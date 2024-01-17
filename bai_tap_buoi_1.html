@@ -67,11 +67,25 @@
             <b><li>Display</li></b>
             <p>Đây đơn giản là thuộc tính display trong CSS thôi. Cũng như Block, Inline hay Inline-block, ta tạo ra một flex container bằng cách thiết lập cho 1 element thuộc tính này có giá trị như sau:</p>
 
+            <pre>
+                <span style="color: darkgreen;">.container</span> {
+                    <span style="color: blue;">display</span> : flex; /* or inline-flex */
+                  }
+            </pre>
+
 
 
             <b><li>flex-direction</li></b>
             <img src="https://images.viblo.asia/full/4129cabc-a5c7-4e14-ae31-8216e6ef6916.png" width="600" alt="">
             <p>Đây chính là thuộc tính sẽ giúp điều chỉnh hướng của main-axis (cũng chính là hướng mà các item sẽ hiển thị). Flexbox là một single-direction layout concept, vậy nên các item sẽ <b>chỉ</b> được hiển thị theo 1 trong 2 kiểu đó là ngang hoặc dọc.</p> 
+
+            <pre>
+                <span style="color: darkgreen;">.container</span> {
+                    <span style="color: blue;">flex-direction</span>: row | row-reverse | column | column-reverse;
+                  }
+
+            </pre>
+
 
             <ul>
                 <li> 
@@ -99,6 +113,11 @@
 
             <p>Mặc định thì các flex item sẽ luôn nằm trên 1 dòng, ta có thể thay đổi điều này dựa trên thuộc tính flex-wrap.</p>
 
+            <pre>
+    <span style="color: darkgreen;">.container</span>{
+    <span style="color: blue;">flex-wrap</span>: nowrap | wrap | wrap-reverse;
+      }            
+            </pre>
 
             <ul>
                 <li><p>nowrap (default): Các flex item sẽ luôn nằm trên 1 dòng</p></li>
@@ -116,6 +135,11 @@
 
             <p>Đây là cách mà các item sắp xếp cách hiển thị trong container.</p>
 
+            <pre>
+                <span style="color: darkgreen;">.container</span> {
+                <span style="color: blue;">justify-content </span>: flex-start | flex-end | center | space-between | space-around | space-evenly;
+                  }
+            </pre>
             <ul>
                 <li><p>flex-start (default): Các item được "căn lề trái"</p></li>
             
@@ -138,7 +162,12 @@
             <img src="https://images.viblo.asia/793009f7-e87b-4ec9-9bb7-7523229a89dd.png" width="600" >
 
             <p>Có thể coi đây là justify-content phiên bản dành cho cross-axis.</p>
-        
+
+            <pre>
+                <span style="color: darkgreen;">.contain</span>er {
+                <span style="color: blue;">align-items</span>: stretch | flex-start | flex-end | center | baseline;
+                  }
+            </pre>
 
 
             <ul>
@@ -161,6 +190,13 @@
             <img src="https://images.viblo.asia/51a0934c-0204-4892-a771-1040ebe64838.png" width="600">
         
             <p>Nếu như align-items là justify-content phiên bản cross-axis dành cho các item nằm trên 1 dòng, thì align-content là phiên bản dành cho <b>các dòng</b>.</p>
+
+            <pre>
+            <span style="color: darkgreen;">.container</span> {
+            <span style="color: blue;">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;
+                  }
+            </pre>
+
 
             <ul>
                 <li><p>flex-start: Các dòng được "căn lề trên"</p></li>
