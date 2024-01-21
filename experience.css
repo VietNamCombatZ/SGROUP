@@ -4,14 +4,12 @@
   font-weight: bolder;
   margin: 20px 0px ;
   text-decoration: 2px underline solid deeppink ;
-  
-  
 }
 
 .experience .history
 {
-    display: inline-block;
-    margin: 30px 30px ;
+  display: inline-block;
+  margin: 30px 30px ;
 }
 .year
 {
