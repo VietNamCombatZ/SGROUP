@@ -1,0 +1,71 @@
+.intro
+{
+    margin-top: 50px;
+}
+
+.image img
+{
+    
+    display: inline-block;
+    width: 25%;
+    margin-top: 30px;
+
+}
+.container
+{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.container h1
+{
+    margin: 40px 0;
+}
+.info
+{
+    
+    margin-top: 20px;
+    width: 40%;
+}
+.overall
+{
+    display: inline-block;
+    
+}
+.overall .detail
+{
+    display: inline-block;
+    
+    margin: 20px 30px 20px 0;
+}
+.detail 
+{
+  color: deeppink;
+  font-weight: bolder;
+  font-size:x-large;
+}
+
+.detail p
+{
+    color:black;
+    font-weight: normal;
+    font-size: smaller;
+}
+
+.about h2
+{
+    display: inline-block;
+    text-decoration: 3px underline solid deeppink;
+    margin: 20px 0;
+}
+
+.about button
+{
+    background-color: white;
+    text-align: center;
+    margin: 10px  120px;
+    padding: 10px;
+    border-radius: 30px;
+    border: solid deeppink;
+    cursor: pointer;
+}

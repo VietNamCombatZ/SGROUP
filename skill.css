@@ -1,0 +1,35 @@
+.skill_tree
+{
+    margin-top: 20px;
+
+}
+.skill_box
+{
+    display: block;
+    width: 50%;
+    margin: 20px 00px;
+}
+
+.skill_box h3
+{
+  display: block;
+  font-weight: bolder;
+  text-decoration: 3px underline solid deeppink;
+  margin: 30px 0px;
+  
+}
+
+/* .skill_box .container
+{
+  display: block;
+  border-radius: 25%;
+
+} */
+.skill {
+  display: inline-block;
+  margin-right: 14px;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
