@@ -5,8 +5,18 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.web_page
+{
+    
+    display: block;
+    width: 800px;
+    margin: 0 auto;
+    
+}
+
 .icon
 {
+    width: 100%;
     margin-top: 40px;
 }
 .icon .alphabet
@@ -27,9 +37,11 @@
 {
     font-size: larger;
     font-weight: bolder;
-    margin-right: 600px;
+    margin-right: 550px;
 }
 .icon .web_icon
 {
     color: red;
+
+    
 }

@@ -1,12 +1,21 @@
+
+
 .intro
 {
     margin-top: 50px;
+    width: 100%;
 }
+
+.body_1
+{
+    width: 100%;
+}
+
 .image 
 {
     
     display: inline-block;
-    width: 30%;
+    width: 35%;
     margin-top: 30px;
 
 }
@@ -14,7 +23,6 @@
 .image img
 {
     
-    display: inline-block;
     width: 100%;
     margin-top: 0px;
 
@@ -22,19 +30,21 @@
 .container
 {
     display: inline-block;
-    width: 50%;
+    width: 45%;
     height: 100%;
-    margin-left: 50px;
+    margin-left: 80px;
+    
 }
 .container h1
 {
-    margin: 50px 0;
+    margin: 40px 0 0 0;
+    
 }
 .info
 {
     
     margin-top: 20px;
-    width: 40%;
+    width: 100%;
 }
 .overall
 {
@@ -45,13 +55,13 @@
 {
     display: inline-block;
     
-    margin: 20px 30px 20px 0;
+    margin: 20px 25px 20px 0;
 }
 .detail 
 {
   color: deeppink;
   font-weight: bolder;
-  font-size:x-large;
+  font-size:larger;
 }
 
 .detail p
@@ -60,6 +70,7 @@
     font-weight: normal;
     font-size: smaller;
 }
+
 
 .about h2
 {
@@ -70,9 +81,10 @@
 
 .about button
 {
+    
     background-color: white;
     text-align: center;
-    margin: 10px  120px;
+    margin:  20px  300px;
     padding: 10px;
     border-radius: 30px;
     border: solid deeppink;
