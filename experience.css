@@ -9,6 +9,7 @@
 .experience .history
 {
   display: inline-block;
+  vertical-align:top;
   width: 42%;
   margin: 0px 30px ;
 }
