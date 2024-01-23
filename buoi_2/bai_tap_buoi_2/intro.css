@@ -1,26 +1,92 @@
+
+
 .intro
 {
     margin-top: 50px;
+    width: 100%;
 }
 
-.intro .image
+.body_1
+{
+    width: 100%;
+}
+
+.image 
+{
+    
+    display: inline-block;
+    width: 35%;
+    margin-top: 30px;
+
+}
+
+.image img
+{
+    
+    width: 100%;
+    margin-top: 0px;
+
+}
+.container
 {
     display: inline-block;
-    margin-top: 30px;
+    width: 45%;
+    height: 100%;
+    margin-left: 80px;
+    
+}
+.container h1
+{
+    margin: 40px 0 0 0;
+    
 }
 .info
 {
-    display: inline-block;
     
     margin-top: 20px;
-    width: 40%;
+    width: 100%;
 }
 .overall
 {
     display: inline-block;
+    
 }
 .overall .detail
 {
     display: inline-block;
-    margin-right: 30px;
+    
+    margin: 20px 25px 20px 0;
+}
+.detail 
+{
+  color: deeppink;
+  font-weight: bolder;
+  font-size:larger;
+}
+
+.detail p
+{
+    color:black;
+    font-weight: normal;
+    font-size: smaller;
+}
+
+
+.about h2
+{
+    display: inline-block;
+    text-decoration: 3px underline solid deeppink;
+    margin: 20px 0;
+}
+
+.about button
+{
+    
+    background-color: white;
+    text-align: center;
+    margin:  20px  300px;
+    padding: 10px;
+    border-radius: 30px;
+    border: solid deeppink;
+    cursor: pointer;
 }
