@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.web_page
+{
+    
+    display: block;
+    width: 800px;
+    padding: 40px auto ;
+    margin: 0px auto;
+    
+}
+
+.icon
+{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    padding: 0px 0;
+    
+    box-sizing: border-box;
+    justify-content: center;
+
+    background-color: white;
+
+}
+
+.icon .container
+{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading
+{
+    display: flex;
+    
+}
+
+.alphabet
+{
+    
+    width: 30px;
+    height: 30px;
+    padding: 8px 6px 0px;
+    margin-right: 10px;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+}
+.name
+{
+    font-size: larger;
+    font-weight: bolder;
+    margin-right: 550px;
+}
+.web_icon
+{
+    color: red;
+
+    
+}

@@ -1,0 +1,41 @@
+.experience h3 
+{
+  display:block;
+  font-weight: bolder;
+  margin: 20px 0px ;
+  text-decoration: 3px underline solid deeppink ;
+}
+
+.experience .history
+{
+  display: inline-block;
+  vertical-align:top;
+  width: 42%;
+  margin: 0px 30px ;
+}
+.year
+{
+  margin: 20px 0;
+  font-weight: bolder;
+  
+}
+.company_name
+{
+  margin: 20px 0;
+  font-weight: 200;
+  font-size: x-large;
+}
+.role
+{
+  margin: 20px 0;
+  font-weight: bolder;
+}
+.detail_2 p
+{
+  margin: 20px 0;
+}
+
+ul li
+{
+  margin: 10px 0;
+}

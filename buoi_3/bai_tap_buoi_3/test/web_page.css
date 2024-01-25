@@ -1,0 +1,6 @@
+.web_page {
+  display: flex;
+  width: 960px;
+  box-sizing: content-box;
+  margin: 0 auto;
+}

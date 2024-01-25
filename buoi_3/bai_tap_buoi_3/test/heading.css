@@ -1,0 +1,45 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading
+{
+    display: flex;
+    position: fixed;
+    
+    justify-content: space-between;
+    width: 960px;
+    padding: 40px 0;
+    background-color: white;
+    
+    
+}
+.heading .container_1
+{
+   display: flex;
+   align-items: center;
+}
+
+.alphabet
+{
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    justify-content: center;
+    
+    text-align: center;
+}
+.fa-brands
+{
+    color: red;
+    margin-left: 5px;
+}

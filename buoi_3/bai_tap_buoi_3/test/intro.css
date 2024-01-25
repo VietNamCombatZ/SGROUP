@@ -1,0 +1,17 @@
+.intro
+{
+    display: flex;
+    margin: 120px auto;
+    width: 960px;
+    box-sizing: content-box;
+
+}
+.image
+{
+    display: flex;
+    flex: 0;
+}
+.image img
+{
+    width: 100%;
+}
