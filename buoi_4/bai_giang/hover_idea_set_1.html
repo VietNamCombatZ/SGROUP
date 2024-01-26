@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container
+        {
+         display: flex;
+         height: 360px;
+         width: 480px;
+         overflow: hidden;
+         
+
+        }
+        img
+        {
+         position: fixed;
+         z-index: -1;
+         transition: transform 0.5s;
+        }
+        .text
+        {
+            font-size: x-large;
+            font-weight: 100;
+            color: white;
+            box-sizing: content-box;
+            width: 350px;
+            padding: 280px 0 0px 40px;
+            transition: transform 0.5s;
+        }
+        b
+        {
+            font-weight: 900;
+
+        }
+        .text span
+        {
+            color: transparent;
+
+        }
+        .line
+        {
+            width: 480px;
+            height: 10px;
+            background-color: white;
+            z-index: 2;
+            margin: 360px 0 0 -380px;
+            transition: transform 0.5s;
+            
+        }
+        .container:hover .text
+        {
+          transform: translate(0,20px);
+          
+          transition-duration: 0.5s;
+        }
+        .container:hover .text span
+        {
+          color: white;
+          transition-duration: 0.5s;
+          
+        }
+        .container:hover .line
+        {
+          background-color: white;
+          transform: translate(0,-10px);
+          transition-duration: 0.5s; 
+        }
+        .container:hover img
+        {
+            filter:grayscale(0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://tympanus.net/Development/HoverEffectIdeas/img/4.jpg" alt="">
+        <div class="text">DREAMY <b>HONEY</b> <span>NOW</span></div>
+        <div class="line"></div>
+    </div>
+    
+
+</body>
+</html>

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="intro.css" />
     <link rel="stylesheet" href="skill.css" />
     <link rel="stylesheet" href="experience.css" />
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="footer.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,900&display=swap"
       rel="stylesheet"
@@ -23,7 +25,7 @@
   </head>
   <body>
     <div class="icon">
-      <div class="container">
+      <div class="container_1">
         <div class="heading">
           <div class="alphabet">J</div>
 
@@ -87,14 +89,16 @@
           deserunt.
         </p>
 
-        <button>DOWNLOAD RESUME</button>
+        <div  class="download_button">
+          <button>DOWNLOAD RESUME</button>
+        </div>
       </div>
 
       <div class="skill_tree">
         <div class="skill_box">
           <h3>CORE SKILLS</h3>
-
-          <div class="skill">JavaScript</div>
+          <div class="container_3">
+            <div class="skill">JavaScript</div>
           <div class="skill">Node.js</div>
           <div class="skill">Express.js</div>
           <div class="skill">Mongo.DB</div>
@@ -103,22 +107,30 @@
           <div class="skill">Sequelize</div>
           <div class="skill">Github</div>
           <div class="skill">HTML</div>
+
+          </div>
+          
         </div>
 
         <div class="skill_box">
           <h3>OTHER SKILLS</h3>
+          <div class="container_3">
+           <div class="skill">Storyblok</div>
+           <div class="skill">PWAs</div>
+           <div class="skill">Vuetify</div>
+           <div class="skill">Responsive Web Design</div>
+           <div class="skill">React</div>
 
-          <div class="skill">Storyblok</div>
-          <div class="skill">PWAs</div>
-          <div class="skill">Responsive Web Design</div>
-          <div class="skill">React</div>
-          <div class="skill">Vuetify</div>
+          </div>
+          
+          
         </div>
       </div>
 
       <div class="experience">
         <h3>WORK EXPERIENCE</h3>
-        <div class="history">
+        <div class="container_4">
+          <div class="history">
           <div class="year">2019 - Present</div>
           <div class="company_name">Matrix Media Inc</div>
           <div class="role">Full Stack Developer</div>
@@ -161,11 +173,67 @@
         </div>
       </div>
 
+        </div>
+        
+
       <!-- work -->
       <div class="work">
-
+          <div class="container_5">
+            <div class="heading_5"><h3>LATEST WORK</h3></div>
+            <!-- product no.1 -->
+            <div class="product">
+              <div class="container_6">
+                <div class="product_info">
+                  <h2>Tripy mobile app</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+                  <div class="detail_button"><button>DETAILS</button></div>
+                </div>
+                <div class="product_image">
+                  <img src="https://www.designstub.com/demos/defolio/assets/images/work-1.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <!-- product no.2 -->
+            <div class="product">
+              <div class="container_6">
+                <div class="product_info">
+                  <h2>Hello mobile app</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+                  <div class="detail_button"><button>DETAILS</button></div>
+                </div>
+                <div class="product_image">
+                  <img src="https://www.designstub.com/demos/defolio/assets/images/work-2.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <!-- product no.3 -->
+            <div class="product">
+              <div class="container_6">
+                <div class="product_info">
+                  <h2>Cute cookies app</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales.</p>
+                  <div class="detail_button"><button>DETAILS</button></div>
+                </div>
+                <div class="product_image">
+                  <img src="https://www.designstub.com/demos/defolio/assets/images/work-3.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
 
       </div>
     </div>
+
+    <!-- footer -->
+    <div class="footer">
+      <div class="container_7">
+        <h4>STAY IN TOUCH</h4>
+        <h1>Ready to talk</h1>
+        <h5>Feel free to contact us</h5>
+        <div class="contact_button"><button>LET'S TALK</button></div>
+        <p>© 2022 All rights reserved. Free minimal bootstrap template by Designstub.</p>
+      </div>
+    </div>
+
   </body>
 </html>

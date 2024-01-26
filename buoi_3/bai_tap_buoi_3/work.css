@@ -1,0 +1,90 @@
+.work
+{
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 20px 0 20px 0px ;
+}
+
+.work h3
+{
+    display: flex;
+    box-sizing: content-box;
+    border-bottom: 5px solid darksalmon;
+    max-width: fit-content;
+    padding-bottom: 5px;
+    margin: 20px 0;
+}
+
+.work .product
+{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    padding: 30px 0;
+    margin: 40px 0;
+    background-color:rgb(246, 248, 250) ;
+}
+.product .container_6
+{
+    display: flex;
+    max-width: 90%;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.product .product_info
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.product_info p
+{
+   display: flex;
+   max-width: 100%;
+   margin-top: 20px;
+   font-weight: lighter;
+}
+
+.detail_button
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.detail_button button
+{
+    
+    background-color: white;
+    text-align: center;
+    max-width: fit-content;
+    margin-top: 50px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: solid  darksalmon;
+    color: darksalmon;
+    cursor: pointer;
+}
+
+.product .product_image
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 40%;
+}
+.container_7 p
+{
+    display: flex;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+    
+    color:white;
+    margin-top: 80px;
+}

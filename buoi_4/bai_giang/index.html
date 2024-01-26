@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .box
+        {
+            
+            width: 200px;
+            height: 200px;
+            background-color:  green;
+            
+            
+            animation-name: animation_1;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+        }
+        @keyframes animation_1
+        {
+           0% {background-color: green; }
+           10%
+           {
+              transform: scale(1,2);
+           }
+           20%
+           {
+              background-color: aquamarine;
+              transform: scale(1,2);
+           }
+           30%
+           {
+             background-color: aquamarine;
+             transform: rotate(45deg);
+             transform: scale(1,2);
+           }
+           40%
+           {
+             background-color: aqua;
+             
+             transform: scale(1,2);
+           }
+           50%
+           {
+             background-color: aqua;
+             transform: rotate(90deg);
+             transform: scale(1,2);
+           }
+           60%
+           {
+             background-color: aqua;
+             transform: rotate(90deg);
+             transform: scale(2,2);
+           }
+           70%
+           {
+             background-color: aqua;
+             transform: rotate(135deg);
+             transform: scale(1,2);
+           }
+           80%
+           {
+
+           }
+           90%
+           {
+
+           }
+           100%
+           {
+
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+
+</body>
+</html>
