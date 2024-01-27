@@ -66,25 +66,19 @@
     margin-top: 50px;
     padding: 10px 20px;
     border-radius: 30px;
-    border: solid  darksalmon;
+    border: 2px solid  darksalmon;
     color: darksalmon;
     cursor: pointer;
 }
-
+.detail_button button:hover
+{
+  background-color: darksalmon;
+  color: white;
+}
 .product .product_image
 {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     max-width: 40%;
-}
-.container_7 p
-{
-    display: flex;
-    justify-content: center;
-    
-    flex-wrap: wrap;
-    
-    color:white;
-    margin-top: 80px;
 }

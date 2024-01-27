@@ -1,145 +1,121 @@
-
-
-.intro
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 50px;
-    width: 100%;
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  width: 100%;
 }
 
-.body_1
-{
-    display: flex;
-    justify-content: space-between;
-   
-    max-width: 800px;
+.body_1 {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
 }
 
-.image 
-{
-    
-    display: flex;
-    max-width: 35%;
-    margin-top: 30px;
-
+.image {
+  display: flex;
+  max-width: 35%;
+  height: fit-content;
+  margin-top: 30px;
 }
 
-.image img
-{
-    
-    width: 100%;
-    margin-top: 0px;
-
+.image img {
+  width: 100%;
+  margin-top: 0px;
 }
-.body_1 .container
-{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 45%;
-    max-height: 100%;
-    /* margin-left: 80px; */
-    
+.body_1 .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 45%;
+  max-height: 100%;
+  /* margin-left: 80px; */
 }
-.info h1
-{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 100%;
-    margin: 40px 0 0 0;
-    
+.info h1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 40px 0 0 0;
 }
-.info
-{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    width: 100%;
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 100%;
 }
-.info .greeting
-{
-    display: flex;
-    flex-wrap: wrap;
+.info .greeting {
+  display: flex;
+  flex-wrap: wrap;
 }
-.info h1
-{
-    display: flex;
-    flex-wrap: wrap;
+.info h1 {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.overall
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 100%;
-   
+.overall {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
 }
-.overall .detail
-{
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0px 20px 0;
+.overall .detail {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 20px 0;
 }
-.detail 
-{
+.detail {
   color: darksalmon;
   font-weight: bolder;
-  font-size:larger;
+  font-size: larger;
 }
 
-.detail p
-{
-    color:black;
-    font-weight: normal;
-    font-size: smaller;
+.detail p {
+  color: black;
+  font-weight: normal;
+  font-size: smaller;
 }
 
-
-.about
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.about h2
-{
-    display: flex;
-    box-sizing: content-box;
-    border-bottom: 5px solid darksalmon;
-    max-width: fit-content;
-    padding-bottom: 5px;
-    margin: 20px 0;
+.about h2 {
+  display: flex;
+  box-sizing: content-box;
+  border-bottom: 5px solid darksalmon;
+  max-width: fit-content;
+  padding-bottom: 5px;
+  margin: 20px 0;
 }
 
-.about p
-{
-    display: flex;
-    max-width:100% ;
-    flex-wrap: wrap;
+.about p {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 
-.download_button
+.download_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.download_button button:hover
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: darksalmon;
+  color: white;
 }
 
-.download_button button
-{
-    
-    background-color: white;
-    text-align: center;
-    max-width: fit-content;
-    margin-top: 50px;
-    padding: 10px;
-    border-radius: 30px;
-    border: solid  darksalmon;
-    color: darksalmon;
-    cursor: pointer;
+.download_button button {
+  background-color: white;
+  text-align: center;
+  max-width: fit-content;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 30px;
+  border: 2px solid darksalmon;
+  color: darksalmon;
+  cursor: pointer;
 }
