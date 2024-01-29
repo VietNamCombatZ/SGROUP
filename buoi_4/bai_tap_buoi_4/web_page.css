@@ -1,0 +1,14 @@
+.web_page
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: darkslategrey;
+    padding-top: 80px;
+    
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+}
