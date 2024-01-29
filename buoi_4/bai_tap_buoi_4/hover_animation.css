@@ -1,126 +1,125 @@
-.hover_animation
-{
-    display: flex;
-    
-    width: 480px;
-    height: 360px;
-    box-sizing: content-box;
-    overflow: hidden;
-    justify-content: flex-start;
-    font-family: 'Raleway', Arial, sans-serif;
-    cursor: pointer;
-    
+.hover_animation {
+  display: flex;
+  width: 480px;
+  height: 360px;
+  box-sizing: content-box;
+  overflow: hidden;
+  cursor: pointer;
+  justify-content: flex-start;
+  font-family: "Raleway", Arial, sans-serif;
 }
 
-
-.hover_animation img
-{
-    transform: scale(1.05, 1.05);
-    z-index: 0;
-    position: relative;
-    transition: transform 0.75s;
-}
-.hover_animation .heading
-{
-    z-index: 2;
-    color: white;
-    position: absolute;
-    font-weight:100 ;
-    font-size: xx-large;
-    padding: 10px 0 0 30px;
-}
-.heading span
-{
-    font-weight: 700;
-} 
-.hover_animation .text
-{
-    display: flex;
-    z-index: 3;
-    position: absolute;
-    color: transparent;
-    margin: 250px 0 0 270px;
-    padding-right: 10px;
-    width: 150px;
-    height: 80px;
-    
-    border-right: 4px  solid transparent;
-    box-sizing: content-box;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-.text .text-1
-{
-    z-index: 3;
-    width: 150px;
-    height: 20px;
-    box-sizing: content-box;
-    margin: 0px 0;
-    display: flex;
-    justify-content: flex-end;
-}
-.text .text-2
-{
-    z-index: 3;
-    
-    width: 150px;
-    height: 20px;
-    box-sizing: content-box;
-    margin: 0px 0;
-    display: flex;
-    justify-content: flex-end;
-}
-.text .text-3
-{
-    z-index: 3;
-    width: 150px;
-    height: 20px;
-    box-sizing: content-box;
-    margin: 0px 0;
-    display: flex;
-    justify-content: flex-end;
-}
-.text .text-4
-{
-    display: flex;
-    z-index: 3;
-    width: 150px;
-    height: 20px;
-    box-sizing: content-box;
-    margin: 0px 0;
-    justify-content: flex-end;
-}
-.hover_animation .filter
-{
-    display: flex;
-    z-index: 0;
-    width: 950px;
-    height: 150px;
-    margin-top: -75px;
-    margin-left: 110px;
-    position: absolute;
-    background-color: ghostwhite;
-    rotate: 45deg;
-    filter: opacity(0.5) ;
-    transition: transform 0.75s;
+.hover_animation .image {
+  transform: scale(1.05, 1.05);
+  z-index: 0;
+  position: relative;
+  
+  transition: transform 0.75s;
 }
 
-.hover_animation:hover img
+.hover_animation .image_cover 
 {
-    transform: scale(1,1);
-    transition-duration: 0.3s;
-    
+  display: flex;
+  width: 480px;
+  height: 360px;
+  box-sizing: content-box;
+  position: absolute;
+  z-index: 1;
+  background-color: transparent;
 }
-.hover_animation:hover .text
-{
-    color: white;
-    border-right-color: white;
-    
-    
+.hover_animation .heading {
+  z-index: 2;
+  color: white;
+  position: absolute;
+  font-weight: 100;
+  font-size: xx-large;
+  padding: 10px 0 0 30px;
 }
-.hover_animation:hover .filter
+.heading span {
+  font-weight: 700;
+}
+.hover_animation .text {
+  display: flex;
+  z-index: 3;
+  position: absolute;
+  color: transparent;
+  margin: 250px 0 0 270px;
+  padding-right: 10px;
+  width: 150px;
+  height: 80px;
+
+  border-right: 4px solid transparent;
+  box-sizing: content-box;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.text .text-1 {
+  z-index: 3;
+  width: 150px;
+  height: 20px;
+  box-sizing: content-box;
+  margin: 0px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.text .text-2 {
+  z-index: 3;
+
+  width: 150px;
+  height: 20px;
+  box-sizing: content-box;
+  margin: 0px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.text .text-3 {
+  z-index: 3;
+  width: 150px;
+  height: 20px;
+  box-sizing: content-box;
+  margin: 0px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.text .text-4 {
+  display: flex;
+  z-index: 3;
+  width: 150px;
+  height: 20px;
+  box-sizing: content-box;
+  margin: 0px 0;
+  justify-content: flex-end;
+}
+.hover_animation .filter {
+  display: flex;
+  z-index: 0;
+  width: 950px;
+  height: 150px;
+  margin-top: -550px;
+  margin-left: 250px;
+  position: absolute;
+  background-color: white;
+  rotate: 45deg;
+  filter: opacity(0.5);
+  transition: transform 0.75s;
+}
+
+.hover_animation:hover img {
+  transform: scale(1, 1);
+
+  transition-duration: 0.3s;
+}
+.hover_animation:hover .text {
+  color: white;
+  border-right-color: white;
+}
+.hover_animation:hover .filter {
+  transform: translate(0%, 800%);
+  transition: 0.75s;
+}
+.hover_animation:hover .image_cover
 {
-    transform: translate(0%, 500%);
-    transition: 0.75s;
+    background-color: lightskyblue;
+    opacity: 0.4;
 }
