@@ -67,7 +67,7 @@
   margin: 20px 0px 20px 0;
 }
 .detail {
-  color: darksalmon;
+  color: #F26464;
   font-weight: bolder;
   font-size: larger;
 }
@@ -86,7 +86,7 @@
 .about h2 {
   display: flex;
   box-sizing: content-box;
-  border-bottom: 5px solid darksalmon;
+  border-bottom: 3px solid #F26464;
   max-width: fit-content;
   padding-bottom: 5px;
   margin: 20px 0;
@@ -105,7 +105,7 @@
 }
 .download_button button:hover
 {
-  background-color: darksalmon;
+  background-color: #F26464;
   color: white;
 }
 
@@ -116,7 +116,7 @@
   margin-top: 50px;
   padding: 10px;
   border-radius: 30px;
-  border: 2px solid darksalmon;
-  color: darksalmon;
+  border: 2px solid #F26464;
+  color: #F26464;
   cursor: pointer;
 }

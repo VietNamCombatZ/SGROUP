@@ -66,13 +66,13 @@
     margin-top: 50px;
     padding: 10px 20px;
     border-radius: 30px;
-    border: 2px solid  darksalmon;
-    color: darksalmon;
+    border: 2px solid  #F26464;
+    color: #F26464;
     cursor: pointer;
 }
 .detail_button button:hover
 {
-  background-color: darksalmon;
+  background-color: #F26464;
   color: white;
 }
 .product .product_image

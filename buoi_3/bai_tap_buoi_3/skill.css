@@ -18,7 +18,7 @@
 {
   display: flex;
     box-sizing: content-box;
-    border-bottom: 5px solid darksalmon;
+    border-bottom: 5px solid #F26464;
     max-width: fit-content;
     padding-bottom: 5px;
     margin: 20px 0;
