@@ -4,3 +4,9 @@
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 }
+.launch_page
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
