@@ -2,13 +2,46 @@
 {
     display: flex;
     position: relative;
-    padding-top:140px ;
+    padding-top:  140px ;
     padding-bottom: 110px;
-    overflow: hidden;
+    
 }
 
-.home_overlay
+.home_background
 {
   position: absolute;
+  width: 100%;
+  top: -80px;
+  z-index: -2;
   
+  
+}
+.home_background img
+{
+    width: 100%;
+    
+    filter: brightness(0.7);
+}
+
+.home_section_container
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_section_description
+{
+  color: white;
+  flex: 4;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+.home_section_signin
+{
+  
+  flex: 3;
+  z-index: 2;
+  background-color: white;
+  margin: -20px 50px 0;
 }
