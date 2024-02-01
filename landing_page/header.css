@@ -1,0 +1,55 @@
+.header
+{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    padding: 20px 16px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    top: 0;
+}
+
+.header_container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_brand
+{
+   font-size: 28px;
+   font-weight: 700;
+   color: #e52f37;
+   
+}
+
+.header_button_container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    font-size: 17px;
+    
+}
+.header_button_container li
+{
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 15px;
+    font-weight: 400;
+    
+}
+
+.discover_link_button
+{
+   box-sizing: content-box;
+   padding: 12px 18px;
+   border: 1px solid #e52f37;
+   border-radius: 23px 23px;
+   font-weight: 400;
+   background-color: #e52f37;
+   color: white;
+}
