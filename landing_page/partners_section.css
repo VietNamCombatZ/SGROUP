@@ -31,13 +31,15 @@
   box-sizing: border-box;
   align-items: center;
   opacity: 0.4;
+  z-index: 4;
 }
 
 .partners_image img {
   max-height: 55px;
 }
 
-.partners_image:hover .partners_image {
+.partners_image:hover .partners_image 
+{
   opacity: 1;
   
   
