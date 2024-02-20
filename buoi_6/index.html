@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("Hello world");
+      var str = "abc";
+      console.log(str);
+
+      //const, let, var
+      //const hằng
+      //let biến cục bộ
+      //var biến toàn cục
+
+      //    const tmp = 12;
+      //    tmp = 13;
+      //    console.log(tmp);
+
+      const bool = true;
+      console.log(!!bool);
+
+      var b;
+      console.log(b);
+
+      var a = null;
+      console.log(a);
+
+      const person = {
+        name: "Jack",
+        number: 20,
+      };
+
+      const person1 = {
+        name: "Jack1",
+        number: 21,
+      };
+      // person = person1;
+
+      console.log(person);
+
+      function add(a, b) {
+        return a + b;
+      }
+      console.log(add(1, 2));
+
+      //hoisting
+      /* 3 loại biến đều có hoisting, 
+    nhưng var cấp phát luôn bộ nhớ khi đưa lên đầu, còn const, let thì không
+    */
+
+      console.warn("Hello warn");
+      console.error("Hello error");
+
+
+      let tmp1 = 0;
+      tmp1 += 1;
+      console.log(tmp1);
+      
+    </script>
+
+    <script src="js1.js">
+
+    </script>
+  </body>
+</html>
