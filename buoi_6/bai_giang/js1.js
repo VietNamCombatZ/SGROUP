@@ -14,3 +14,4 @@ if (check1) {
 } else {
   console.log("Sai");
 }
+
