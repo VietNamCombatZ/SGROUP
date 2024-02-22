@@ -1,0 +1,10 @@
+.discover_section {
+  padding: 90px 0 100px;
+}
+.discover_image_container {
+  margin-right: 15px;
+}
+.discover_image {
+  width: 100%;
+  object-fit: contain;
+}
