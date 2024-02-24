@@ -23,3 +23,9 @@ console.log(
 
 // for (index of array )
 
+//forEach(value, index, array)
+
+// dùng forEach để in ra a,b,c
+
+// dùng forEach để in ra 2,4,6 từ 1,2,3
+

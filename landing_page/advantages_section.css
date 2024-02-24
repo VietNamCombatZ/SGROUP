@@ -1,0 +1,51 @@
+.advantages_section {
+  padding: 90px 0 100px;
+  background-color: #f1faff;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 0;
+}
+.col_container {
+  margin-right: 25px;
+  flex-direction: column;
+}
+.content-link {
+  padding: 8px 16px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+.features_content {
+  margin: 10px 0;
+}
+.features_logo .blue {
+  color: #1e90ff;
+}
+.features_logo .red {
+  color: #e52f37;
+}
+
+.features_logo .green {
+  color: #27b36a;
+}
+.content-link .active {
+  background: #fff;
+}
+.slide_image_container
+{
+  display: flex;
+}
+.slide_image .image_01 {
+  position: relative;
+  z-index: 3;
+}
+.slide_image .image_02
+{
+  position: absolute;
+  z-index: 4;
+}
+.slide_image .image_03
+{
+  position: absolute;
+  z-index: 5;
+}

@@ -3,10 +3,12 @@
 }
 .discover_image_container {
   margin-right: 15px;
+  border-radius: 8px 8px;
 }
 .discover_image {
   width: 100%;
   object-fit: contain;
+  border-radius: 8px 8px;
 }
 .discover_section h3 {
   font-size: 32px;
@@ -54,4 +56,9 @@ ul.benefits li {
   text-decoration: none;
   border: 1px solid #e52f37;
   border-radius: 23px;
+}
+.discover_button:hover .discover_button
+{
+  box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.25s ease-in-out;
 }
