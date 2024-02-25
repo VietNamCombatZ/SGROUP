@@ -19,7 +19,12 @@
   text-align: center;
 }
 .pad_15 {
-  padding: 0 15px;
+  padding-left:  15px;
+  padding-right: 15px;
+}
+.pad_bottom_10
+{
+  padding-bottom: 10px;
 }
 .about_section_title {
   margin-bottom: 10px;

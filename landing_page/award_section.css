@@ -1,0 +1,84 @@
+.award_section {
+  background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/bg3.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  padding: 110px 0;
+  z-index: -2;
+}
+.award_overlay {
+  width: 100%;
+  background: #e52f37;
+  opacity: 0.95;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.award_title {
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+}
+.award_text {
+  color: #fff;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+
+  margin-bottom: 20px;
+}
+.white_button {
+  z-index: 5;
+  font-size: 16px;
+  padding: 14px 20px;
+  text-decoration: none;
+  outline: 0;
+  line-height: 22px;
+  font-weight: 700;
+  color: #e52f37;
+  background-color: #ffffff;
+  border: 1px solid #fff;
+  box-shadow: 0px 8px 40px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 23px 23px;
+  margin: 10px 10px;
+
+  display: inline-block;
+  /* transition: all 0.4s ease-in-out; */
+}
+.white_button:hover .white_button {
+  box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  color: #e52f37 !important;
+  background: #f9f9f9;
+}
+.white_border_button {
+  z-index: 5;
+  color: #fff;
+  background: transparent;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  border: 1px solid #fff;
+  border-radius: 23px 23px;
+  margin: 10px 10px;
+  padding: 14px 20px;
+  display: inline-block;
+  box-shadow: 0px 8px 40px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  outline: 0;
+}
+/* .award_button
+{
+    cursor: pointer;
+} */

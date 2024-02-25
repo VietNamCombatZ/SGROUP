@@ -1,0 +1,75 @@
+.margin_top_30 {
+  margin-top: 30px;
+}
+.background_white {
+  background-color: #fff;
+}
+
+.teams_section {
+  background: #f1faff;
+  padding: 90px 0 100px 0;
+}
+.teams_section_title {
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #071e55;
+  font-weight: 700;
+  font-size: 38px;
+}
+.teams_section_subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #7c8595;
+  margin-bottom: 20px;
+}
+.member_image {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px 8px 0 0;
+}
+.member_description {
+  padding: 10px 25px 30px 25px;
+  background-color: #fff;
+  border: 1px solid #e5efff;
+  border-top: none;
+  text-align: center;
+  transition: all 1s;
+  border-radius: 0 0 8px 8px;
+  margin-top: -5px;
+}
+
+.member_name {
+  margin: 20px 0 1px 0 !important;
+  color: #454545;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+.member_position {
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #acacac;
+  font-style: italic;
+  text-align: center;
+}
+.member_position::after {
+  background: #e52f37;
+  display: inline-block;
+  vertical-align: middle;
+  content: "";
+  width: 50px;
+  height: 3px;
+  margin-top: -20px;
+}
+.member_info {
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #7c8595;
+  margin-bottom: 20px;
+}

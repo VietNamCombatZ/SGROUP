@@ -1,0 +1,53 @@
+.funfacts_section {
+  background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/bg3.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  padding: 110px 0;
+  z-index: -2;
+}
+.funfacts_overlay {
+  width: 100%;
+  background: #e52f37;
+  opacity: 0.95;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.margin_bottom_20 {
+  margin-bottom: 20px;
+}
+.margin_auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.funfacts_title {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.fun_fact_box i {
+  font-size: 45px;
+  line-height: 60px;
+  color: #fff;
+}
+.fun_fact_box .facts_title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.facts_numbers {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 600;
+  font-style: normal;
+}
