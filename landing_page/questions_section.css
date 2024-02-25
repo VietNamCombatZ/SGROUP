@@ -1,0 +1,27 @@
+.questions_section {
+  background: #fff;
+  padding: 90px 0 100px 0;
+}
+.FAQ_box {
+  margin: 30px 0 0 0;
+}
+.FAQ_box h5 {
+  margin-bottom: 7px;
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  margin-top: 0;
+
+  color: #071e55;
+  font-weight: 700;
+
+  
+}
+.FAQ_box p {
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #7c8595;
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+}
