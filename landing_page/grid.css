@@ -35,6 +35,15 @@
     align-items: center;
 }
 
+.pad_top_120
+{
+    padding-top: 120px;
+}
+.margin_top_20
+{
+    margin-top: 20px;
+}
+
 /* pc */
 @media (min-width:1240px) {
     .l-1,
