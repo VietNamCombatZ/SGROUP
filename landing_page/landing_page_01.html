@@ -106,6 +106,8 @@
                 <h3 class="form_title">Get Your Free 14-Day Trial</h3>
                 <p class="form_subtitle">Velis demo enim quia tempor magnet.</p>
               
+                <p class="register_success_box">We received your message and you will hear from us soon. Thank You!</p>
+            
                 <form class="register_form" action="" >
                   <input class="company_name_input" placeholder="Company Name*" type="text" >
                   <input class="email_input" placeholder="Email Adddress*" type="text" >
@@ -115,7 +117,7 @@
                     <option value="">Our Sales Department</option>
                   </select>
 
-                  <button  class="submit_input">START MY FREE 14-DAY TRIAL</button>
+                  <button onclick="handleClick_1()" class="submit_input">START MY FREE 14-DAY TRIAL</button>
                   <!-- <input placeholder="START MY FREE 14-DAY TRIAL" class="submit_input" type="submit"> -->
                 </form>
 
@@ -245,10 +247,11 @@
 
       <section class="discover_section" >
         <div class="container">
-          <div class="row">
-            <div class="col l-6 m-6 c-12 pad_15">
+          <div class="row align_center">
+            <div class="col l-6 m-6 c-12 pad_15 justify_center">
               <div class="discover_image_container">
                 <img
+                  id="discover_image"
                   class="discover_image"
                   src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/about001.jpg"
                   alt=""
@@ -286,7 +289,7 @@
           <div class="row align_center">
             <div class="col l-6 m-6 c-12 pad_15">
               <div class="col_container">
-                <a class="content-link active show" href="">
+                <div class="content_link active show" >
                   <div class="features_content">
                     <div class="features_logo blue">
                       <i class="fa-solid fa-arrow-trend-up"></i>
@@ -297,8 +300,8 @@
                       with total ease.
                     </p>
                   </div>
-                </a>
-                <a href="content-link">
+                </div>
+                <div class="content_link" >
                   <div class="features_content">
                     <div class="features_logo red">
                       <i class="fa-solid fa-network-wired"></i>
@@ -309,8 +312,8 @@
                       with total ease.
                     </p>
                   </div>
-                </a>
-                <a href="content-link">
+                </div>
+                <div class="content_link " >
                   <div class="features_content">
                     <div class="features_logo green">
                       <i class="fa-solid fa-rocket"></i>
@@ -321,7 +324,7 @@
                       with total ease.
                     </p>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
             <div class="col l-6 m-6 c-12 pad_15">
@@ -455,20 +458,20 @@
           </div>
         </div>
 
-        <div class="container">
+        <div class="container" id="fortfolio">
           <div class="row">
             <div class="col l-4 m-4 c-12">
               <figure class="gallery_insta">
                 <div class="popup_gallery ">
-                  <a class="popup_2" href="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery1.jpg" >
+                  <div class="popup_2" >
                     <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery1.jpg" alt="">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye-icon"></i>
+                      <i class="fa fa-search-plus eye_icon"></i>
                     
                   </span>
                   
-                  </a>
+                  </div>
 
                   
                 </div>
@@ -476,15 +479,15 @@
 
               <figure class="gallery_insta">
                 <div class="popup_gallery ">
-                  <a class="popup_2" href="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" >
+                  <div class="popup_2"  >
                     <img class="popup_image" src="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" alt="">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye-icon"></i>
+                      <i class="fa fa-search-plus eye_icon"></i>
                     
                   </span>
                   
-                  </a>
+                  </div>
 
                   
                 </div>
@@ -493,15 +496,15 @@
             <div class="col l-4 m-4 c-12">
               <figure class="gallery_insta">
                 <div class="popup_gallery ">
-                  <a class="popup_2" href="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" >
+                  <div class="popup_2" >
                     <img class="popup_image" src="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" alt="">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye-icon"></i>
+                      <i class="fa fa-search-plus eye_icon"></i>
                     
                   </span>
                   
-                  </a>
+                  </div>
 
                   
                 </div>
@@ -511,15 +514,15 @@
 
               <figure class="gallery_insta">
                 <div class="popup_gallery ">
-                  <a class="popup_2" href="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery4.jpg" >
+                  <div class="popup_2" >
                     <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery4.jpg" alt="">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye-icon"></i>
+                      <i class="fa fa-search-plus eye_icon"></i>
                     
                   </span>
                   
-                  </a>
+                  </div>
 
                   
                 </div>
@@ -527,15 +530,15 @@
 
               <figure class="gallery_insta">
                 <div class="popup_gallery ">
-                  <a class="popup_2" href="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg" >
-                    <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg" alt="">
+                  <div class="popup_2" >
+                    <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye-icon"></i>
+                      <i class="fa fa-search-plus eye_icon"></i>
                     
                   </span>
                   
-                  </a>
+                  </div>
 
                   
                 </div>
@@ -547,7 +550,7 @@
         </div>
 
         <!-- image slider start -->
-        <div class="preview-box">
+        <!-- <div class="preview-box">
           <div class="details">
            <span class="title"><p class="current-img"></p> of <p class="total-img"></p></span>
             <span class="icon fas fa-times"></span>
@@ -558,7 +561,7 @@
           <img src="" alt="">
       </div>
   </div>
-  <div class="shadow"></div>
+  <div class="shadow"></div> -->
 
   <!-- image slider end -->
 
@@ -814,8 +817,10 @@
               <div class="contact_form_wrapper">
                 <!-- succes message -->
 
+                <p class="contact_success_box">We received your message and you will hear from us soon. Thank You!</p>
+
                 <!-- form input -->
-                <form class="row contact_form justify_center" action=" ">
+                <form id="contact_form" class="row contact_form justify_center">
 
                   <div class="col l-6 m-6 c-12 pad_15">
                     <input class="contact_input" type="text" placeholder="Your Name*" name="Your Name*" required  >
@@ -833,7 +838,8 @@
                   <div class="col l-12 m-12 c-12 s-12 pad_15 text_center" >
                      <textarea class="contact_message contact_input" placeholder="Your Message..." name="" id="" ></textarea> 
                     <!-- <input class="contact_message" type="text"  placeholder="Your Message..."> -->
-                    <input class="contact_submit_button" type="submit" value="Get In Touch"> 
+                    <!-- <input class="contact_submit_button" type="submit" value="Get In Touch">  -->
+                    <div  onclick="handleClick_2()" class="contact_submit_button" id="contact_submit_button">Get In Touch</div>
                   </div>
 
                 </form>
@@ -907,6 +913,10 @@
       </footer>
 
     </div>
+    <script src="image_slide_in.js"></script>
+    <!-- <script  src="image_blur_in.js"></script> -->
+    <script src="Fade_out_onclick.js"></script>
+    <script   src="Fade_in_onclick.js"></script>
 
 <!-- <header class="header">
         <div class="container">
@@ -955,5 +965,7 @@
           </div>
         </div>
       </section> -->
+    
+      
   </body>
 </html>

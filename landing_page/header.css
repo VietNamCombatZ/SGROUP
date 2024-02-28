@@ -46,12 +46,19 @@
   width: 100%;
   height: fit-content;
   display: flex;
+  position: static;
+  z-index: 10;
   justify-content: center;
   background-color: white;
   padding: 8px 16px;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
   top: 0;
+}
+
+.header.Fixed
+{
+  position: fixed;
 }
 
 /* .header>.container
@@ -159,6 +166,12 @@
   font-weight: 600;
 }
 
+.header_button_container li > a:hover
+{
+  color:#e52f37;
+  transition: 0.1s;
+}
+
 .discover_link_button {
   box-sizing: content-box;
 
@@ -176,9 +189,13 @@
   color: transparent;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 992px) {
   .header_button {
     display: none;
+  }
+
+  .header_button_container {
+    flex-direction: column;
   }
 
   .header_container {

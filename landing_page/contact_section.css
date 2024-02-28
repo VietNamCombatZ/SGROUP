@@ -116,8 +116,48 @@ select.contact_input:focus {
   transition: all 0.5s ease-in-out;
 }
 
-.contact_submit_button:hover
-{
+.contact_submit_button:hover {
   background: #eaeaea;
-    transition: all .50s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact_success_box {
+  line-height: 28px;
+  font-weight: 400;
+
+  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #eee;
+  padding: 25px 25px;
+  font-size: 19px;
+  text-shadow: none;
+  font-style: italic;
+  border-radius: 8px 8px;
+  margin: 15px 0;
+  opacity: 0;
+  display: none;
+}
+
+.contact_form.Fadeout {
+  transition-duration: 0.1s;
+  opacity: 0;
+}
+
+.contact_success_box.FadeIn {
+  transition-duration: 0.25s;
+  transition-delay: 0.5s;
+  opacity: 1;
+  display: block;
+}
+
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }

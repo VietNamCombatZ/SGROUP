@@ -6,7 +6,7 @@
   background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/bg0.jpg)
     top center no-repeat;
   background-size: cover;
-  background-attachment: inherit;
+  /* background-attachment: inherit; */
 }
 @media (max-width: 375px) {
   .home_section {
@@ -23,7 +23,7 @@
   .home_section {
     padding-top: 65px;
     padding-bottom: 90px;
-    background-attachment: inherit;
+    /* background-attachment: inherit; */
   }
 
   .home_section_overlay {
@@ -35,7 +35,7 @@
   .home_section {
     padding-top: 170px;
     padding-bottom: 70px;
-    background-attachment: inherit;
+    /* background-attachment: inherit; */
   }
   .home_section_title {
     font-size: 38px;
@@ -162,6 +162,7 @@
   padding: 40px 40px;
   background: rgba(255, 255, 255, 1);
   border-radius: 5px 5px;
+  z-index: 999;
 }
 
 .form_title {
@@ -182,6 +183,34 @@
   margin-bottom: 25px;
   margin-top: 0;
   font-family: "Open Sans", sans-serif;
+}
+
+.register_success_box {
+  display: inline-block;
+  color: #27b36a;
+  border: 1px solid #27b36a;
+  padding: 25px 25px;
+  font-size: 19px;
+  text-shadow: none;
+  font-style: italic;
+  border-radius: 8px 8px;
+  margin: 15px 0;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  display: none;
+}
+
+.register_success_box.FadeIn {
+  transition-duration: 0.25s;
+  transition-delay: 0.5s;
+  opacity: 1;
+  display: block;
+}
+
+.register_form.Fadeout {
+  transition-duration: 0.25s;
+  opacity: 0;
 }
 
 .register_form_term {

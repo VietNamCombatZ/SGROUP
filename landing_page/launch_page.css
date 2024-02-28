@@ -4,6 +4,16 @@
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 }
+body
+{
+  overflow-x: hidden;
+  
+}
+html
+{
+  scroll-behavior: smooth;
+}
+
 .launch_page
 {
   display: flex;
