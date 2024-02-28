@@ -55,7 +55,7 @@
   display: inline-block;
   /* transition: all 0.4s ease-in-out; */
 }
-.white_button:hover  {
+.white_border_button:hover {
   box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
   color: #e52f37 !important;
   background: #f9f9f9;

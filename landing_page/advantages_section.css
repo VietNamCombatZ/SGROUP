@@ -72,11 +72,11 @@
   border-radius: 8px;
   box-shadow: 10px 12px 40px rgba(0, 0, 0, 0.2);
 }
-/* .slide_image.image_02 {
+.slide_image.image_02 {
   position: absolute;
   z-index: 4;
 }
 .slide_image.image_03 {
   position: absolute;
-  z-index: 5; 
-}*/
+  z-index: 5;
+}

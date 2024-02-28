@@ -1,6 +1,7 @@
 .pricing_section {
   background: #f1faff;
   padding: 90px 0 100px 0;
+  width: 100%;
 }
 .pricing_section_title {
   font-size: 32px;
@@ -48,7 +49,7 @@
   margin-left: 20px;
   border-radius: 8px 8px;
   transition: all 0.3s ease-in-out;
-  animation-name: BounceIn;
+  animation-name: BounceIn 0.3s ease-in-out;
   animation-delay: 0.25s;
 }
 .price_box_white:hover {

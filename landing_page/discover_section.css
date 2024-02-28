@@ -43,10 +43,11 @@ ul.benefits li {
   margin-bottom: 8px;
 }
 .discover_button {
+  display: inline-block;
   font-size: 18px;
   padding: 14px 20px;
   margin: 5px 10px 10px 0;
-  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.27);;
+  box-shadow: 0px 5px 20px 0 rgba(0, 0, 0, 0.27);
   line-height: 22px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -57,8 +58,7 @@ ul.benefits li {
   border: 1px solid #e52f37;
   border-radius: 23px;
 }
-.discover_button:hover .discover_button
-{
+.discover_button:hover {
   box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.5);
   transition: 0.25s ease-in-out;
 }

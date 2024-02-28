@@ -39,26 +39,44 @@
     <title>LaunchPage</title>
   </head>
   <body>
-    <div class="launch_page">
-      <section class="header">
+    <div class="launch_page" >
+
+      <!-- <header class="header">
+        <div class="container">
+          <div class="row align_center ">
+            <a  class="header_brand" href=""></a>
+
+          </div>
+        </div>
+
+      </header> -->
+
+
+
+      <section class="header" id="nav">
         <div class="header_container">
-          <div class="header_brand">LaunchPage</div>
+          <a class="header_brand" href="">LaunchPage</a>
 
           <button class="header_bar_button">
             <i class="fa-solid fa-bars"></i>
           </button>
 
+          <div class="header_button_collapsed collapse ">
+
+          </div>
+
           <div class="header_button">
             <ul class="header_button_container">
-              <li>Home</li>
-              <li>About</li>
-              <li>Testimonials</li>
-              <li>Work</li>
-              <li>Team</li>
-              <li>Features</li>
-              <li>Pricing</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#work">Work</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
               <li class="discover_link">
-                <button class="discover_link_button">Get Started</button>
+                <a class="discover_link_button" href="#contact">Get Started</a>
+                
               </li>
             </ul>
           </div>
@@ -66,7 +84,7 @@
       </section>
 
 
-      <section class="home_section">
+      <section class="home_section" id="home">
         <div class="home_section_overlay"></div>
         <div class="container">
           <div class="row">
@@ -90,7 +108,8 @@
 
               </div>
             </div>
-            <div class="col l-6 l-o-11 m-6 c-12 pad_15 margin_top_20">
+            <!-- <div class="col l-1 m-1 c-0 pad_15"></div> -->
+            <div class="col l-5 l-o-1 m-5 m-o-1 c-12 pad_15 margin_top_20">
               <div class="form_wrapper">
                 <h3 class="form_title">Get Your Free 14-Day Trial</h3>
                 <p class="form_subtitle">Velis demo enim quia tempor magnet.</p>
@@ -103,7 +122,9 @@
                     <option value="">Our Support Team</option>
                     <option value="">Our Sales Department</option>
                   </select>
-                  <input placeholder="START MY FREE 14-DAY TRIAL" class="submit_input" type="submit">
+
+                  <button  class="submit_input">START MY FREE 14-DAY TRIAL</button>
+                  <!-- <input placeholder="START MY FREE 14-DAY TRIAL" class="submit_input" type="submit"> -->
                 </form>
 
                 <p class="register_form_term">No Credit Card • No Installation Required</p>
@@ -153,7 +174,7 @@
         </div>
       </section> -->
 
-      <section class="partners_section">
+      <section class="partners_section" id="partners">
         <div class="partners_section_container">
           <h5 class="partners_title">As featured in:</h5>
           <div class="partners_image">
@@ -187,7 +208,7 @@
         </div>
       </section>
 
-      <section class="about_section">
+      <section class="about_section" id="about">
         <!-- <div class="about_section_container"> -->
         <div class="container">
           <div class="row">
@@ -265,7 +286,7 @@
         <!-- </div> -->
       </section>
 
-      <section class="discover_section">
+      <section class="discover_section" >
         <div class="container">
           <div class="row">
             <div class="col l-6 m-6 c-12 pad_15">
@@ -303,7 +324,7 @@
         </div>
       </section>
 
-      <section class="advantages_section">
+      <section class="advantages_section" >
         <div class="container">
           <div class="row align_center">
             <div class="col l-6 m-6 c-12 pad_15">
@@ -375,7 +396,7 @@
         </div>
       </section>
 
-      <section class="funfacts_section">
+      <section class="funfacts_section" id=>
         <div class="funfacts_overlay"></div>
         <div class="container">
           <div class="row">
@@ -418,7 +439,7 @@
         </div>
       </section>
 
-      <section class="reviews_section">
+      <section class="reviews_section" id="testimonials">
         <div class="container">
           <div class="row align_center">
           <div class="col l-5 m-5 c-12 ">
@@ -467,11 +488,110 @@
         </div>
       </section>
 
-      <section class="fortfolio_section">
+      <section class="fortfolio_section" id="work">
+        <div class="container">
+          <div class="row">
+            <div class="col l-12 m-12 c-12 text_center margin_bottom_30">
+              <h2 class="fortfolio_title"> Portfolio</h2>
+              <p class="fortfolio_subtitle">Dicover the latest projects accomplished for my clients.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col l-4 m-4 c-12">
+              <figure class="gallery_insta">
+                <div class="popup_gallery ">
+                  <a class="popup_2" href="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery1.jpg" >
+                    <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery1.jpg" alt="">
+                  
+                    <span class="eye_wrapper">
+                      <i class="fa fa-search-plus eye-icon"></i>
+                    
+                  </span>
+                  
+                  </a>
+
+                  
+                </div>
+              </figure>
+
+              <figure class="gallery_insta">
+                <div class="popup_gallery ">
+                  <a class="popup_2" href="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" >
+                    <img class="popup_image" src="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" alt="">
+                  
+                    <span class="eye_wrapper">
+                      <i class="fa fa-search-plus eye-icon"></i>
+                    
+                  </span>
+                  
+                  </a>
+
+                  
+                </div>
+              </figure>
+            </div>
+            <div class="col l-4 m-4 c-12">
+              <figure class="gallery_insta">
+                <div class="popup_gallery ">
+                  <a class="popup_2" href="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" >
+                    <img class="popup_image" src="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" alt="">
+                  
+                    <span class="eye_wrapper">
+                      <i class="fa fa-search-plus eye-icon"></i>
+                    
+                  </span>
+                  
+                  </a>
+
+                  
+                </div>
+              </figure>
+            </div>
+            <div class="col l-4 m-4 c-12">
+
+              <figure class="gallery_insta">
+                <div class="popup_gallery ">
+                  <a class="popup_2" href="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery4.jpg" >
+                    <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery4.jpg" alt="">
+                  
+                    <span class="eye_wrapper">
+                      <i class="fa fa-search-plus eye-icon"></i>
+                    
+                  </span>
+                  
+                  </a>
+
+                  
+                </div>
+              </figure>
+
+              <figure class="gallery_insta">
+                <div class="popup_gallery ">
+                  <a class="popup_2" href="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg" >
+                    <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg" alt="">
+                  
+                    <span class="eye_wrapper">
+                      <i class="fa fa-search-plus eye-icon"></i>
+                    
+                  </span>
+                  
+                  </a>
+
+                  
+                </div>
+              </figure>
+
+
+            </div>
+          </div>
+        </div>
 
       </section>
 
-      <section class="teams_section">
+      <section class="teams_section" id="team">
         <div class="container">
           <div class="row">
             <div class="col l-12 m-12 c-12 text_center pad_15">
@@ -541,7 +661,7 @@
               </p>
               
                 <a class="white_button " href="">Discover More</a>
-              <a class="white_border_button" href="" >Get In Touch</a>
+              <a class="white_border_button" href="#home" >Get In Touch</a>
               
               
 
@@ -550,7 +670,7 @@
         </div>
       </section>
 
-      <section class="amazing_features_section">
+      <section class="amazing_features_section" id="features">
         <div class="container">
           <div class="row">
             <div class="col l-12 m-12 c-12 pad_15 pad_bottom_10 text_center">
@@ -626,7 +746,7 @@
         </div>
       </section>
 
-      <section class="pricing_section">
+      <section class="pricing_section" id="pricing">
         <div class="container">
           <div class="row align_center">
             <div class="col l-4 m-4 c-12 pad_15">
@@ -638,7 +758,7 @@
                 Quis autem velis ets reprehender net etid quiste voluptate. Utise wisi enim minim veniam, quis et stationes nets.
               </p>
             </div>
-            <div class="col l-4 m-4 c-6 pad_15">
+            <div class="col l-4 m-4 c-6 s-12 pad_15" >
               <div class="price_box_white">
                 <ul class="price_list">
                   <li class="price_title">MONTHLY</li>
@@ -652,7 +772,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col l-4 m-4 c-6 pad_15">
+            <div class="col l-4 m-4 c-6 s-12 pad_15">
               <div class="price_box_red">
                 <ul class="price_list">
                   <li class="price_title">ANNUALLY</li>
@@ -706,10 +826,10 @@
         </div>
       </section>
 
-      <section class="contact_section">
+      <section class="contact_section" id="contact">
         <div class="contact_overlay"></div>
         <div class="container">
-          <div class="row">
+          <div class="row justify_center">
             <div class="col l-12 m-12 c-12 pad_15 pad_bottom_10 text_center">
               <h2 class="contact_title">Contact Us</h2>
               <p class="contact_subtitle">Have any queries? Get in touch today.</p>
@@ -717,18 +837,18 @@
           </div>
           <!-- Form start -->
           <div class="row justify_center">
-            <div class="col l-8 m-8 c-12 margin_top_10">
+            <div class="col l-8 m-8 c-12 s-12 margin_top_10">
               <div class="contact_form_wrapper">
                 <!-- succes message -->
 
                 <!-- form input -->
-                <form class="row contact_form" action=" ">
+                <form class="row contact_form justify_center" action=" ">
 
                   <div class="col l-6 m-6 c-12 pad_15">
                     <input class="contact_input" type="text" placeholder="Your Name*" name="Your Name*" required  >
                     <input class="contact_input" type="text" placeholder="Phone Number* " name="Phone Number*" required> 
                   </div>
-                  <div class="col l-6 m-6 c-12 pad_15">
+                  <div class="col l-6 m-6 c-12 s-12 pad_15">
                     <input class="contact_input" type="text" placeholder="Email Address*" name="Email Address*" required  >
                     <select class="contact_input"  name="contact_ticket*" required  id="">
                       <option value="">Choose Option</option>
@@ -737,11 +857,9 @@
                     </select>
                   </div>
 
-                  <div class="col l-12 m-12 c-12 pad_15 text_center" >
-                    <!-- <textarea class="contact_message contact_input" placeholder="Your Message..." name="" id="" cols="20" rows="2">
-
-                    </textarea> -->
-                    <input class="contact_message" type="text" placeholder="Your Message...">
+                  <div class="col l-12 m-12 c-12 s-12 pad_15 text_center" >
+                     <textarea class="contact_message contact_input" placeholder="Your Message..." name="" id="" ></textarea> 
+                    <!-- <input class="contact_message" type="text"  placeholder="Your Message..."> -->
                     <input class="contact_submit_button" type="submit" value="Get In Touch"> 
                   </div>
 
@@ -757,7 +875,7 @@
 
       <footer class="footer">
         <div class="container">
-          <div class="row">
+          <div class="row justify_center">
             <div class="col l-5 m-5 c-12 pad_15">
               <p>
                 "© 2020" 

@@ -1,0 +1,77 @@
+.fortfolio_section {
+  background: #fff;
+  padding: 90px 0 100px 0;
+}
+
+.fortfolio_title {
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #071e55;
+  font-weight: 700;
+  font-size: 38px;
+}
+
+.fortfolio_subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #7c8595;
+  margin-bottom: 20px;
+}
+
+.gallery_insta {
+  margin: 0 !important;
+}
+
+a.popup_2 {
+  text-decoration: none;
+}
+
+a.popup_2 > .popup_image {
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+
+  border-radius: 5px 5px 0 0;
+
+  vertical-align: middle;
+  border-style: none;
+
+  border-radius: 0 !important;
+  padding: 5px 5px;
+}
+
+.eye_wrapper {
+  background-color: #e52f37;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  z-index: 999;
+  width: 90%;
+  height: 90% !important;
+  top: 5%;
+  left: 5%;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  opacity: 0;
+}
+
+.eye_wrapper i.eye_icon
+{
+
+    position: absolute;
+    display: inline-block;
+    font-size: 38px;
+    z-index: 3;
+    top: 50%!important;
+    margin-top: -18px!important;
+    left: 0%;
+    right: 0%;
+    font-weight: 900;
+}
+
