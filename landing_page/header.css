@@ -161,6 +161,7 @@
 
 .discover_link_button {
   box-sizing: content-box;
+
   padding: 12px 18px;
   border: 1px solid #e52f37;
   border-radius: 23px 23px;
@@ -171,6 +172,10 @@
   text-decoration: none;
 }
 
+.discover_link_button > span {
+  color: transparent;
+}
+
 @media screen and (max-width: 1023px) {
   .header_button {
     display: none;
@@ -178,7 +183,7 @@
 
   .header_container {
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .header_bar_button {
