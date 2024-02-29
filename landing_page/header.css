@@ -226,6 +226,14 @@
   transition: 0.1s;
 }
 
+.header_button_container_collapsed li > a.active {
+  color: #e52f37 !important;
+}
+
+.header_button_container li > a.active {
+  color: #e52f37 !important;
+}
+
 @media screen and (max-width: 992px) {
   .header_button_container_collapsed.collapse {
     display: flex;
