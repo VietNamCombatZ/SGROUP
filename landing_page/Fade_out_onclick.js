@@ -27,11 +27,22 @@ var handleClick_2 = () => {
 
 // header_bar
 var header_btn = document.querySelector(".header_bar_button");
-var handleClick_2 = () => {
+var header_collapse = document.querySelector(".header_button_container_collapsed");
+var handleClick_3 = () => {
+  var isCollapse = header_collapse.classList.contains("collapse")
+  
+  if( !isCollapse)
+  {
+    header_collapse.classList.add("collapse")
+  }
+  else
+  {
+    header_collapse.classList.remove("collapse");
+  }
+
+
   contact_form.classList.add("Fadeout");
-  setTimeout(() => {
-    contact_form.style.display = "none";
-  }, 1);
+  
   contact_success.classList.add("FadeIn");
 };
 

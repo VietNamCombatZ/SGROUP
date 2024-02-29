@@ -22,7 +22,7 @@ const handleScroll2 = (offset) => {
 };
 
 const handleScroll3 = (offset) => {
-  const scrollPosition = window.pageYOffset;
+  const scrollPosition = window.scrollY;
   console.log("nav", scrollPosition);
   if (scrollPosition > offset) {
     nav_bar.classList.add("Fixed");
@@ -42,7 +42,7 @@ const handleScroll4 = (offset) => {
 window.addEventListener("scroll", () => handleScroll1(1300));
 window.addEventListener("scroll", () => handleScroll2(3400));
 window.addEventListener("scroll", () => handleScroll3(600));
-window.addEventListener("scroll", () => handleScroll3(5400));
+window.addEventListener("scroll", () => handleScroll4(5400));
 
 // window.addEventListener("scroll", () => {
 //   const innnerHeightofWindow = window.innerHeight;
