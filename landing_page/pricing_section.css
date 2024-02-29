@@ -18,7 +18,7 @@
   color: #7c8595;
   margin-bottom: 20px;
 }
-@keyframes BounceIn {
+/* @keyframes BounceIn {
   0% {
     opacity: 0;
     transform: scale(0.3);
@@ -35,7 +35,9 @@
     opacity: 1;
     transform: scale(1);
   }
-}
+} */
+
+
 /* 1st box */
 .price_box_white {
   text-align: center;
@@ -51,6 +53,7 @@
   transition: all 0.3s ease-in-out;
   animation-name: BounceIn 0.3s ease-in-out;
   animation-delay: 0.25s;
+  opacity: 0;
 }
 .price_box_white:hover {
   transform: scale(1.03, 1.03);
@@ -117,6 +120,27 @@
   font-weight: 400;
   margin-bottom: 5px;
   color: #6a6a6a;
+  
+}
+
+.price_box_white.bounce_in
+{
+  animation: bounceIn 1s ease forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* 2nd box */
@@ -131,9 +155,10 @@
   margin-bottom: 20px;
   margin-left: 20px;
   border-radius: 8px 8px;
-  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  /* transition: all 0.3s ease-in-out;
   animation-name: BounceIn;
-  animation-delay: 0.75s;
+  animation-delay: 0.75s; */
 }
 .price_box_red:hover {
   transform: scale(1.03, 1.03);
@@ -200,4 +225,25 @@
   font-weight: 400;
   margin-bottom: 5px;
   color: #fff;
+}
+
+
+.price_box_red.bounce_in
+{
+  animation: bounceIn 1s ease forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

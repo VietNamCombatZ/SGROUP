@@ -3,6 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bounce In Animation</title>
+    <style>
+        /* CSS styling for component */
+.component {
+  width: 200px;
+  height: 200px;
+  background-color: #f9f9f9;
+  margin: 200px auto;
+  text-align: center;
+  line-height: 200px;
+  font-size: 24px;
+  border-radius: 10px;
+  opacity: 0;
+  
+}
+
+.component.bounce-in
+{
+  animation: bounceIn 1s ease forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="component">Scroll down to see the animation</div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+  const component = document.querySelector('.component');
+  
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function handleScroll() {
+    if (isInViewport(component)) {
+      component.classList.add('bounce-in');
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+});
+
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordion Example</title>
     <style>
       /* CSS styling for accordion */
@@ -62,4 +136,4 @@
 </script>
   </body>
 </html>
-
+ -->
