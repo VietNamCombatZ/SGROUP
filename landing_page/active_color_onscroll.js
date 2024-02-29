@@ -117,3 +117,14 @@ const handleScroll17 = (offset) => {
   }
 };
 window.addEventListener("scroll", () => handleScroll17(6700));
+
+const handleScroll18 = (offset) => {
+  const scrollPosition = window.pageYOffset;
+
+  if (scrollPosition > offset) {
+    header_nav_btn.forEach((header_nav) => {
+      header_nav.classList.remove("active");
+    });
+  }
+};
+window.addEventListener("scroll", () => handleScroll18(7900));

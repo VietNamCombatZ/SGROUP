@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery Carousel</title>
+    <style>
+        .carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-index {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-index span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #aaa;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.carousel-index span.active {
+    background-color: #333;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="image1.jpg" alt="Image 1" />
+        <img src="image2.jpg" alt="Image 2" />
+        <img src="image3.jpg" alt="Image 3" />
+      </div>
+      <div class="carousel-index"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.carousel-slide img');
+    const indexContainer = document.querySelector('.carousel-index');
+
+    // Create index buttons
+    slides.forEach((_, index) => {
+        const indexBtn = document.createElement('span');
+        indexBtn.classList.add('index-btn');
+        indexBtn.addEventListener('click', () => {
+            currentSlide(index);
+        });
+        indexContainer.appendChild(indexBtn);
+    });
+
+    let slideIndex = 0;
+
+    function showSlides() {
+        slides.forEach((slide) => {
+            slide.style.display = "none";
+        });
+        slides[slideIndex].style.display = "block";
+
+        const indexBtns = document.querySelectorAll('.index-btn');
+        indexBtns.forEach((btn, index) => {
+            if (index === slideIndex) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    }
+
+    function currentSlide(n) {
+        slideIndex = n;
+        showSlides();
+    }
+
+    showSlides();
+});
+
+    </script>
+  </body>
+</html>

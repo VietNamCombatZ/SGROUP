@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
      }
    };
 
-   window.addEventListener("scroll", () => handleScroll6(6300));
+   window.addEventListener("scroll", () => handleScroll6(6500));
    window.addEventListener("scroll", () => handleScroll7(8000));
 
   // window.addEventListener("scroll", handleScroll1);
