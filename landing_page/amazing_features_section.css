@@ -3,15 +3,14 @@
   padding: 90px 0 100px 0;
 }
 .characteristic_box {
-  margin-top: 40px ;
+  margin-top: 40px;
   overflow: hidden;
   opacity: 0;
 }
 
-.characteristic_box.FadeIn_2
-{
+/* .characteristic_box.Fade_In_Query {
   opacity: 1;
-}
+} */
 
 .characteristic_box i {
   font-size: 50px;
@@ -47,10 +46,19 @@
 }
 
 .characteristic_box .light_green {
-    visibility: visible;
-  transition-delay: 0.25s;
+  visibility: visible;
+  opacity: 0;
+  /* transition-delay: 0.25s;
   
-  transition-duration: 0.25s;
+  transition-duration: 0.25s; */
+}
+
+.characteristic_box.light_green.Fade_In_Query {
+  animation: fadeIn;
+  animation-duration: 0.75s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 /* 2nd box */
@@ -59,10 +67,19 @@
 }
 
 .characteristic_box .light_blue {
-    visibility: visible;
-  transition-delay: 0.5s;
+  visibility: visible;
+  opacity: 0;
+  /* transition-delay: 0.5s;
   
-  transition-duration: 0.25s;
+  transition-duration: 0.25s; */
+}
+
+.characteristic_box.light_blue.Fade_In_Query {
+  animation: fadeIn;
+  animation-duration: 0.75s;
+  animation-delay: 0.75s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 /* 3rd box */
 .characteristic_box.orange i {
@@ -70,47 +87,84 @@
 }
 
 .characteristic_box .orange {
-    visibility: visible;
-  transition-delay: 0.75s;
+  visibility: visible;
+  opacity: 0;
+  /* transition-delay: 0.75s;
   
-  transition-duration: 0.25s;
+  transition-duration: 0.25s; */
 }
+
+.characteristic_box.orange.Fade_In_Query {
+  animation: fadeIn;
+  animation-duration: 0.75s;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 /* 4th box */
 .characteristic_box.dark_blue i {
   color: #3473b8;
 }
 
 .characteristic_box .dark_blue {
-    visibility: visible;
-  transition-delay: 1s;
+  visibility: visible;
+  opacity: 0;
+  /* transition-delay: 1s;
   
-  transition-duration: 0.25s;
+  transition-duration: 0.25s; */
 }
+
+.characteristic_box.dark_blue.Fade_In_Query {
+  animation: fadeIn;
+  animation-duration: 0.75s;
+  animation-delay: 1.25s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 /* 5th box */
 .characteristic_box.light_red i {
   color: #fc6a3f;
 }
 
 .characteristic_box .light_red {
-    visibility: visible;
-  transition-delay: 1.25s;
+  visibility: visible;
+  opacity: 0;
+  /* transition-delay: 1.25s;
   
-  transition-duration: 0.25s;
+  transition-duration: 0.25s; */
 }
+.characteristic_box.light_red.Fade_In_Query {
+  animation: fadeIn;
+  animation-duration: 0.75s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 /* 6th box */
 .characteristic_box.dark_green i {
   color: #87ac34;
 }
 
 .characteristic_box .dark_green {
-    visibility: visible;
-  transition-delay: 1.5s;
+  visibility: visible;
+  opacity: 0;
+  /* transition-delay: 1.5s;
   
-  transition-duration: 0.25s;
+  transition-duration: 0.25s; */
+}
+
+.characteristic_box.dark_green.Fade_In_Query {
+  animation: fadeIn;
+  animation-duration: 0.75s;
+  animation-delay: 1.75s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeIn {
-    
   0% {
     opacity: 0;
   }

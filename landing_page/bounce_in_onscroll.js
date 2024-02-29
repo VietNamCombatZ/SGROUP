@@ -20,26 +20,44 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
-  function handleScroll1() {
-    if (isInViewport(price_box_red) && isInViewport(price_box_red)) {
+  // function handleScroll1() {
+  //   if (isInViewport(price_box_red) && isInViewport(price_box_red)) {
+  //     price_box_red.classList.add("bounce_in");
+  //     price_box_white.classList.add("bounce_in");
+  //     window.removeEventListener("scroll", handleScroll1);
+  //   }
+  // }
+
+  const handleScroll6 = (offset) => {
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition > offset) {
       price_box_red.classList.add("bounce_in");
       price_box_white.classList.add("bounce_in");
-      window.removeEventListener("scroll", handleScroll1);
     }
-  }
+  };
 
-   function handleScroll2() {
-     if (isInViewport(contact_form) ) {
-       contact_form.classList.add("bounce_in");
+  //  function handleScroll2() {
+  //    if (isInViewport(contact_form) ) {
+  //      contact_form.classList.add("bounce_in");
        
-       window.removeEventListener("scroll", handleScroll2);
+  //      window.removeEventListener("scroll", handleScroll2);
+  //    }
+  //  }
+
+   const handleScroll7 = (offset) => {
+     const scrollPosition = window.pageYOffset;
+     
+     if (scrollPosition > offset) {
+       contact_form.classList.add("bounce_in");
      }
-   }
+   };
 
+   window.addEventListener("scroll", () => handleScroll6(7300));
+   window.addEventListener("scroll", () => handleScroll7(8000));
 
-
-  window.addEventListener("scroll", handleScroll1);
-  window.addEventListener("scroll", handleScroll2);
+  // window.addEventListener("scroll", handleScroll1);
+  // window.addEventListener("scroll", handleScroll2);
 });
 
 

@@ -7,13 +7,9 @@
   background: url(https://demo.epic-webdesign.com/tf-launchpage/v1/images/bg0.jpg)
     top center no-repeat;
   background-size: cover;
-  
 
   /* background-attachment: inherit; */
 }
-
-
-
 
 @media (max-width: 375px) {
   .home_section {
@@ -114,7 +110,7 @@
   left: 50%;
   margin-left: -31px;
   bottom: 10%;
-  margin-bottom: -9px;
+  margin-bottom: -8px;
 
   animation: pulsation 1.9s ease infinite;
   z-index: 0;
@@ -147,7 +143,7 @@
   font-size: 26px;
   line-height: 56px;
   color: #e52a3d;
-  margin-left: 18px;
+  margin-left: 21px;
   transition: all 0.4s ease-in-out;
   font-weight: 900;
 }
@@ -173,8 +169,7 @@
   opacity: 0;
 }
 
-.form_wrapper.bounce_in
-{
+.form_wrapper.bounce_in {
   animation: bounceIn 1s ease forwards;
 }
 
@@ -307,14 +302,15 @@ select.select_input {
   max-width: 535px;
   padding: 16px 0;
   text-transform: uppercase;
+  text-align: center;
 
   border-radius: 3px 3px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .submit_input:hover {
   background: #27b36a;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 /* .home_section {

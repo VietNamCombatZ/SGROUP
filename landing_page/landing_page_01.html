@@ -131,7 +131,8 @@
                     <option value="">Our Sales Department</option>
                   </select>
 
-                  <button onclick="handleClick_1()" class="submit_input">START MY FREE 14-DAY TRIAL</button>
+                  <!-- <button onclick="handleClick_1()" class="submit_input">START MY FREE 14-DAY TRIAL</button> -->
+                  <div onclick="handleClick_1()" class="submit_input">START MY FREE 14-DAY TRIAL</div>
                   <!-- <input placeholder="START MY FREE 14-DAY TRIAL" class="submit_input" type="submit"> -->
                 </form>
 
@@ -144,9 +145,6 @@
         </div>
       </section>
       
-
-      
-
       <section class="partners_section" id="partners">
         <div class="partners_section_container">
           <h5 class="partners_title">As featured in:</h5>
@@ -736,7 +734,7 @@
           </div>
           <div class="row">
             <div class="col l-4 m-4 c-12 pad_15">
-              <div class="characteristic_box light_green delay0.25s">
+              <div class="characteristic_box light_green delay0.25s" id="char_box_01" >
                 <i class="fas fa-tools"></i>
                 <div class="characteristic_box_text">
                   <h4>Support 24/7</h4>
@@ -746,7 +744,7 @@
 
             </div>
             <div class="col l-4 m-4 c-12 pad_15">
-              <div class="characteristic_box light_blue delay0.5s">
+              <div class="characteristic_box light_blue delay0.5s" id="char_box_02">
                 <i class="fas fa-users"></i>
                 <div class="characteristic_box_text">
                   <h4>User Friendly</h4>
@@ -756,7 +754,7 @@
 
             </div>
             <div class="col l-4 m-4 c-12 pad_15">
-              <div class="characteristic_box orange delay0.75s">
+              <div class="characteristic_box orange delay0.75s"id="char_box_03">
                 <i class="fa-regular fa-bell"></i>
                 <div class="characteristic_box_text">
                   <h4>Notification</h4>
@@ -768,7 +766,7 @@
           </div>
           <div class="row">
             <div class="col l-4 m-4 c-12 pad_15">
-              <div class="characteristic_box dark_blue delay1s">
+              <div class="characteristic_box dark_blue delay1s"id="char_box_04">
                 <i class="fas fa-gift"></i>
                 <div class="characteristic_box_text">
                   <h4>Accesibility</h4>
@@ -778,7 +776,7 @@
 
             </div>
             <div class="col l-4 m-4 c-12 pad_15">
-              <div class="characteristic_box light_red delay1.25s">
+              <div class="characteristic_box light_red delay1.25s" id="char_box_05">
                 <i class="fas fa-piggy-bank"></i>
                 <div class="characteristic_box_text">
                   <h4>Cost Control</h4>
@@ -788,7 +786,7 @@
 
             </div>
             <div class="col l-4 m-4 c-12 pad_15">
-              <div class="characteristic_box dark_green delay1.5s">
+              <div class="characteristic_box dark_green delay1.5s" id="char_box_06">
                 <i class="fa-regular fa-comments"></i>
                 <div class="characteristic_box_text">
                   <h4>Chat With Friends</h4>
@@ -994,6 +992,7 @@
 
     </div>
     <script src="bounce_in_onscroll.js"></script>
+    <script src="fade_in_onscroll.js"></script>
     <script src="image_slide_in.js"></script>
     <!-- <script  src="image_blur_in.js"></script> -->
 

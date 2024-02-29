@@ -2,7 +2,7 @@ var discover_box = document.getElementById("discover_image");
 var gallery_box = document.getElementById("fortfolio");
 var nav_bar = document.getElementById("nav");
 
-var char_box_01 = document.querySelectorAll(".characteristic_box");
+// var char_box_01 = document.querySelectorAll(".characteristic_box");
 
 console.log(discover_box);
 const handleScroll1 = (offset) => {
@@ -31,18 +31,18 @@ const handleScroll3 = (offset) => {
   }
 };
 
-const handleScroll4 = (offset) => {
-  const scrollPosition = window.pageYOffset;
+// const handleScroll4 = (offset) => {
+//   const scrollPosition = window.pageYOffset;
 
-  if (scrollPosition > offset) {
-    char_box_01.querySelectorAll.classList.add("FadeIn_2");
-  }
-};
+//   if (scrollPosition > offset) {
+//     char_box_01.querySelectorAll.classList.add("FadeIn_2");
+//   }
+// };
 
 window.addEventListener("scroll", () => handleScroll1(1300));
 window.addEventListener("scroll", () => handleScroll2(3400));
 window.addEventListener("scroll", () => handleScroll3(600));
-window.addEventListener("scroll", () => handleScroll4(5400));
+// window.addEventListener("scroll", () => handleScroll4(5400));
 
 // window.addEventListener("scroll", () => {
 //   const innnerHeightofWindow = window.innerHeight;
