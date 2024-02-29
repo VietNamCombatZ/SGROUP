@@ -52,6 +52,12 @@
     
     border-radius: 0.25rem; */
 }
+.card_collapse
+{
+  display: none;
+  transition: display 0.3 ease;
+}
+
 
 .card_body {
   padding: 20px 25px 5px 25px;
@@ -70,6 +76,10 @@
   background-color: #fff;
   border-bottom: none;
   border-left: 6px solid #27b36a;
+}
+
+.card_header.active {
+
 }
 
 .card_header_container {
@@ -132,7 +142,7 @@
 }
 
 .card_collapse {
-  transform: translateY(100%);
+  
 }
 
 .according_card {

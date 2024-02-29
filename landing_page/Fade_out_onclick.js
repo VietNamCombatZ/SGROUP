@@ -3,6 +3,7 @@ var register_submit_btn = document.querySelector(".submit_input");
 var register_form = document.querySelector(".register_form");
 var register_success = document.querySelector(".register_success_box");
 
+
 var handleClick_1 = () => {
   register_form.classList.add("Fadeout");
   setTimeout(() => {
@@ -23,3 +24,35 @@ var handleClick_2 = () => {
   }, 1);
   contact_success.classList.add("FadeIn");
 };
+
+// header_bar
+var header_btn = document.querySelector(".header_bar_button");
+var handleClick_2 = () => {
+  contact_form.classList.add("Fadeout");
+  setTimeout(() => {
+    contact_form.style.display = "none";
+  }, 1);
+  contact_success.classList.add("FadeIn");
+};
+
+
+//review_section
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".card_header");
+
+    
+
+  items.forEach((item) => {
+    item.addEventListener("click", function () {
+      const isActive = this.classList.contains("active");
+      items.forEach((item) => {
+        item.classList.remove("active");
+        item.previousElementSibling.style.display = "none";
+      });
+      if (!isActive) {
+        this.classList.add("active");
+        this.previousElementSibling.style.display = "block";
+      }
+    });
+  });
+});

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Example</title>
+    <style>
+      /* CSS styling for accordion */
+      .accordion {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+
+      .accordion-item {
+        background-color: #f9f9f9;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .accordion-item.active {
+        background-color: #eaeaea;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <div class="accordion-item active">Accordion Item 1</div>
+      <div class="accordion-content" style="display: block">
+        Content for Accordion Item 1
+      </div>
+    </div>
+
+    <div class="accordion">
+      <div class="accordion-item">Accordion Item 2</div>
+      <div class="accordion-content">Content for Accordion Item 2</div>
+    </div>
+
+    <script>document.addEventListener('DOMContentLoaded', function() {
+  const items = document.querySelectorAll('.accordion-item');
+
+  items.forEach(item => {
+    item.addEventListener('click', function() {
+      const isActive = this.classList.contains('active');
+      items.forEach(item => {
+        item.classList.remove('active');
+        item.nextElementSibling.style.display = 'none';
+      });
+      if (!isActive) {
+        this.classList.add('active');
+        this.nextElementSibling.style.display = 'block';
+      }
+    });
+  });
+});
+</script>
+  </body>
+</html>
+
