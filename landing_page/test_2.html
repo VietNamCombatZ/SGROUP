@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop-up Video</title>
+  <style>
+    .popup-container {
+  text-align: center;
+}
+
+.popup-video {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#closePopup {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="popup-container">
+  <button id="openPopup">Open Video</button>
+  
+  <div class="popup-video" id="videoPopup">
+    <button id="closePopup">&times;</button>
+    <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script >
+    document.getElementById("openPopup").addEventListener("click", function() {
+  document.getElementById("videoPopup").style.display = "block";
+});
+
+document.getElementById("closePopup").addEventListener("click", function() {
+  document.getElementById("videoPopup").style.display = "none";
+});
+
+
+</script>
+</body>
+</html>

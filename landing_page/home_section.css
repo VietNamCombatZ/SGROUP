@@ -98,6 +98,7 @@
   transition: all 0.4s ease-in-out;
   text-decoration: none;
   outline: 0;
+  cursor: pointer;
 }
 
 .popup_video_button::before {
@@ -159,6 +160,69 @@
   text-decoration: underline;
   text-shadow: 1px 1px #656565;
 }
+
+/* Start video popup window*/
+/* .popup-video {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  opacity: 0.8;
+  z-index: 2000;
+
+  padding: 20px;
+}
+.popup-video-container {
+  position: absolute;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 8px;
+  padding-right: 8px;
+  top: 50%;
+  left: 50%;
+} */
+
+.popup-video {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+
+  z-index: 2000;
+}
+
+.popup-video-container
+{
+  padding:40px 8px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#closePopup {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* End video popup window */
 
 .form_wrapper {
   margin-top: 25px;

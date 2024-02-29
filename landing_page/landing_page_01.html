@@ -40,7 +40,17 @@
   </head>
   <body>
 
+    <div class="popup-video" id="videoPopup">
+                  <div class="popup-video-container">
+                    <button id="closePopup">&times;</button>
+                    <iframe id="videoFrame" src="https://www.youtube.com/watch?v=FPfQMVf4vwQ" frameborder="0" allowfullscreen></iframe>
+
+                  </div>
+                    
+
+                  
     
+    </div>
 
     <div class="launch_page" >
 
@@ -90,6 +100,8 @@
       </section>
 
 
+
+
       <section class="home_section" id="home">
         <div class="home_section_overlay"></div>
         <div class="container">
@@ -103,14 +115,16 @@
               </p>
               <div class="popup_video_wrapper">
                 <div class="popup_video_box">
-                  <a class="popup_video_button" href="https://www.youtube.com/watch?v=FPfQMVf4vwQ" > 
+                  <div class="popup_video_button" id="openPopup" > 
                     
                     <i class="fas fa-play"></i>
-                  </a>
+                  </div>
                   <p class="popup_video_text">
                     Watch Presentation Video
                   </p>
                 </div>
+
+                
 
               </div>
             </div>
@@ -143,6 +157,8 @@
             </div>
           </div>
         </div>
+
+        
       </section>
       
       <section class="partners_section" id="partners">
@@ -999,6 +1015,7 @@
     <script src="active_onclick.js"></script>
     <script src="Fade_out_onclick.js"></script>
     <script   src="Fade_in_onclick.js"></script>
+    <script src="pop_up_video_onclick.js"></script>
     
 
 
