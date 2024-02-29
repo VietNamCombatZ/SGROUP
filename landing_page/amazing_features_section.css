@@ -5,6 +5,12 @@
 .characteristic_box {
   margin-top: 40px ;
   overflow: hidden;
+  opacity: 0;
+}
+
+.characteristic_box.FadeIn_2
+{
+  opacity: 1;
 }
 
 .characteristic_box i {
@@ -42,9 +48,9 @@
 
 .characteristic_box .light_green {
     visibility: visible;
-  animation-delay: 0.25s;
-  animation-name: fadeIn;
-  animation-duration: 0.25s;
+  transition-delay: 0.25s;
+  
+  transition-duration: 0.25s;
 }
 
 /* 2nd box */
@@ -54,9 +60,9 @@
 
 .characteristic_box .light_blue {
     visibility: visible;
-  animation-delay: 0.5s;
-  animation-name: fadeIn;
-  animation-duration: 0.25s;
+  transition-delay: 0.5s;
+  
+  transition-duration: 0.25s;
 }
 /* 3rd box */
 .characteristic_box.orange i {
@@ -65,9 +71,9 @@
 
 .characteristic_box .orange {
     visibility: visible;
-  animation-delay: 0.75s;
-  animation-name: fadeIn;
-  animation-duration: 0.25s;
+  transition-delay: 0.75s;
+  
+  transition-duration: 0.25s;
 }
 /* 4th box */
 .characteristic_box.dark_blue i {
@@ -76,9 +82,9 @@
 
 .characteristic_box .dark_blue {
     visibility: visible;
-  animation-delay: 1s;
-  animation-name: fadeIn;
-  animation-duration: 0.25s;
+  transition-delay: 1s;
+  
+  transition-duration: 0.25s;
 }
 /* 5th box */
 .characteristic_box.light_red i {
@@ -87,9 +93,9 @@
 
 .characteristic_box .light_red {
     visibility: visible;
-  animation-delay: 1.25s;
-  animation-name: fadeIn;
-  animation-duration: 0.25s;
+  transition-delay: 1.25s;
+  
+  transition-duration: 0.25s;
 }
 /* 6th box */
 .characteristic_box.dark_green i {
@@ -98,9 +104,9 @@
 
 .characteristic_box .dark_green {
     visibility: visible;
-  animation-delay: 1.5s;
-  animation-name: fadeIn;
-  animation-duration: 0.25s;
+  transition-delay: 1.5s;
+  
+  transition-duration: 0.25s;
 }
 
 @keyframes fadeIn {

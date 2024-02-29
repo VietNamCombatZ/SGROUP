@@ -1,6 +1,8 @@
-const discover_box = document.getElementById("discover_image");
-const gallery_box = document.getElementById("fortfolio");
-const nav_bar = document.getElementById("nav");
+var discover_box = document.getElementById("discover_image");
+var gallery_box = document.getElementById("fortfolio");
+var nav_bar = document.getElementById("nav");
+
+var char_box_01 = document.querySelectorAll(".characteristic_box");
 
 console.log(discover_box);
 const handleScroll1 = (offset) => {
@@ -9,9 +11,6 @@ const handleScroll1 = (offset) => {
   if (scrollPosition > offset) {
     discover_box.classList.add("show");
   }
-  // else {
-  //   discover_box.classList.remove("show");
-  // }
 };
 
 const handleScroll2 = (offset) => {
@@ -27,21 +26,23 @@ const handleScroll3 = (offset) => {
   console.log("nav", scrollPosition);
   if (scrollPosition > offset) {
     nav_bar.classList.add("Fixed");
+  } else {
+    nav_bar.classList.remove("Fixed");
   }
 };
 
-window.addEventListener("scroll", () => handleScroll1(1400));
-window.addEventListener("scroll", () => handleScroll2(3600));
-window.addEventListener("scroll", () => handleScroll3(800));
+const handleScroll4 = (offset) => {
+  const scrollPosition = window.pageYOffset;
 
+  if (scrollPosition > offset) {
+    char_box_01.querySelectorAll.classList.add("FadeIn_2");
+  }
+};
 
-
-
-
-
-
-
-
+window.addEventListener("scroll", () => handleScroll1(1300));
+window.addEventListener("scroll", () => handleScroll2(3400));
+window.addEventListener("scroll", () => handleScroll3(600));
+window.addEventListener("scroll", () => handleScroll3(5400));
 
 // window.addEventListener("scroll", () => {
 //   const innnerHeightofWindow = window.innerHeight;

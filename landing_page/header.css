@@ -185,6 +185,13 @@
   text-decoration: none;
 }
 
+.discover_link_button:hover
+{
+  border: 1px solid #e52f37;
+    color: #e52f37!important;
+    background: #fff;
+}
+
 .discover_link_button > span {
   color: transparent;
 }

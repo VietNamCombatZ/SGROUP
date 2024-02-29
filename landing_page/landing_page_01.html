@@ -289,7 +289,7 @@
           <div class="row align_center">
             <div class="col l-6 m-6 c-12 pad_15">
               <div class="col_container">
-                <div class="content_link active show" >
+                <div onclick="AdvanClick_1()" class="content_link active show" id="advantage_option_1">
                   <div class="features_content">
                     <div class="features_logo blue">
                       <i class="fa-solid fa-arrow-trend-up"></i>
@@ -301,7 +301,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="content_link" >
+                <div onclick="AdvanClick_2()" class="content_link" id="advantage_option_2">
                   <div class="features_content">
                     <div class="features_logo red">
                       <i class="fa-solid fa-network-wired"></i>
@@ -313,7 +313,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="content_link " >
+                <div onclick="AdvanClick_3()" class="content_link " id="advantage_option_3" >
                   <div class="features_content">
                     <div class="features_logo green">
                       <i class="fa-solid fa-rocket"></i>
@@ -329,21 +329,21 @@
             </div>
             <div class="col l-6 m-6 c-12 pad_15">
               <div class="slide_image_container">
-                <div class="slide_image image_01">
+                <div class="slide_image image_01 appear" id="advantage_image_01">
                   <img
                     class="img_01"
                     src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/about2.jpg"
                     alt=""
                   />
                 </div>
-                <div class="slide_image image_02">
+                <div class="slide_image image_02" id="advantage_image_02">
                   <img
                     class="img_02"
                     src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/about5.jpg"
                     alt=""
                   />
                 </div>
-                <div class="slide_image image_03">
+                <div class="slide_image image_03" id="advantage_image_03">
                   <img
                     class="img_03"
                     src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/about1.jpg"
@@ -440,6 +440,72 @@
 
           </div>
           <div class="col l-6 m-6 c-12 ">
+            <div class="according_container">
+              <div class="according_card">
+                <div class="card_collapse" id="card_collapse_one">
+                  <div class="card_body">
+                    Nemo enim ipsam voluptatem quia voluptas situm ets aspernatis netsum loris fugit, sed quia magni dolores eos quis ratione sequi etum nets vesciunt neque.
+                  </div>
+                </div>
+                <div class="card_header" id="heading_one">
+                  <h5 class="card_header_container">
+                    <button class="card_button">
+                      <img class="card_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/testimonials3.jpg" alt="" >
+                      <p class="card_name">
+                        Alexandra Smith / 
+                        <span>
+                          Manager - SmartCoders
+                        </span>
+                      </p>
+                    </button>
+                  </h5>
+
+                </div>
+                
+              </div>
+              <div class="according_card">
+                <div class="card_collapse" id="card_collapse_two">
+                  <div class="card_body">
+                    Nemo enim ipsam voluptatem quia voluptas situm ets aspernatis netsum loris fugit, sed quia magni dolores eos quis ratione sequi etum nets vesciunt neque.
+                  </div>
+                </div>
+                <div class="card_header" id="heading_two">
+                  <h5 class="card_header_container">
+                    <button class="card_button">
+                      <img class="card_image" src="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/testimonials2.jpg" alt="" >
+                      <p class="card_name">
+                        John Doe / 
+                        <span>
+                          CEO - Epic Design
+                        </span>
+                      </p>
+                    </button>
+                  </h5>
+
+                </div>
+              </div>
+              <div class="according_card">
+                <div class="card_collapse" id="card_collapse_three">
+                  <div class="card_body">
+                    Nemo enim ipsam voluptatem quia voluptas situm ets aspernatis netsum loris fugit, sed quia magni dolores eos quis ratione sequi etum nets vesciunt neque.
+                  </div>
+                </div>
+                <div class="card_header" id="heading_three">
+                  <h5 class="card_header_container">
+                    <button class="card_button">
+                      <img class="card_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/testimonials1.jpg" alt="" >
+                      <p class="card_name">
+                        Christina Pages /  
+                        <span>
+                          Designer - New Fashion
+                        </span>
+                      </p>
+                    </button>
+                  </h5>
+
+                </div>
+              </div>
+            </div>
 
           </div>
 
@@ -467,8 +533,8 @@
                     <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery1.jpg" alt="">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye_icon"></i>
-                    
+                      <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
+                      
                   </span>
                   
                   </div>
@@ -483,7 +549,7 @@
                     <img class="popup_image" src="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" alt="">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye_icon"></i>
+                      <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
                     
                   </span>
                   
@@ -500,7 +566,7 @@
                     <img class="popup_image" src="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" alt="">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye_icon"></i>
+                      <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
                     
                   </span>
                   
@@ -518,7 +584,7 @@
                     <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery4.jpg" alt="">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye_icon"></i>
+                      <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
                     
                   </span>
                   
@@ -534,7 +600,7 @@
                     <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg">
                   
                     <span class="eye_wrapper">
-                      <i class="fa fa-search-plus eye_icon"></i>
+                      <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
                     
                   </span>
                   
@@ -915,6 +981,8 @@
     </div>
     <script src="image_slide_in.js"></script>
     <!-- <script  src="image_blur_in.js"></script> -->
+
+    <script src="active_onclick.js"></script>
     <script src="Fade_out_onclick.js"></script>
     <script   src="Fade_in_onclick.js"></script>
 
