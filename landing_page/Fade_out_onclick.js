@@ -41,10 +41,10 @@ var handleClick_3 = () => {
   }
 
 
-  contact_form.classList.add("Fadeout");
-  
-  contact_success.classList.add("FadeIn");
+ 
 };
+
+
 
 
 //review_section
