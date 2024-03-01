@@ -4,24 +4,22 @@
 .discover_image_container {
   margin-right: 15px;
   border-radius: 8px 8px;
+  margin-bottom: 50px !important;
   margin-top: auto;
   margin-bottom: auto;
 }
 .discover_image {
   width: 100%;
   object-fit: contain;
-  
+
   border-radius: 8px 8px;
   transform: translateX(-200%);
 }
 
-.discover_image.show
-{
+.discover_image.show {
   transform: translateX(0);
-  transition: 0.25s;
+  transition: 0.5s ease-in-out;
 }
-
-
 
 .discover_section h3 {
   font-size: 32px;

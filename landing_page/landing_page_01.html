@@ -41,6 +41,7 @@
   <body>
 
     <div class="popup-video" id="videoPopup">
+      <div class="popup-video-overlay"></div>
      <div class="popup-video-container">
        <button id="closePopup">&times;</button>
          <iframe id="videoFrame" src="https://www.youtube.com/watch?v=FPfQMVf4vwQ" frameborder="0"></iframe>
@@ -551,12 +552,12 @@
         <div class="container" id="fortfolio">
           <div class="row">
             <div class="col l-4 m-4 c-12">
-              <figure class="gallery_insta">
+              <figure class="gallery_insta" >
                 <div class="popup_gallery ">
                   <div class="popup_2" >
                     <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery1.jpg" alt="">
                   
-                    <span class="eye_wrapper">
+                    <span class="eye_wrapper" onclick="openLightbox(0)">
                       <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
                       
                   </span>
@@ -567,12 +568,12 @@
                 </div>
               </figure>
 
-              <figure class="gallery_insta">
+              <figure class="gallery_insta" >
                 <div class="popup_gallery ">
                   <div class="popup_2"  >
-                    <img class="popup_image" src="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" alt="">
+                    <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" alt="">
                   
-                    <span class="eye_wrapper">
+                    <span class="eye_wrapper" onclick="openLightbox(1)">
                       <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
                     
                   </span>
@@ -584,12 +585,12 @@
               </figure>
             </div>
             <div class="col l-4 m-4 c-12">
-              <figure class="gallery_insta">
+              <figure class="gallery_insta" >
                 <div class="popup_gallery ">
                   <div class="popup_2" >
-                    <img class="popup_image" src="	https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" alt="">
+                    <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" alt="">
                   
-                    <span class="eye_wrapper">
+                    <span class="eye_wrapper" onclick="openLightbox(2)">
                       <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
                     
                   </span>
@@ -602,12 +603,12 @@
             </div>
             <div class="col l-4 m-4 c-12">
 
-              <figure class="gallery_insta">
+              <figure class="gallery_insta" >
                 <div class="popup_gallery ">
                   <div class="popup_2" >
                     <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery4.jpg" alt="">
                   
-                    <span class="eye_wrapper">
+                    <span class="eye_wrapper" onclick="openLightbox(3)">
                       <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
                     
                   </span>
@@ -618,12 +619,12 @@
                 </div>
               </figure>
 
-              <figure class="gallery_insta">
+              <figure class="gallery_insta" >
                 <div class="popup_gallery ">
                   <div class="popup_2" >
                     <img class="popup_image" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg">
                   
-                    <span class="eye_wrapper">
+                    <span class="eye_wrapper" onclick="openLightbox(4)">
                       <i class="fa-regular fa-magnifying-glass-plus eye_icon"></i>
                     
                   </span>
@@ -638,6 +639,23 @@
             </div>
           </div>
         </div>
+
+        <div class="lightbox" id="lightbox">
+        <span class="close" id="close">&times;</span>
+        <div class="carousel">
+            <img class="slide" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery1.jpg" alt="Image 1" >
+            <img class="slide" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery2.jpg" alt="Image 2" >
+            <img class="slide" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery3.jpg" alt="Image 3" >
+            <img class="slide" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery4.jpg" alt="Image 4" >
+            <img class="slide" src="https://demo.epic-webdesign.com/tf-launchpage/v1/images/gallery5.jpg" alt="Image 5" >
+            <!-- Add more images as needed -->
+        </div>
+        <div class="navigation">
+            <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+            <span class="next" onclick="changeSlide(1)">&#10095;</span>
+        </div>
+        <div class="counter" id="counter"></div>
+    </div>
 
         <!-- image slider start -->
         <!-- <div class="preview-box">
@@ -1007,6 +1025,7 @@
     <script src="fade_in_onscroll.js"></script>
     <script src="image_slide_in.js"></script>
     <script src="active_color_onscroll.js"></script>
+    <script src="light_box_slider.js"></script>
 
 
     <!-- <script  src="image_blur_in.js"></script> -->

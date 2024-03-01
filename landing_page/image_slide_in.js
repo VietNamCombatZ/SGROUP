@@ -39,7 +39,7 @@ const handleScroll3 = (offset) => {
 //   }
 // };
 
-window.addEventListener("scroll", () => handleScroll1(1300));
+window.addEventListener("scroll", () => handleScroll1(1150));
 window.addEventListener("scroll", () => handleScroll2(3400));
 window.addEventListener("scroll", () => handleScroll3(600));
 // window.addEventListener("scroll", () => handleScroll4(5400));
