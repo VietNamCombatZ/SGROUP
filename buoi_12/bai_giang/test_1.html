@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Confirmation</title>
+<script>
+  function validatePassword() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (password != confirmPassword) {
+      alert("Passwords do not match.");
+      return false;
+    }
+    return true;
+  }
+</script>
+</head>
+<body>
+
+<form onsubmit="return validatePassword()">
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required><br>
+
+  <label for="confirmPassword">Confirm Password:</label>
+  <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

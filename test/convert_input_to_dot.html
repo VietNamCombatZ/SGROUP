@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Convert Character to Dot</title>
+<style>
+    #inputField{
+      height: 80px;
+      width: 800px;
+      font-size: 30px;
+    }
+</style>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type here...">
+
+    <script>
+        const inputField = document.getElementById('inputField');
+
+        inputField.addEventListener('input', function(event) {
+            const currentValue = inputField.value;
+            const newValue = currentValue.replace(/\S/g, '.'); // Replace commas with dots
+
+            // Update the input field value with the modified value
+            inputField.value = newValue;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.signup_page {
+  padding: 0 400px;
+}
+.section_title {
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.section_subtitle {
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.section_subtitle_button {
+  color: darkblue;
+  font-weight: 600;
+  cursor: pointer;
+}
+.section_input_title {
+  color: darkblue;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container {
+  margin: 30px 0;
+  padding: 10px 0;
+  width: max-content;
+}
+
+.signup_input {
+  width: 400px;
+  height: 30px;
+}
+
+.Password_input {
+  position: relative;
+  width: fit-content;
+  padding: 30px 0;
+  height: 50px;
+}
+
+.signup_input.pass {
+  position: absolute;
+  margin: 0px 0px;
+}
+
+.signup_input.hidden {
+  z-index: 2;
+  display: none;
+}
+
+.Repeat_password_input {
+  position: relative;
+  padding: 30px 0;
+}
+.signup_input.repeat_pass {
+  position: absolute;
+  margin: 0px 0px;
+}
+
+i.icon {
+  position: absolute;
+  z-index: 3;
+  margin-top: 7px;
+  margin-left: 370px;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.signup_warning {
+  display: none;
+  padding: 5px 0;
+  width: 100%;
+}
+.signup_warning.active {
+  display: block;
+  color: gray;
+}
+
+.signup_button {
+  margin-top: 20px;
+  background-color: darkblue;
+  color: white;
+  font-size: 22px;
+  width: 400px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
