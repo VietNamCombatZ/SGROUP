@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Conversion</title>
+    <style>
+      input {
+        height: 80px;
+        width: 800px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="input1" placeholder="Enter text" />
+    <input type="password" id="input2" placeholder="Converted text" />
+    <button onclick="changeType()">Click here</button>
+
+    <script>
+      // Get references to the input fields
+      const input1 = document.getElementById("input1");
+      const input2 = document.getElementById("input2");
+
+      //   // Function to convert text to dots
+      //   function convertToDots(text) {
+      //     return text.replace(/./g, '.');
+      //   }
+
+      //   // Add event listener to input1
+      //   input1.addEventListener('input', function() {
+      //     input2.value = convertToDots(this.value);
+      //   });
+
+      //   // Add event listener to input2
+      //   input2.addEventListener('input', function() {
+      //     input1.value = this.value;
+      //     // input2.value = convertToDots(this.value);
+      //   });
+
+      function changeType() {
+        if (input2.type == "text") {
+          input2.type = "password";
+        } else {
+          input2.type = "text";
+        }
+      }
+    </script>
+  </body>
+</html>

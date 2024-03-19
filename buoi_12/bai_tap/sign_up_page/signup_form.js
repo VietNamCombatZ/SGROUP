@@ -1,3 +1,10 @@
+function gotoPage() {
+  window.location.href =
+    "http://127.0.0.1:5500/buoi_12/bai_tap/login_page/login_page.html";
+}
+
+
+
 function validateInputCheck() {
   let passWarning = document.getElementById("confirm_password_requirement");
   let signUpPass = document.getElementById("signup_pass").value;
@@ -8,7 +15,7 @@ function validateInputCheck() {
   var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   // nếu confirm pass khác pass hoặc pass rỗng => in ra dòng báo lỗi
-  if ((signUpPass != signUpConfirmPass) || (signUpPass == "")) {
+  if (signUpPass != signUpConfirmPass || signUpPass == "") {
     passWarning.classList.add("active");
   } else {
     passWarning.classList.remove("active");
@@ -23,7 +30,7 @@ function validateInputCheck() {
   }
 
   // nếu độ dài pass không hợp lệ => in ra báo lỗi
-  if (((signUpPass).length < 8) ||((signUpPass).length > 32)) {
+  if (signUpPass.length < 8 || signUpPass.length > 32) {
     passWarning.classList.add("active");
   } else {
     passWarning.classList.remove("active");
@@ -41,41 +48,81 @@ function getInfo() {
   let Pass = localStorage.getItem("signUpPass");
 }
 
-
-// ẩn hiện input pass khi click vào con mắt
-function ActiveBtn() {
-  let passShow = document.querySelectorAll(".sign_up_input.show");
-  let passHidden = document.querySelectorAll(".sign_up_input.hidden");
-
-  passShow.forEach(passShow1 => {
-    if (passShow1.classList.contains("active")) {
-      passShow1.classList.remove("active");
-      passHidden.forEach(
-        passHidden1 => {
-          passHidden1.classList.add("active");
-        }
-      )
-    } else {
-       passShow1.classList.add("active");
-      passHidden.forEach((passHidden1) => {
-        passHidden1.classList.add("active");
-      });
-    }
-    
-  });
-  
+function changeType() {
+  let signUpPass = document.getElementById("signup_pass");
+  let signUpConfirmPass = document.getElementById("signup_confirm_pass");
+  if (signUpPass.type == "text") {
+    signUpConfirmPass.type = "password";
+    signUpPass.type = "password";
+  } else {
+    signUpPass.type = "text";
+    signUpConfirmPass.type = "text";
+  }
 }
 
 
-//chuyển kí tự gõ được thành dấu chấm
-let inputField = document.getElementById("signup_pass");
-let inputFieldHidden = document.getElementById("signup_pass_hidden").value;
+  let signUpPass = document.getElementById("signup_pass");
+  let signUpConfirmPass = document.getElementById("signup_confirm_pass");
+signUpPass.addEventListener('input', function() {
+    signUpConfirmPass.value = signUpPass.value;
+  });
 
-inputField.addEventListener("input", function (event) {
-  const currentValue = inputField.value;
-  const newValue = currentValue.replace(/\S/g, "."); // Replace commas with dots
+  signUpConfirmPass.addEventListener("input", function () {
+    signUpPass.value = signUpConfirmPass.value;
+  });
 
-  // Update the input field value with the modified value
-  inputFieldHidden.value = newValue;
-});
+  
 
+// ẩn hiện input pass khi click vào con mắt
+// function ActiveBtn() {
+//   let passShow = document.querySelectorAll(".sign_up_input.show");
+//   let passHidden = document.querySelectorAll(".sign_up_input.hidden");
+
+//   passShow.forEach((passShow1) => {
+//     if (passShow1.classList.contains("active")) {
+//       passShow1.classList.remove("active");
+//       passHidden.forEach((passHidden1) => {
+//         passHidden1.classList.add("active");
+//       });
+//     } else {
+//       passShow1.classList.add("active");
+//       passHidden.forEach((passHidden1) => {
+//         passHidden1.classList.add("active");
+//       });
+//     }
+//   });
+// }
+
+// //chuyển kí tự gõ được thành dấu chấm
+// const inputField = document.getElementById("signup_pass");
+// const inputFieldHidden = document.getElementById("signup_pass_hidden");
+
+// inputField.addEventListener("input", function (event) {
+//   const currentValue = inputField.value;
+//   const newValue = currentValue.replace(/\S/g, "."); // Replace anything with dots
+
+//   // Update the input field value with the modified value
+//   inputFieldHidden = newValue;
+// });
+
+// //chuyển kí tự  gõ được thành dấu chấm v2
+
+// // Get references to the input fields
+//   const input1 = document.getElementById('signup_pass');
+//   const input2 = document.getElementById('signup_pass_hidden');
+
+//   // Function to convert text to dots
+//   function convertToDots(text) {
+//     return text.replace(/./g, '.');
+//   }
+
+//   // Add event listener to input1
+//   input1.addEventListener('input', function() {
+//     input2.value = convertToDots(this.value);
+//   });
+
+//   // Add event listener to input2
+//   input2.addEventListener('input', function() {
+//     input1.value = this.value;
+//     input2.value = convertToDots(this.value);
+//   });

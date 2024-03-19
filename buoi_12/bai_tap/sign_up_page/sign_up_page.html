@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="account_page.css" />
+    <link rel="stylesheet" href="signup.css" />
 
     <link
       rel="stylesheet"
@@ -18,70 +18,79 @@
     <section class="signup_page">
       <h3 class="section_title">Sign up</h3>
       <p class="section_subtitle">
-        Have an account? <span class="section_subtitle_button">Login</span>
+        Have an account?
+        <span onclick="gotoPage()" class="section_subtitle_button">Login</span>
       </p>
       <div class="section_input">
         <!-- Email input -->
-        
+
         <div class="container">
           <h4 class="section_input_title">EMAIL</h4>
           <div class="Email_input">
             <input class="signup_input" id="signup_email" type="text" />
           </div>
-         
+
           <p class="signup_warning" id="email_requirement">Invalid Email</p>
-
         </div>
-          
-
-        
-        
 
         <!-- Password input -->
         <div class="container">
           <h4 class="section_input_title">PASSWORD</h4>
-        <div class="Password_input">
-          <input class="signup_input pass show" id="signup_pass" type="text" />
-          <input class="signup_input pass hidden" id="signup_pass_hidden" type="text" />
-          <i onclick="ActiveBtn()" class="fa-solid fa-eye icon"></i>
+          <div class="Password_input">
+            <input class="signup_input pass" id="signup_pass" type="text" />
+            
+            <i onclick="changeType()" class="fa-solid fa-eye icon"></i>
+          </div>
+          <p class="signup_warning" id="password_requirement">
+            Password should be 8+ characters: letters, numbers, and special
+            characters.
+          </p>
         </div>
-        <p class="signup_warning " id="password_requirement">
-          Password should be 8+ characters: letters, numbers, and special
-          characters.
-        </p>
-
-        </div>
-      
-
-          
-
-        
-        
 
         <!-- Reapeat password input -->
         <div class="container">
           <h4 class="section_input_title">REPEAT PASSWORD</h4>
           <div class="Repeat_password_input">
-           <input class="signup_input repeat_pass show" id="signup_confirm_pass" type="text" />
-           <input class="signup_input repeat_pass hidden" id="signup_confirm_pass_hidden" type="text" />
-           <i onclick="ActiveBtn()" class="fa-solid fa-eye icon"></i>
-
+            <input class="signup_input repeat_pass" id="signup_confirm_pass" type="text"/>
+            
+            <i onclick="changeType()" class="fa-solid fa-eye icon"></i>
           </div>
-        <p class="signup_warning " id="confirm_password_requirement">Pass ngmu ngmu ngmu</p>
-
+          <p class="signup_warning" id="confirm_password_requirement">
+            Pass ngmu ngmu ngmu
+          </p>
         </div>
-          
-
-        
-        
       </div>
 
       <!-- Submit button -->
-      <button onclick="getInfo(),  validateInputCheck(); " class="signup_button">
+      <button
+        onclick="getInfo(),  validateInputCheck(); "
+        class="signup_button"
+      >
         Create account
       </button>
     </section>
 
     <script src="signup_form.js"></script>
+    <script>
+      // Get references to the input fields
+      const input1 = document.getElementById("signup_pass");
+      const input2 = document.getElementById("signup_pass_hidden");
+
+      // Function to convert text to dots
+      function convertToDots(text) {
+        return text.replace(/./g, ".");
+      }
+
+      // Add event listener to input1
+      input1.addEventListener("input", function () {
+        input2.value = convertToDots(this.value);
+      });
+
+      // Add event listener to input2
+      input2.addEventListener("input", function () {
+        input1.value = this.value;
+        input2.value = convertToDots(this.value);
+      });
+    </script>
   </body>
 </html>

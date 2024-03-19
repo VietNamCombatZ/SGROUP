@@ -20,7 +20,7 @@
 
         inputField.addEventListener('input', function(event) {
             const currentValue = inputField.value;
-            const newValue = currentValue.replace(/\S/g, '.'); // Replace commas with dots
+            const newValue = currentValue.replace(/\S/g, '.'); // Replace anything with dots
 
             // Update the input field value with the modified value
             inputField.value = newValue;
