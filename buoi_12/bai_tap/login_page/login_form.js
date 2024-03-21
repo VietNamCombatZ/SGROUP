@@ -10,5 +10,25 @@ function changeType() {
 
 function gotoPage2() {
   window.location.href =
-    "http://127.0.0.1:5500/buoi_12/bai_tap/sign_up_page/sign_up_page.html";
+    "https://vietnamcombatz.github.io/SGROUP/buoi_12/bai_tap/login_page/login_page.html";
+}
+
+function checkInfoAvailable() {
+  let storageEmail = localStorage.getItem("signUpEmail");
+  let storagePass = localStorage.getItem("signUpPass");
+
+  let loginEmail = document.getElementById("login_email");
+  let loginPass = document.getElementById("login_pass");
+
+  let emailWarning = document.getElementById("email_requirement");
+  let passWarning = document.getElementById("login_password_requirement");
+
+  if (loginEmail.value != storageEmail) {
+    emailWarning.style.display = "block";
+
+  }else
+  if  (loginPass.value != storagePass )
+  {
+    passWarning.style.display = "block";
+  }
 }

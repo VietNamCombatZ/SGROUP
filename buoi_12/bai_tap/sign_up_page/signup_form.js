@@ -1,6 +1,6 @@
 function gotoPage() {
   window.location.href =
-    "http://127.0.0.1:5500/buoi_12/bai_tap/login_page/login_page.html";
+    "https://vietnamcombatz.github.io/SGROUP/buoi_12/bai_tap/sign_up_page/sign_up_page.html";
 }
 
 
@@ -13,30 +13,44 @@ function validateInputCheck() {
   let signUpEmail = document.getElementById("signup_email").value;
   let emailWarning = document.getElementById("email_requirement");
   var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var uppercaseRegex = /[A-Z]/;
+  var numberRegex = /[0-9]/;
 
   // nếu confirm pass khác pass hoặc pass rỗng => in ra dòng báo lỗi
   if (signUpPass != signUpConfirmPass || signUpPass == "") {
     passWarning.classList.add("active");
   } else {
     passWarning.classList.remove("active");
+
+    // nếu email không đúng theo form => in ra dòng báo lỗi
+
+    if (
+      !regex.test(signUpEmail)
+      
+    ) {
+      emailWarning.classList.add("active");
+    } else {
+      emailWarning.classList.remove("active");
+
+      // nếu độ dài pass không hợp lệ => in ra báo lỗi
+      if (signUpPass.length < 8 || signUpPass.length > 32 || !uppercaseRegex.test(signUpPass) ||
+      !numberRegex.test(signUpPass)) {
+        passWarning.classList.add("active");
+      } else {
+        passWarning.classList.remove("active");
+
+        getInfo();
+      }
+    }
   }
 
-  // nếu email không đúng theo form => in ra dòng báo lỗi
+  
 
-  if (!regex.test(signUpEmail)) {
-    emailWarning.classList.add("active");
-  } else {
-    emailWarning.classList.remove("active");
-  }
-
-  // nếu độ dài pass không hợp lệ => in ra báo lỗi
-  if (signUpPass.length < 8 || signUpPass.length > 32) {
-    passWarning.classList.add("active");
-  } else {
-    passWarning.classList.remove("active");
-  }
+  
 }
 
+
+// lấy info đưa lên local Storage (chưa code phần kiểm tra hợp lệ )
 function getInfo() {
   let signUpEmail = document.getElementById("signup_email").value;
   let signUpPass = document.getElementById("signup_pass").value;
@@ -44,10 +58,12 @@ function getInfo() {
   localStorage.setItem("signUpEmail", signUpEmail);
   localStorage.setItem("signUpPass", signUpPass);
 
-  let Email = localStorage.getItem("signUpEmail");
-  let Pass = localStorage.getItem("signUpPass");
+  // let Email = localStorage.getItem("signUpEmail");
+  // let Pass = localStorage.getItem("signUpPass");
 }
 
+
+// đổi type của pass input: text <--> password
 function changeType() {
   let signUpPass = document.getElementById("signup_pass");
   let signUpConfirmPass = document.getElementById("signup_confirm_pass");

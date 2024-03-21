@@ -46,15 +46,20 @@
   height: 50px;
 }
 .login_input {
-  position: absolute;
   margin: 0px 0px;
+}
+
+
+.login_warning {
+  padding: 20px 0;
+  display: none;
 }
 
 i.icon {
   position: absolute;
   z-index: 3;
   margin-top: 7px;
-  margin-left: 370px;
+  margin-left: -30px;
   color: lightgray;
   cursor: pointer;
 }

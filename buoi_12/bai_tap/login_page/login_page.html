@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -12,46 +12,42 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-</head>
-<body>
+  </head>
+  <body>
     <section class="login_page">
-        <h3 class="section_title">Login</h3>
+      <h3 class="section_title">Login</h3>
       <p class="section_subtitle">
-        New to Vuestics? <span onclick="gotoPage2()" class="section_subtitle_button">Sign up</span>
+        New to Vuestics?
+        <span onclick="gotoPage2()" class="section_subtitle_button"
+          >Sign up</span
+        >
       </p>
 
       <div class="section_input">
         <div class="container">
           <h4 class="section_input_title">EMAIL</h4>
-          <div class="Email_input">
-            <input class="login_input" id="login_email" type="text" />
-          </div>
-         
-          <p class="login_warning" id="email_requirement">Invalid Email</p>
 
+          <input class="login_input" id="login_email" type="text" />
+
+          <p class="login_warning" id="email_requirement">Invalid Email</p>
         </div>
-          
 
         <div class="container">
           <h4 class="section_input_title">PASSWORD</h4>
-        <div class="Password_input">
-          <input class="login_input " id="login_pass" type="text" />
-          <i onclick="changeType()" class="fa-solid fa-eye icon"></i>
-          
-        </div>
-        <p class="login_warning" id="login_password_requirement">Invalid password</p>
-
+          <div class="Password_input">
+            <input class="login_input" id="login_pass" type="text" />
+            <i onclick="changeType()" class="fa-solid fa-eye icon"></i>
+          </div>
+          <p class="login_warning" id="login_password_requirement">
+            Invalid password
+          </p>
         </div>
       </div>
 
       <!-- Submit button -->
-      <button onclick="" class="login_button">Login</button>
-
-
-
+      <button onclick="checkInfoAvailable()" class="login_button">Login</button>
     </section>
 
     <script src="login_form.js"></script>
-
-</body>
+  </body>
 </html>
