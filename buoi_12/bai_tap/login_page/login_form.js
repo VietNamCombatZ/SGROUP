@@ -29,6 +29,11 @@ function checkInfoAvailable() {
   }else
   if  (loginPass.value != storagePass )
   {
+    emailWarning.style.display = "none";
     passWarning.style.display = "block";
+  }
+  else {
+    
+    passWarning.style.display = "none";
   }
 }

@@ -76,6 +76,28 @@ async function createUserByID() {
 };
 
 
+async function checkUserIDAvailability(userID) {
+  try {
+    const res = await fetch(
+      "https://65f001c5ead08fa78a516efe.mockapi.io/api/v1/users/" + userID
+    );
+    if (res.status === 200) {
+      // User ID tồn tại
+      return true;
+    } else if (res.status === 404) {
+      // User ID không tồn tại
+      return false;
+    } else {
+      // Xử lý các error code khác nếu có
+      throw new Error("Failed to check user ID availability");
+    }
+  } catch (err) {
+    console.error(err);
+    return false; // Return false nếu có lỗi
+  }
+}
+
+// Usage example:
 async function updateUserByID() {
   try {
     let userID = document.getElementById("ID").value;
@@ -88,33 +110,76 @@ async function updateUserByID() {
       password: userPass,
     });
 
-    
+    // Kiểm tra ID có tồn tại hay không
+    const isAvailable = await checkUserIDAvailability(userID);
+    if (!isAvailable) {
+      console.error("User ID not available");
+      return; // Thoát hàm nếu ID không tồn tại
+    }
 
-    
-    
-      const res = await fetch(
-        "https://65f001c5ead08fa78a516efe.mockapi.io/api/v1/users/" + userID,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            id: userID,
-            email: userEmail,
-            password: userPass,
-          }),
-        }
-      );
-      if (!res.ok) {
-        throw new Error("Failed to update user");
+    // Xử lý cập nhật thông tin ID
+    const res = await fetch(
+      "https://65f001c5ead08fa78a516efe.mockapi.io/api/v1/users/" + userID,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: userID,
+          email: userEmail,
+          password: userPass,
+        }),
       }
-
-    
-    
-    
+    );
+    if (!res.ok) {
+      throw new Error("Failed to update user");
+    }
   } catch (err) {
     console.error(err);
   }
 };
+
+
+// async function updateUserByID() {
+//   try {
+//     let userID = document.getElementById("ID").value;
+//     let userEmail = document.getElementById("email").value;
+//     let userPass = document.getElementById("pass").value;
+
+//     console.log({
+//       id: userID,
+//       email: userEmail,
+//       password: userPass,
+//     });
+
+    
+
+    
+    
+//       const res = await fetch(
+//         "https://65f001c5ead08fa78a516efe.mockapi.io/api/v1/users/" + userID,
+//         {
+//           method: "PUT",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//           body: JSON.stringify({
+//             id: userID,
+//             email: userEmail,
+//             password: userPass,
+//           }),
+//         }
+//       );
+//       if (!res.ok) {
+//         throw new Error("Failed to update user");
+//       }
+
+    
+    
+    
+//   } catch (err) {
+//     Error(err);
+//   }
+// };
 

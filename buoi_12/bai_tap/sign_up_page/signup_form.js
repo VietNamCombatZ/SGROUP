@@ -18,31 +18,37 @@ function validateInputCheck() {
   var numberRegex = /[0-9]/;
 
   // nếu confirm pass khác pass hoặc pass rỗng => in ra dòng báo lỗi
-  if ((signUpPass != signUpConfirmPass) || (signUpPass == "")) {
-    passWarning.classList.add("active");
+  if ( !regex.test(signUpEmail)) {
+    emailWarning.classList.add("active");
+    
   } else {
-    passWarning.classList.remove("active");
+    
+    emailWarning.classList.remove("active");
 
     // nếu email không đúng theo form => in ra dòng báo lỗi
 
-    if (
-      !regex.test(signUpEmail)
-      
-    ) {
-      emailWarning.classList.add("active");
+    if (signUpPass == "") {
+      passWarning.classList.add("active");
     } else {
-      emailWarning.classList.remove("active");
+      passWarning.classList.remove("active");
 
       // nếu độ dài pass không hợp lệ => in ra báo lỗi
-      if ((signUpPass.length < 8) || (signUpPass.length > 32) || (!uppercaseRegex.test(signUpPass)) ||
-      (!numberRegex.test(signUpPass))) {
+      if (
+        signUpPass.length < 8 ||
+        signUpPass.length > 32 ||
+        !uppercaseRegex.test(signUpPass) ||
+        !numberRegex.test(signUpPass)
+      ) {
         passWarning.classList.add("active");
       } else {
         passWarning.classList.remove("active");
-
-
-        gotoPage();
-        getInfo();
+        if (signUpPass != signUpConfirmPass) {
+          confirmPassWarning.classList.add("active");
+        } else {
+          confirmPassWarning.classList.remove("active");
+          gotoPage();
+          getInfo();
+        }
       }
     }
   }
@@ -79,16 +85,16 @@ function changeType() {
   }
 }
 
+// // nhập đồng thời cả pass và confirmPass
+//   let signUpPass = document.getElementById("signup_pass");
+//   let signUpConfirmPass = document.getElementById("signup_confirm_pass");
+// signUpPass.addEventListener('input', function() {
+//     signUpConfirmPass.value = signUpPass.value;
+//   });
 
-  let signUpPass = document.getElementById("signup_pass");
-  let signUpConfirmPass = document.getElementById("signup_confirm_pass");
-signUpPass.addEventListener('input', function() {
-    signUpConfirmPass.value = signUpPass.value;
-  });
-
-  signUpConfirmPass.addEventListener("input", function () {
-    signUpPass.value = signUpConfirmPass.value;
-  });
+//   signUpConfirmPass.addEventListener("input", function () {
+//     signUpPass.value = signUpConfirmPass.value;
+//   });
 
   
 

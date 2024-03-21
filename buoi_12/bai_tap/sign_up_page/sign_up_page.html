@@ -15,61 +15,72 @@
     />
   </head>
   <body>
-    <section class="signup_page">
-      <h3 class="section_title">Sign up</h3>
-      <p class="section_subtitle">
-        Have an account?
-        <span onclick="gotoPage()" class="section_subtitle_button">Login</span>
-      </p>
-      <div class="section_input">
-        <!-- Email input -->
+    <div class="layout">
+      <section class="page_logo">
+        <div class="container_2">
+          <span class="logo_main">VUETICS</span>
+          <span class="logo_sub">ADMIN</span>
+        </div>
+      </section>
+      <section class="signup_page">
+        <h3 class="section_title">Sign up</h3>
+        <p class="section_subtitle">
+          Have an account?
+          <span onclick="gotoPage()" class="section_subtitle_button"
+            >Login</span
+          >
+        </p>
+        <div class="section_input">
+          <!-- Email input -->
 
-        <div class="container">
-          <h4 class="section_input_title">EMAIL</h4>
-          <div class="Email_input">
-            <input class="signup_input" id="signup_email" type="text" />
+          <div class="container">
+            <h4 class="section_input_title">EMAIL</h4>
+            <div class="Email_input">
+              <input class="signup_input" id="signup_email" type="text" />
+            </div>
+
+            <p class="signup_warning" id="email_requirement">Invalid Email</p>
           </div>
 
-          <p class="signup_warning" id="email_requirement">Invalid Email</p>
-        </div>
+          <!-- Password input -->
+          <div class="container">
+            <h4 class="section_input_title">PASSWORD</h4>
+            <div class="Password_input">
+              <input class="signup_input pass" id="signup_pass" type="text" />
 
-        <!-- Password input -->
-        <div class="container">
-          <h4 class="section_input_title">PASSWORD</h4>
-          <div class="Password_input">
-            <input class="signup_input pass" id="signup_pass" type="text" />
-            
-            <i onclick="changeType()" class="fa-solid fa-eye icon"></i>
+              <i onclick="changeType()" class="fa-solid fa-eye icon"></i>
+            </div>
+            <p class="signup_warning" id="password_requirement">
+              Password should be 8+ characters: letters, numbers, and special
+              characters.
+            </p>
           </div>
-          <p class="signup_warning" id="password_requirement">
-            Password should be 8+ characters: letters, numbers, and special
-            characters.
-          </p>
-        </div>
 
-        <!-- Reapeat password input -->
-        <div class="container">
-          <h4 class="section_input_title">REPEAT PASSWORD</h4>
-          <div class="Repeat_password_input">
-            <input class="signup_input repeat_pass" id="signup_confirm_pass" type="text"/>
-            
-            <i onclick="changeType()" class="fa-solid fa-eye icon"></i>
+          <!-- Reapeat password input -->
+          <div class="container">
+            <h4 class="section_input_title">REPEAT PASSWORD</h4>
+            <div class="Repeat_password_input">
+              <input
+                class="signup_input repeat_pass"
+                id="signup_confirm_pass"
+                type="text"
+              />
+
+              <i onclick="changeType()" class="fa-solid fa-eye icon"></i>
+            </div>
+            <p class="signup_warning" id="confirm_password_requirement">
+              Pass ngmu ngmu ngmu
+            </p>
           </div>
-          <p class="signup_warning" id="confirm_password_requirement">
-            Pass ngmu ngmu ngmu
-          </p>
         </div>
-      </div>
 
-      <!-- Submit button -->
-      <button
-        onclick="  validateInputCheck(); "
-        class="signup_button"
-      >
-        Create account
-      </button>
-    </section>
-<a href="../login_page/login_page.html"></a>
+        <!-- Submit button -->
+        <button onclick="  validateInputCheck(); " class="signup_button">
+          Create account
+        </button>
+      </section>
+    </div>
+
     <script src="signup_form.js"></script>
     <!-- <script>
       // Get references to the input fields
