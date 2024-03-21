@@ -2,6 +2,8 @@
 
 // const getInfoBtn = document.getElementsByClassName(button);
 
+
+
 const getAllUsers = async () => {
     try {
         const res = await fetch (
