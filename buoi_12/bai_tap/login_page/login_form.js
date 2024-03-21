@@ -10,7 +10,7 @@ function changeType() {
 
 function gotoPage2() {
   window.location.href =
-    "https://vietnamcombatz.github.io/SGROUP/buoi_12/bai_tap/sign_up_page/sign_up_page.html";
+    "../sign_up_page/sign_up_page.html";
 }
 
 function checkInfoAvailable() {

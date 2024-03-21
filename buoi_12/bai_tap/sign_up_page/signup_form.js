@@ -1,6 +1,5 @@
 function gotoPage() {
-  window.location.href =
-    "https://vietnamcombatz.github.io/SGROUP/buoi_12/bai_tap/login_page/login_page.html";
+  window.location.href = "../login_page/login_page.html";
 }
 
 
