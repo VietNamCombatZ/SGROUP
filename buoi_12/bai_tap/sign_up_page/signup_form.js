@@ -1,12 +1,14 @@
 function gotoPage() {
   window.location.href =
-    "https://vietnamcombatz.github.io/SGROUP/buoi_12/bai_tap/sign_up_page/sign_up_page.html";
+    "https://vietnamcombatz.github.io/SGROUP/buoi_12/bai_tap/login_page/login_page.html";
 }
 
 
 
 function validateInputCheck() {
-  let passWarning = document.getElementById("confirm_password_requirement");
+  let passWarning = document.getElementById("password_requirement");
+   let confirmPassWarning = document.getElementById("confirm_password_requirement");
+
   let signUpPass = document.getElementById("signup_pass").value;
   let signUpConfirmPass = document.getElementById("signup_confirm_pass").value;
 
@@ -17,7 +19,7 @@ function validateInputCheck() {
   var numberRegex = /[0-9]/;
 
   // nếu confirm pass khác pass hoặc pass rỗng => in ra dòng báo lỗi
-  if (signUpPass != signUpConfirmPass || signUpPass == "") {
+  if ((signUpPass != signUpConfirmPass) || (signUpPass == "")) {
     passWarning.classList.add("active");
   } else {
     passWarning.classList.remove("active");
@@ -33,12 +35,14 @@ function validateInputCheck() {
       emailWarning.classList.remove("active");
 
       // nếu độ dài pass không hợp lệ => in ra báo lỗi
-      if (signUpPass.length < 8 || signUpPass.length > 32 || !uppercaseRegex.test(signUpPass) ||
-      !numberRegex.test(signUpPass)) {
+      if ((signUpPass.length < 8) || (signUpPass.length > 32) || (!uppercaseRegex.test(signUpPass)) ||
+      (!numberRegex.test(signUpPass))) {
         passWarning.classList.add("active");
       } else {
         passWarning.classList.remove("active");
 
+
+        gotoPage();
         getInfo();
       }
     }
