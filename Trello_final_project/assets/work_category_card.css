@@ -1,0 +1,51 @@
+.work_list_card {
+  padding: 20px 30px 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px gray ;
+}
+.work_category_container {
+  margin: 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.work_category {
+  width: fit-content;
+  font-size: 18px;
+  color: rgb(0, 166, 218);
+  padding-bottom: 2px;
+  text-decoration: underline;
+}
+
+.work_icon i {
+  font-size: 35px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.work_element {
+  margin-top: 10px;
+}
+
+.work_title {
+  width: 80%;
+  text-wrap: wrap;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.work_title_underline {
+  background-color: lightgray;
+  height: 2px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.work_content
+{
+    font-size: 18px;
+    color: grey;
+    margin-bottom: 15px;
+}

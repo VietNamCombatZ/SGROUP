@@ -1,0 +1,82 @@
+/* Frame 101373 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 5px;
+
+position: absolute;
+width: 180px;
+height: 100px;
+left: 50px;
+top: 38px;
+
+
+
+/* logo-taskio-0e358e6b5592e0b71eba2806bf4d4eb53a101a0047b739a9054d0f63e982513c 1 */
+
+width: 171px;
+height: 58px;
+
+background: url(logo-taskio-0e358e6b5592e0b71eba2806bf4d4eb53a101a0047b739a9054d0f63e982513c.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 101374 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 0px;
+gap: 5px;
+
+width: 172px;
+height: 23px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Let’s get shit done! */
+
+width: 144px;
+height: 20px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+display: flex;
+align-items: center;
+
+color: #5A5C63;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* peace 1 */
+
+width: 23px;
+height: 23px;
+
+background: url(peace.png);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;

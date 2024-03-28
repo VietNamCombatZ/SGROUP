@@ -1,0 +1,30 @@
+.section_title_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.blue {
+  background-color: rgb(0, 166, 218);
+}
+
+.section_title {
+  width: fit-content;
+}
+
+.child_count {
+  width: fit-content;
+  padding: 5px 10px;
+  background-color: rgb(0, 205, 218);
+}
+.section_underline {
+  background-color: rgb(0, 166, 218);
+  height: 4px;
+  border-radius: 5px;
+}
