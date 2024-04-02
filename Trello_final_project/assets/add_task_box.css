@@ -31,6 +31,7 @@
 }
 
 .add_task_title {
+  position: relative;
   width: fit-content;
   font-size: 32px;
   font-weight: 700;
@@ -40,7 +41,7 @@
 
 .close_btn {
   position: absolute;
-  left: 950px;
+  left: 180%;
   cursor: pointer;
 }
 
@@ -51,6 +52,11 @@
   margin-bottom: 10px;
   border-radius: 5px;
 }
+
+.add_task_input.active{
+  border: solid 3px red;
+}
+
 
 .add_task_input.content {
   height: 100px;

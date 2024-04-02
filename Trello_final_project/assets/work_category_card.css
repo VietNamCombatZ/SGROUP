@@ -1,7 +1,8 @@
 .work_list_card {
   padding: 20px 30px 30px;
+  margin-top: 20px;
   border-radius: 10px;
-  box-shadow: 2px 2px gray ;
+  box-shadow: 2px 2px 5px 2px gray;
 }
 .work_category_container {
   margin: 20px 0 20px;
@@ -43,9 +44,8 @@
   margin-bottom: 20px;
 }
 
-.work_content
-{
-    font-size: 18px;
-    color: grey;
-    margin-bottom: 15px;
+.work_content {
+  font-size: 18px;
+  color: grey;
+  margin-bottom: 15px;
 }

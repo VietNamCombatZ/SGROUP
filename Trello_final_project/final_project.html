@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/add_task_box.css" />
     <link rel="stylesheet" href="assets/Todo_section.css" />
 
-    <link rel="stylesheet" href="assets/work_category_card.css">
+    <link rel="stylesheet" href="assets/work_category_card.css" />
 
     <link
       rel="stylesheet"
@@ -25,17 +25,20 @@
     <section class="add_task_section" id="add_task_section">
       <div class="add_task_overlay"></div>
       <div class="add_task_box">
-        <h5 class="add_task_title">Add new todo</h5>
-        <i onclick="Disappear()" class="fa-solid fa-xmark close_btn"></i>
+        <h5 class="add_task_title">
+          Add new todo
+          <i onclick="Disappear()" class="fa-solid fa-xmark close_btn"></i>
+        </h5>
 
-        <input class="add_task_input" type="text" placeholder=" Category" />
-        <input class="add_task_input" type="text" placeholder=" Title" />
+        <input class="add_task_input" id="add_task_category" type="text" placeholder=" Category" />
+        <input class="add_task_input" id="add_task_title" type="text" placeholder=" Title" />
         <input
+        id="add_task_content"
           class="add_task_input content"
           type="text"
           placeholder=" Content"
         />
-        <button class="add_task_btn">Submit</button>
+        <button onclick="checkCategoryValidate()" id="add_task_box_btn" class="add_task_btn">Submit</button>
       </div>
     </section>
     <div class="trello_page">
@@ -82,28 +85,26 @@
               </div>
               <div class="section_underline"></div>
             </div>
-            <div class="col l-4 m-12 c-12" >
+            <div class="col l-4 m-12 c-12">
               <div class="Todo_work_container">
                 <div class="work_list_card">
                   <div class="work_category_container">
-                  <div class="work_category">Let's do this</div>
-                  <div class="work_icon">
-                    <i class="edit_work fa-solid fa-pen"></i>
-                    <i class="delete_work fa-solid fa-trash-can"></i>
+                    <div class="work_category">Let's do this</div>
+                    <div class="work_icon">
+                      <i class="edit_work fa-solid fa-pen"></i>
+                      <i class="delete_work fa-solid fa-trash-can"></i>
+                    </div>
                   </div>
-                  
-                  
+                  <div class="work_element">
+                    <div class="work_title">Go go go</div>
+                    <div class="work_title_underline"></div>
+                    <div class="work_content">It's time to move</div>
+                    <div class="work_time">
+                      <i class="work_time_icon fa-regular fa-clock"></i>
+                      <span class="work_time_content"></span>
+                    </div>
+                  </div>
                 </div>
-                <div class="work_element">
-                  
-                  <div class="work_title">Go go go</div>
-                  <div class="work_title_underline"></div>
-                  <div class="work_content">It's time to move</div>
-                  <div class="work_time"><i class="work_time_icon fa-regular fa-clock"></i> <span class="work_time_content"></span></div>
-                </div>
-
-                </div>
-                
               </div>
             </div>
           </div>
