@@ -1,0 +1,115 @@
+.login_section {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 30px;
+  background-color: white;
+}
+
+.login_section_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_option_container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.option_container {
+  width: 48%;
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.option_container.active {
+  border-bottom: 3px solid lightseagreen;
+}
+
+.option_title {
+  font-weight: 400;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.email_input_container
+{
+  margin-top: 30px;
+}
+
+.password_input_container
+{
+  margin-top: 30px;
+}
+
+.input_title
+{
+  font-weight: 400;
+}
+
+.login_input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.login_input.active{
+  border: 1px solid red;
+}
+
+.login_warning {
+  font-size: 20px;
+  font-weight: 400;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.checkbox_container {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.checkbox_input {
+  /* transform: scale(1.6); */
+  scale: 1.6;
+}
+
+.checkbox_title {
+  margin-left: 10px;
+  font-size: 15px;
+  font-size: 400;
+}
+
+.login_button {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color:deepskyblue ;
+  border-radius: 25px;
+  text-align: center;
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+/* .register_option_container {
+  width: 48%;
+  box-sizing: border-box;
+  justify-content: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid lightseagreen ;
+} */
+

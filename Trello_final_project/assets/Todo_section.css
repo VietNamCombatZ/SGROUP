@@ -21,10 +21,15 @@
 .child_count {
   width: fit-content;
   padding: 5px 10px;
+  
+}
+
+.child_count.blue{
   background-color: rgb(0, 205, 218);
 }
+
 .section_underline {
-  background-color: rgb(0, 166, 218);
+  /* background-color: rgb(0, 166, 218); */
   height: 4px;
   border-radius: 5px;
 }

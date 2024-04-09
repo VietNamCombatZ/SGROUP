@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="assets/page_logo.css" />
     <link rel="stylesheet" href="assets/add_task_box.css" />
     <link rel="stylesheet" href="assets/Todo_section.css" />
+    <link rel="stylesheet" href="assets/doing_section.css">
+    <link rel="stylesheet" href="assets/completed_section.css">
+    <link rel="stylesheet" href="assets/blocked_section.css">
 
     <link rel="stylesheet" href="assets/work_category_card.css" />
 
@@ -77,15 +80,15 @@
 
       <section class="Todo_section">
         <div class="container">
-          <div class="col">
-            <div class="col l-4 m-12 c-12">
+          
+          <div class="row">
+            <!-- todo section -->
+            <div class="col l-3 m-12 c-12">
               <div class="section_title_container blue">
                 <div class="section_title">Todo</div>
                 <div class="child_count blue">5</div>
               </div>
-              <div class="section_underline"></div>
-            </div>
-            <div class="col l-4 m-12 c-12">
+              <div class="section_underline blue"></div>
               <div class="Todo_work_container">
                 <div class="work_list_card">
                   <div class="work_category_container">
@@ -107,11 +110,41 @@
                 </div>
               </div>
             </div>
+            <!-- doing section -->
+            <div class="col l-3 m-12 c-12">
+              <div class="section_title_container yellow">
+                <div class="section_title">Doing</div>
+                <div class="child_count yellow"></div>
+              </div>
+              <div class="section_underline yellow"></div>
+              
+            </div>
+
+            <!-- completed section -->
+            <div class="col l-3 m-12 c-12">
+              <div class="section_title_container green">
+                <div class="section_title">Completed</div>
+                <div class="child_count green">3</div>
+              </div>
+              <div class="section_underline green"></div>
+              
+            </div>
+
+            <!-- blocked section -->
+            <div class="col l-3 m-12 c-12">
+              <div class="section_title_container red">
+                <div class="section_title">blocked</div>
+                <div class="child_count red">4</div>
+              </div>
+              <div class="section_underline red"></div>
+              
+            </div>
           </div>
+          
         </div>
       </section>
     </div>
 
-    <script src="index.js"></script>
+    <script src="todo_page_js.js"></script>
   </body>
 </html>

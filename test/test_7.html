@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List App</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  h1, h2 {
+    text-align: center;
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .working {
+    background-color: #d9edf7;
+  }
+  .finished {
+    background-color: #dff0d8;
+  }
+  .cancelled {
+    background-color: #f2dede;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>To-Do List App</h1>
+  <input type="text" id="taskInput" placeholder="Add a new task...">
+  <input type="text" id="field1Input" placeholder="Field 1...">
+  <input type="text" id="field2Input" placeholder="Field 2...">
+  <input type="text" id="field3Input" placeholder="Field 3...">
+  <input type="text" id="field4Input" placeholder="Field 4...">
+  <button onclick="addTask()">Add Task</button>
+
+  <h2>Working</h2>
+  <ul id="workingList" ondrop="drop(event, 'working')" ondragover="allowDrop(event)" onclick="moveTask(event)"></ul>
+
+  <h2>Finished</h2>
+  <ul id="finishedList" ondrop="drop(event, 'finished')" ondragover="allowDrop(event)" onclick="moveTask(event)"></ul>
+
+  <h2>Cancelled</h2>
+  <ul id="cancelledList" ondrop="drop(event, 'cancelled')" ondragover="allowDrop(event)" onclick="moveTask(event)"></ul>
+</div>
+
+<script>
+  // Retrieve tasks from localStorage
+  window.onload = function() {
+    var workingList = JSON.parse(localStorage.getItem("workingList")) || [];
+    var finishedList = JSON.parse(localStorage.getItem("finishedList")) || [];
+    var cancelledList = JSON.parse(localStorage.getItem("cancelledList")) || [];
+
+    workingList.forEach(function(task) {
+      addTaskToList(task.text, task.fields, "working");
+    });
+    finishedList.forEach(function(task) {
+      addTaskToList(task.text, task.fields, "finished");
+    });
+    cancelledList.forEach(function(task) {
+      addTaskToList(task.text, task.fields, "cancelled");
+    });
+  };
+
+  function allowDrop(ev) {
+    ev.preventDefault();
+  }
+
+  function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+  }
+
+  function drop(ev, status) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    var draggedElement = document.getElementById(data);
+    var list = document.getElementById(status + "List");
+    list.appendChild(draggedElement);
+    draggedElement.classList.remove("working", "finished", "cancelled");
+    draggedElement.classList.add(status);
+
+    // Save tasks to localStorage after dropping
+    saveTasks();
+  }
+
+  function addTask() {
+    var taskInput = document.getElementById("taskInput");
+    var field1Input = document.getElementById("field1Input");
+    var field2Input = document.getElementById("field2Input");
+    var field3Input = document.getElementById("field3Input");
+    var field4Input = document.getElementById("field4Input");
+
+    var taskText = taskInput.value;
+    var fields = [field1Input.value, field2Input.value, field3Input.value, field4Input.value];
+
+    if (taskText.trim() !== "") {
+      addTaskToList(taskText, fields, "working");
+      taskInput.value = "";
+      field1Input.value = "";
+      field2Input.value = "";
+      field3Input.value = "";
+      field4Input.value = "";
+
+      // Save tasks to localStorage after adding
+      saveTasks();
+    } else {
+      alert("Please enter a task!");
+    }
+  }
+
+  function addTaskToList(taskText, fields, status) {
+    var li = document.createElement("li");
+    li.textContent = taskText;
+    var fieldsHTML = "<ul>";
+    fields.forEach(function(field) {
+      fieldsHTML += "<li>" + field + "</li>";
+    });
+    fieldsHTML += "</ul>";
+    li.innerHTML += fieldsHTML;
+
+    li.setAttribute("draggable", "true");
+    li.setAttribute("id", "task" + Date.now());
+    li.setAttribute("ondragstart", "drag(event)");
+    li.classList.add(status);
+    document.getElementById(status + "List").appendChild(li);
+  }
+
+  function moveTask(event) {
+    var task = event.target;
+    var parentList = task.parentNode.id;
+    var targetList = event.currentTarget.id;
+
+    if (parentList !== targetList) {
+      task.parentNode.removeChild(task);
+      document.getElementById(targetList).appendChild(task);
+
+      // Update class of the task
+      task.classList.remove("working", "finished", "cancelled");
+      task.classList.add(targetList.substring(0, targetList.length - 4)); // Removing "List" from the end
+    }
+
+    // Save tasks to localStorage after moving
+    saveTasks();
+  }
+
+  function saveTasks() {
+    var workingList = Array.from(document.getElementById("workingList").children).map(task => {
+      return {
+        text: task.firstChild.textContent,
+        fields: Array.from(task.getElementsByTagName("li")).map(field => field.textContent)
+      };
+    });
+    var finishedList = Array.from(document.getElementById("finishedList").children).map(task => {
+      return {
+        text: task.firstChild.textContent,
+        fields: Array.from(task.getElementsByTagName("li")).map(field => field.textContent)
+      };
+    });
+    var cancelledList = Array.from(document.getElementById("cancelledList").children).map(task => {
+      return {
+        text: task.firstChild.textContent,
+        fields: Array.from(task.getElementsByTagName("li")).map(field => field.textContent)
+      };
+    });
+
+    localStorage.setItem("workingList", JSON.stringify(workingList));
+    localStorage.setItem("finishedList", JSON.stringify(finishedList));
+    localStorage.setItem("cancelledList", JSON.stringify(cancelledList));
+  }
+</script>
+
+</body>
+</html>

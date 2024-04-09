@@ -1,19 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="home_page">
-        <section class="accessories">
-            
-        </section>
-        <section class="login_page">
-            
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets_2/grid.css" />
+    <link rel="stylesheet" href="assets_2/home_page.css" />
+    <link rel="stylesheet" href="assets_2/login_page.css" />
+    <link rel="stylesheet" href="assets_2/login_section.css" />
 
-        </section>
+    <link rel="stylesheet" href="assets_2/background_section.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="home_page">
+      <section class="accessories">
+       
+      </section>
+      <section class="login_page ">
+        <!-- list of page icon -->
+        <img  class="home_page_icon_01" src="./image_and_icon/SGROUP_logo_1.png" alt="">
+        <img src="./image_and_icon/SGROUP_logo_2.png" alt="" class="home_page_icon_02">
+        <img src="./image_and_icon/SGROUP_logo_3.png" alt="" class="home_page_icon_03">
+  
+
+        <!-- end of page icon list -->
+        <div class="container">
+          <div class="justify_center">
+            <div class="col l-10 c-10 m-12 box_shadow">
+              <div class="row">
+                <!--background section  -->
+                <div class="col l-6 c-12 m-12 ">
+                  <div class="">
+                    <div class="background_section">
+                      <img
+                        class="background_img"
+                        src="./image_and_icon/home_page_image_01.png"
+                        alt=""
+                      />
+                      <img class="background_logo_01" src="./image_and_icon/SGROUP_logo_0.png" alt="">
+                      <img src="./image_and_icon/white_logo_01.png" alt="" class="background_logo_02">
+                      <img src="./image_and_icon/white_logo_02.png" alt="" class="background_logo_03">
+                      <!-- <div class="background_overlay"></div> -->
+                    </div>
+                  </div>
+                </div>
+
+                <!-- section login input -->
+                <div class="col l-6 c-12 m-12">
+                  <div class="login_section_container">
+                    <div class="login_section">
+                      <div class=" "> 
+                        <div class="col">
+                        <!-- choose login or register -->
+                        <div class="input_option_container">
+                          <div class="option_container active">
+                            <h3 class="option_title">Login</h3>
+                          </div>
+                          <div class="option_container">
+                            <h3 class="option_title">Register</h3>
+                          </div>
+                        </div>
+                        <!-- input user email -->
+                        <div class="email_input_container">
+                          <h2 class="input_title">Email</h2>
+                          <input
+                            placeholder="  Enter your email"
+                            type="text"
+                            class="login_input email_input"
+                            id="login_email"
+                          />
+
+                          <p class="login_warning" id="email_warning">
+                            Invalid email
+                          </p>
+                        </div>
+                        <!-- input user password -->
+                        <div class="password_input_container">
+                          <h2 class="input_title">Password</h2>
+                          <input
+                            placeholder="  Enter your password"
+                            type="text"
+                            class="login_input password_input"
+                            id="login_pass"
+                          />
+
+                          <p class="login_warning" id="password_warning">
+                            Invalid password
+                          </p>
+                        </div>
+                        <!-- checkbox -->
+                        <div  class="checkbox_container">
+                          <input class="checkbox_input" type="checkbox" />
+                          <span class="checkbox_title">Remember me</span>
+                        </div>
+                        <div onclick="checkInfoAvailable()" class="login_button">Login</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-</body>
+
+    <script src="login_page_js.js"></script>
+  </body>
 </html>

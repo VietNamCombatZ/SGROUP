@@ -1,0 +1,62 @@
+.login_page {
+  
+  background-color: white;
+  display: flex;
+  width: fit-content;
+  flex-direction: row;
+  align-items: center;
+  margin: auto 0;
+  position: relative;
+  overflow:visible;
+  
+  
+}
+.box_shadow
+{
+  box-shadow: 2px 2px 2px 2px lightgray;
+  border-radius: 25px;
+  z-index: 1;
+  background-color: white;
+}
+
+.home_page_icon_01
+{
+  position: absolute;
+  z-index: 0;
+  max-width: 300px;
+  top: -20%;
+  left: 75%;
+}
+
+.home_page_icon_02
+{
+  position: absolute;
+  z-index: 0;
+  max-width: 300px;
+  top: 100%;
+  left: 75%;
+}
+
+.home_page_icon_03
+{
+  position: absolute;
+  z-index: 0;
+  max-width: 300px;
+  top: 60%;
+  left: 0%;
+}
+
+@media (min-width: 992px) and (max-width: 1239px) {
+  .home_page_icon_01
+  {
+    top: 0%;
+    left: 80%;
+  }
+
+  .home_page_icon_03
+{
+  top: 85%;
+  left: -15%;
+}
+  
+}
