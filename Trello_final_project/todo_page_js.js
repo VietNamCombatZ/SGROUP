@@ -19,32 +19,74 @@ function Disappear() {
 
 
 //function to create work_todo_card
+
+const card_array = localStorage.getItem("card_items") ? JSON.parse(localStorage.getItem("card_items")) : []
+
+console.log(
+  card_array
+);
 function createElement() {
   let categoryInput = document.getElementById("add_task_category").value;
   let categoryTitle = document.getElementById("add_task_title").value;
-  let categoryContent = document.getElementById("add_task_content").val;
+  let categoryContent = document.getElementById("add_task_content").value;
   let cardInfo = {
     "category": categoryInput,
     "title": categoryTitle,
-    "content": categoryContent
+    "content": categoryContent,
+    "card_id": '1'
   };
 
+  console.log(cardInfo);
+  card_array.push(cardInfo);
+  console.log(card_array);
 
-  const todo_Array = localStorage.getItem("Todo_array");
+  // var todo_Array = localStorage.getItem("Todo_array");
+  
 
-  if(todo_Array != NULL)
-  {
-    JSON.parse(localStorage.getItem("Todo_array"))
-  }
-  else
-  {
-    todo_Array = [];
-  }
+  // if(todo_Array != "")
+  // {
+  //   JSON.parse(localStorage.getItem("Todo_array"))
+  // }
+  // else
+  // {
+  //   todo_Array = [];
+  // }
+
+  // todo_Array.push(cardInfo);
+  // console.log(todo_Array);
   
   
   
 
 }
+
+// display card
+
+let todo_container = document.getElementById("todo_container");
+card_array.forEach((card_item) => {
+  todo_container.innerHTML += displayCards(card_item);
+});
+
+function displayCards (card_item) {
+  return `<div class="work_list_card">
+                  <div class="work_category_container">
+                    <div class="work_category">${card_item.category}</div>
+                    <div class="work_icon">
+                      <i class="edit_work fa-solid fa-pen"></i>
+                      <i class="delete_work fa-solid fa-trash-can"></i>
+                    </div>
+                  </div>
+                  <div class="work_element">
+                    <div class="work_title">${card_item.title}</div>
+                    <div class="work_title_underline"></div>
+                    <div class="work_content">${card_item.content}</div>
+                    <div class="work_time">
+                      <i class="work_time_icon fa-regular fa-clock"></i>
+                      <span class="work_time_content"></span>
+                    </div>
+                  </div>
+                </div>`;
+};
 
 //function to check whether input field are fullfilled
 
@@ -92,3 +134,4 @@ function checkCategoryValidate() {
     createElement();
   }
 }
+
