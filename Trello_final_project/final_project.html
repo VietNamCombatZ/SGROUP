@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/grid.css" />
     <link rel="stylesheet" href="assets/page_logo.css" />
     <link rel="stylesheet" href="assets/add_task_box.css" />
+    <link rel="stylesheet" href="assets/edit_task_box.css">
     <link rel="stylesheet" href="assets/Todo_section.css" />
     <link rel="stylesheet" href="assets/doing_section.css">
     <link rel="stylesheet" href="assets/completed_section.css">
@@ -44,6 +45,39 @@
         <button onclick="checkCategoryValidate()" id="add_task_box_btn" class="add_task_btn">Submit</button>
       </div>
     </section>
+
+    <section class="edit_task_section" id="edit_task_section">
+      <div class="edit_task_overlay"></div>
+      <div class="edit_task_box">
+        <h5 class="edit_task_title">
+          Edit todo card
+          <i onclick="Disappear()" class="fa-solid fa-xmark edit_close_btn"></i>
+        </h5>
+
+        <input class="edit_task_input" id="edit_task_category" type="text" placeholder=" Category" />
+        <input class="edit_task_input" id="edit_task_title" type="text" placeholder=" Title" />
+        <input
+        id="edit_task_content"
+          class="edit_task_input content"
+          type="text"
+          placeholder=" Content"
+        />
+        <div class="edit_container_option">
+          <div class="edit_option">
+            <input id="todo_option" class="edit_option_btn" type="radio" name="radio" checked>Todo</div>
+          <div class="edit_option">
+            <input id="doing_option" class="edit_option_btn" type="radio" name="radio" checked>Doing</div>
+          <div class="edit_option">
+            <input id="completed_option" class="edit_option_btn" type="radio" name="radio" checked>Completed</div>
+          <div class="edit_option">
+            <input id="blocked_option" class="edit_option_btn" type="radio" name="radio" checked>Blocked</div>
+          
+          
+
+        </div>
+        <button onclick="checkCategoryValidate()" id="edit_task_box_btn" class="edit_task_btn">Submit</button>
+      </div>
+    </section>
     <div class="trello_page">
       <section class="page_logo_section">
         <div class="container">
@@ -70,7 +104,7 @@
               <div class="add_task_container justify_center">
                 <div onclick="displayAddCard()" class="add_task-btn" id="add_task_btn">
                   <i class="fa-solid fa-plus"></i>
-                  <span>New task</span>
+                  <span >New task</span>
                 </div>
               </div>
             </div>

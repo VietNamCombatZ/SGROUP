@@ -10,10 +10,27 @@ function displayAddCard() {
   // })
 }
 
+function editFunction(name) {
+  let editTaskSect = document.getElementById("edit_task_section");
+  let editTaskBtn = document.getElementById("edit_task_btn");
+
+  editTaskSect.style.display = "flex";
+
+  
+  
+
+
+}
+
+
+
 // function to turn off display add_task_section
 function Disappear() {
   let addTaskSect = document.getElementById("add_task_section");
   addTaskSect.style.display = "none";
+
+  let editTaskSect = document.getElementById("edit_task_section");
+  editTaskSect.style.display = "none";
 }
 
 
@@ -26,12 +43,15 @@ const card_array = localStorage.getItem("card_items") ? JSON.parse(localStorage.
 // console.log(
 //   card_array
 // );
+let index = 0;
 function createElement() {
   let categoryInput = document.getElementById("add_task_category").value;
   let categoryTitle = document.getElementById("add_task_title").value;
   let categoryContent = document.getElementById("add_task_content").value;
+  
   let todo_container = document.getElementById("todo_container");
 
+  
 
   let date = new Date();
   let dateArray = date.toString().split(" ");
@@ -44,7 +64,8 @@ function createElement() {
     title: categoryTitle,
     content: categoryContent,
     date: displayDate,
-    card_id: "1",
+    card_type: "1",
+    index: index++,
   };
 
   // console.log(cardInfo);
@@ -54,10 +75,28 @@ function createElement() {
 
   // create item_container
    let items = "";
+   
   card_array.forEach((card_item) => {
     
-    items +=  createCard(card_item.card_id,card_item.category, card_item.title, card_item.content, card_item.date);
+    items +=  createCard(card_item.index,card_item.card_type,card_item.category, card_item.title, card_item.content, card_item.date);
     todo_container.innerHTML = items;
+
+
+    // action for delete card button
+    var deleteBtn = document.querySelectorAll(".delete_work");
+    deleteBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        deleteFunction(item.getAttribute("name"));
+      });
+    });
+
+    // action for edit card button
+    var editBtn = document.querySelectorAll(".edit_work");
+    editBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        editFunction(item.getAttribute("name"));
+      });
+    });
     
   });
 
@@ -98,13 +137,13 @@ function createElement() {
 }
 
 // create innerHTML of todo_container
-function createCard(id, category, title, content, time) {
-   return `<div class="work_list_card ">
+function createCard(index,type, category, title, content, time) {
+   return `<div id="${index}" class="work_list_card ">
                   <div class="work_category_container ">
                     <div class="work_category">${category}</div>
                     <div class="work_icon">
-                      <i class="${id} edit_work fa-solid fa-pen"></i>
-                      <i onclick="deleteCard()" class="${id} delete_work fa-solid fa-trash-can"></i>
+                      <i  name="${index}"  class="${type} edit_work fa-solid fa-pen"></i>
+                      <i  name="${index}" class="  delete_work fa-solid fa-trash-can"></i>
                     </div>
                   </div>
                   <div class="work_element">
@@ -151,15 +190,40 @@ function createCard(id, category, title, content, time) {
 
 
 // delete current card
-function deleteCard(){
-  let card_array = JSON.parse(localStorage.getItem("todo_card"));
-  
-  card_array.forEach((card_element) => {
+// function deleteCard(){
+//   let card_array = JSON.parse(localStorage.getItem("todo_card"));
+//   let card_index_array = document.getElementsByClassName
+
+//   card_array.forEach((card_element) => {
   
     
-  });
+//   });
   
 
+// }
+
+// var deleteBtn = document.querySelectorAll(".fa-trash-can");
+// deleteBtn.forEach((item) => {
+//   addEventListener("click", console.log(item.name)  );
+// });
+
+
+
+function deleteFunction(name){
+  // console.log(name);
+  let cardContainerID = document.getElementById(name);
+  cardContainerID.style.display="none";
+
+  let card_array = JSON.parse(localStorage.getItem("todo_card"));
+  for(i=0; i< card_array.length; i++)
+  {
+    if(card_array[i].index == name)
+    {
+      card_array.splice(i,1);
+    }
+  }
+  localStorage.setItem("todo_card", JSON.stringify(card_array));
+  
 }
 
 //function to check whether input field are fullfilled

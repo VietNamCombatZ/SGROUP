@@ -1,6 +1,7 @@
 .work_list_card {
   padding: 20px 30px 30px;
   margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px gray;
 }
@@ -20,6 +21,7 @@
 }
 
 .work_icon i {
+  z-index: 20;
   font-size: 35px;
   margin: 0 5px;
   cursor: pointer;

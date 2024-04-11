@@ -1,0 +1,93 @@
+.edit_task_section {
+  position: absolute;
+  z-index: 10;
+
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.edit_task_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: gray;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+.edit_task_box {
+  z-index: 10;
+  background-color: white;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.edit_task_title {
+  position: relative;
+  width: fit-content;
+  font-size: 32px;
+  font-weight: 700;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+.edit_close_btn {
+  position: absolute;
+  left: 180%;
+  cursor: pointer;
+}
+
+.edit_task_input {
+  min-width: 600px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.edit_task_input.active{
+  border: solid 3px red;
+}
+
+
+.edit_task_input.content {
+  height: 100px;
+}
+
+.edit_task_btn {
+  min-width: 100%;
+  height: 20px;
+
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit_container_option{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.edit_option
+{
+    font-size: 22px;
+    
+}
+
+.edit_option_btn
+{
+width: 18px;
+height:18px;
+margin-right: 5px;
+}
