@@ -1,9 +1,9 @@
 .red
 {
-    background-color: red;
+    background-color: rgb(231,76,60);
 }
 
 .child_count.red
 {
-    background-color: darkred;
+    background-color: none;
 }

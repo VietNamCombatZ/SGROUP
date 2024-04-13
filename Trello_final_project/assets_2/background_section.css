@@ -3,6 +3,7 @@
   overflow: hidden;
   position: relative;
   margin-bottom: -4px;
+  margin-left: -13px;
   
 
   
@@ -50,6 +51,11 @@
 @media (min-width: 992px) and (max-width: 1239px) {
 
 
+
+  .background_section{
+    margin-left: 5px;
+  }
+
   .background_logo_01
   {
     left: 40%;
@@ -69,11 +75,29 @@
   }
 }
 
+@media (max-width:768px){
+  .background_logo_01{
+    left:40%;
+  }
+
+  .background_logo_02{
+    left: 70%;
+  }
+
+  .background_logo_03{
+    top: 75%;
+  }
+}
+
 @media (max-width:576px){
   .background_logo_01
   {
     left: 25%;
   top: 40%;
+  }
+
+  .background_section{
+    margin-left: 5px;
   }
 
 }
@@ -82,6 +106,10 @@
   {
     left: 20%;
   top: 35%;
+  }
+
+  .background_section{
+    margin-left: 5px;
   }
 
 }

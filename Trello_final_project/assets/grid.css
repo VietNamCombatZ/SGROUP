@@ -446,7 +446,7 @@
   } */
 }
 
-@media (min-width: 1240px) {
+@media (min-width: 1240px ) {
   .container {
     width: 1140px;
     padding-left: 15px;
@@ -461,4 +461,12 @@
   /* .justify_center {
     justify-content: center;
   } */
+}
+
+@media (min-width:1700px){
+  .container
+  {width: 1670px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;}
 }

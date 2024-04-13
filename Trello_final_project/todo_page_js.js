@@ -1,3 +1,6 @@
+// console.log(typeof Number(JSON.parse(localStorage.getItem("current_index"))));
+// console.log(temp);
+
 // function to turn on display add_task_section
 function displayAddCard() {
   let addTaskSect = document.getElementById("add_task_section");
@@ -18,10 +21,13 @@ function editFunction(name) {
   editTaskSect.style.display = "flex";
 
   // gán giá trị của các trường trong Edit card
+  // let editCardIndex = editCardRoot.getAttribute("id");
   let editCardCategory = editCardRoot.querySelector(".work_category").innerHTML;
   let editCardTitle = editCardRoot.querySelector(".work_title").innerHTML;
   let editCardContent = editCardRoot.querySelector(".work_content").innerHTML;
 
+  let editCategoryIndex =
+    document.getElementById("edit_task_index").textContent;
   let editCategorySection = document.getElementById("edit_task_category");
   let editTitleSection = document.getElementById("edit_task_title");
   let editContentSection = document.getElementById("edit_task_content");
@@ -31,14 +37,23 @@ function editFunction(name) {
   editTitleSection.value = editCardTitle;
   editContentSection.value = editCardContent;
 
+  editCategoryIndex = name;
+  // console.log(editCategoryIndex);
+
   // console.log(editCardRoot.children[0].children[1].children[0].classList[0]);
 
-  editSectionSelection.forEach((option, index) =>{
-    if ((index+1)  == editCardRoot.children[0].children[1].children[0].classList[0]){
+  editSectionSelection.forEach((option, index) => {
+    if (
+      index + 1 ==
+      editCardRoot.children[0].children[1].children[0].classList[0]
+    ) {
       option.checked = true;
     }
-  }
-)
+  });
+  let edit_submit_btn = document.getElementById("edit_task_box_btn");
+  edit_submit_btn.addEventListener("click", () =>
+    checkEditCategoryValidate(editSectionSelection, name)
+  );
 }
 
 // function to turn off display add_task_section
@@ -111,9 +126,18 @@ function displayCards(card_array) {
       });
     });
   }
+  
 }
 
-let index = 0;
+var temp = JSON.parse(localStorage.getItem("current_index")) || [];
+
+var index = Number(temp);
+
+// var index = Number(localStorage.getItem("current_index"))
+//   ? Number(JSON.parse(localStorage.getItem("current_index")))
+//   : 0;
+
+// let index =0;
 function createElement() {
   let categoryInput = document.getElementById("add_task_category").value;
   let categoryTitle = document.getElementById("add_task_title").value;
@@ -155,6 +179,7 @@ function createElement() {
     );
 
     todo_container.innerHTML = items;
+    localStorage.setItem("current_index", JSON.stringify(index));
 
     // action for delete card button
     var deleteBtn = document.querySelectorAll(".delete_work");
@@ -281,7 +306,7 @@ function createCard(index, type, category, title, content, time) {
 function deleteFunction(name) {
   // console.log(name);
   let cardContainerID = document.getElementById(name);
-  cardContainerID.style.display = "none";
+  cardContainerID.remove();
 
   // let card_array = JSON.parse(localStorage.getItem("todo_card"));
   // console.log(card_array);
@@ -343,7 +368,8 @@ function checkCategoryValidate() {
   }
 }
 
-function checkEditCategoryValidate() {
+let checkEditCategoryValidate = (editSectionSelection, name) => {
+  // console.log(index);
   let categoryInput = document.getElementById("edit_task_category");
   let categoryTitle = document.getElementById("edit_task_title");
   let categoryContent = document.getElementById("edit_task_content");
@@ -372,6 +398,31 @@ function checkEditCategoryValidate() {
     categoryContent.classList.add("active");
   } else {
     categoryContent.classList.remove("active");
-    Disappear();
   }
-}
+
+  if (categoryInput != "" && categoryTitle != "" && categoryContent != "") {
+    Disappear();
+
+    // thay doi thong tin trong card_array
+    card_array.forEach((item) => {
+      if (item.index == name) {
+        console.log(name);
+        console.log(item.index);
+        item.category = categoryInput.value;
+        item.title = categoryTitle.value;
+        item.content = categoryContent.value;
+
+        editSectionSelection.forEach((option, index) => {
+          if (option.checked) {
+            item.card_type = index + 1;
+          }
+        });
+        localStorage.setItem("todo_card", JSON.stringify(card_array));
+
+        // console.log(item);
+      }
+    });
+    location.reload(displayCards(card_array));
+    
+  }
+};

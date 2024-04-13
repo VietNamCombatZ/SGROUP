@@ -53,7 +53,7 @@
           Edit todo card
           <i onclick="Disappear()" class="fa-solid fa-xmark edit_close_btn"></i>
         </h5>
-
+        <div id="edit_task_index" class="edit_task_index"></div>
         <input class="edit_task_input" id="edit_task_category" type="text" placeholder=" Category" />
         <input class="edit_task_input" id="edit_task_title" type="text" placeholder=" Title" />
         <input
@@ -75,14 +75,14 @@
           
 
         </div>
-        <button onclick="checkEditCategoryValidate()" id="edit_task_box_btn" class="edit_task_btn">Submit</button>
+        <button  id="edit_task_box_btn" class="edit_task_btn">Submit</button>
       </div>
     </section>
     <div class="trello_page">
       <section class="page_logo_section">
         <div class="container">
           <div class="row l_space_between m_c_center m_c_col">
-            <div class="col l-3 m-3 c-3">
+            <div class="col l-5 m-5 c-5">
               <div class="logo_image_container">
                 <img
                   class="logo_image_01"
@@ -100,7 +100,7 @@
                 </p>
               </div>
             </div>
-            <div class="col l-2 m-3 c-3">
+            <div class="col l-2 m-4 c-4">
               <div class="add_task_container justify_center">
                 <div onclick="displayAddCard()" class="add_task-btn" id="add_task_btn">
                   <i class="fa-solid fa-plus"></i>
@@ -175,7 +175,7 @@
             <!-- blocked section -->
             <div class="col l-3 m-12 c-12 section_name">
               <div class="section_title_container red">
-                <div class="section_title">blocked</div>
+                <div class="section_title">Blocked</div>
                 <div class="child_count red"></div>
               </div>
               <div class="section_underline red"></div>

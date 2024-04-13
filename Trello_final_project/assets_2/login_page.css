@@ -1,9 +1,11 @@
 .login_page {
   background-color: white;
   display: flex;
-  width: fit-content;
+  width: 1280px;
+  /* width: fit-content; */
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   margin: auto 0;
   position: relative;
   overflow: visible;
@@ -19,8 +21,8 @@
   position: absolute;
   z-index: 0;
   max-width: 300px;
-  top: -20%;
-  left: 75%;
+  top: -25%;
+  left: 77%;
 }
 
 .home_page_icon_02 {
@@ -35,14 +37,14 @@
   position: absolute;
   z-index: 0;
   max-width: 300px;
-  top: 60%;
+  top: 72%;
   left: 0%;
 }
 
 @media (min-width: 768px) and (max-width: 1239px) {
   .home_page_icon_01 {
     top: 0%;
-    left: 80%;
+    left: 71%;
     /* display: none; */
   }
 
@@ -57,7 +59,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .home_page_icon_01 {
     /* top: 0%;
     left: 80%; */
