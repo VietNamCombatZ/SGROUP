@@ -13,6 +13,33 @@ function displayAddCard() {
   // })
 }
 
+
+
+// grab and drop function
+var work_card = document.querySelectorAll(".work_list_card");
+var section_container_array = document.querySelectorAll(".section_name");
+var current_drag_card = null;
+
+console.log(work_card);
+
+
+work_card.forEach((card) => {
+  card.addEventListener("dragstart", function(){
+    current_drag_card = this;
+    // console.log(current_drag_card);
+  })
+})
+
+section_container_array.forEach(section => {
+  section.addEventListener('dragover', function (event) {
+    event.preventDefault();
+  } );
+  section.addEventListener("drop", function () {
+    this.appendChild(current_drag_card);
+  });
+});
+
+// edit function
 function editFunction(name) {
   let editTaskSect = document.getElementById("edit_task_section");
 
@@ -93,6 +120,7 @@ function showCardAmount(card_array) {
 //function to display all card when load screen
 function displayCards(card_array) {
   let card_container = document.querySelectorAll(".card_container");
+  
 
   for (i = 0; i < card_container.length; i++) {
     let card_cnt = "";
@@ -239,7 +267,7 @@ function createElement() {
 
 // create innerHTML of todo_container
 function createCard(index, type, category, title, content, time) {
-  return `<div id="${index}" class="work_list_card ">
+  return `<div id="${index}" class="work_list_card  " draggable = "true">
                   <div class="work_category_container ">
                     <div class="work_category">${category}</div>
                     <div class="work_icon">

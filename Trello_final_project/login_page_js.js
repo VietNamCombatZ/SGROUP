@@ -53,6 +53,6 @@ async function checkAPI() {
   else
   {
     window.location.href =
-      "http://127.0.0.1:5500/Trello_final_project/final_project.html";
+      "https://vietnamcombatz.github.io/SGROUP/Trello_final_project/final_project.html";
   }
 }
