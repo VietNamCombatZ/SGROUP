@@ -25,10 +25,20 @@ function editFunction(name) {
   let editCategorySection = document.getElementById("edit_task_category");
   let editTitleSection = document.getElementById("edit_task_title");
   let editContentSection = document.getElementById("edit_task_content");
+  let editSectionSelection = document.querySelectorAll(".edit_option_btn");
 
   editCategorySection.value = editCardCategory;
   editTitleSection.value = editCardTitle;
   editContentSection.value = editCardContent;
+
+  // console.log(editCardRoot.children[0].children[1].children[0].classList[0]);
+
+  editSectionSelection.forEach((option, index) =>{
+    if ((index+1)  == editCardRoot.children[0].children[1].children[0].classList[0]){
+      option.checked = true;
+    }
+  }
+)
 }
 
 // function to turn off display add_task_section
@@ -46,23 +56,19 @@ var card_array = localStorage.getItem("todo_card")
   ? JSON.parse(localStorage.getItem("todo_card"))
   : [];
 
-  
-
-
 // display all card when screen is loaded
 window.document.onload = displayCards(card_array);
 
 // show number of card in a section when screen is loaded
 window.document.onload = showCardAmount(card_array);
 
-
-
-function showCardAmount(card_array){
+function showCardAmount(card_array) {
   let section_array = document.querySelectorAll(".section_name");
 
-  for(i = 0; i  < section_array.length; i++)
-  {
-    let section_number = section_array[i].querySelector(".section_title_container").querySelector(".child_count");
+  for (i = 0; i < section_array.length; i++) {
+    let section_number = section_array[i]
+      .querySelector(".section_title_container")
+      .querySelector(".child_count");
     let section_container = section_array[i].querySelector(".card_container");
 
     section_number.innerHTML = section_container.childElementCount;
@@ -133,7 +139,7 @@ function createElement() {
   // console.log(cardInfo);
   card_array.push(cardInfo);
   localStorage.setItem("todo_card", JSON.stringify(card_array));
-  console.log(card_array);
+  // console.log(card_array);
 
   // create item_container
   let items = "";
@@ -147,6 +153,7 @@ function createElement() {
       card_item.content,
       card_item.date
     );
+
     todo_container.innerHTML = items;
 
     // action for delete card button
@@ -276,16 +283,17 @@ function deleteFunction(name) {
   let cardContainerID = document.getElementById(name);
   cardContainerID.style.display = "none";
 
-  let card_array = JSON.parse(localStorage.getItem("todo_card"));
+  // let card_array = JSON.parse(localStorage.getItem("todo_card"));
+  // console.log(card_array);
   for (i = 0; i < card_array.length; i++) {
     if (card_array[i].index == name) {
       card_array.splice(i, 1);
     }
   }
 
-  console.log(card_array);
+  // console.log(card_array);
   localStorage.setItem("todo_card", JSON.stringify(card_array));
-  console.log(card_array);
+  // console.log(card_array);
   showCardAmount(card_array);
   // location.reload(showCardAmount(card_array));
   // location.reload(displayCards(card_array));
@@ -323,10 +331,13 @@ function checkCategoryValidate() {
     categoryContent.classList.add("active");
   } else {
     categoryContent.classList.remove("active");
-    
   }
 
-  if  (categoryInput.value != "" && categoryTitle.value != "" && categoryContent.value != ""){
+  if (
+    categoryInput.value != "" &&
+    categoryTitle.value != "" &&
+    categoryContent.value != ""
+  ) {
     Disappear();
     createElement();
   }
@@ -362,6 +373,5 @@ function checkEditCategoryValidate() {
   } else {
     categoryContent.classList.remove("active");
     Disappear();
-    
   }
 }
