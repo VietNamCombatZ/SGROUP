@@ -75,7 +75,7 @@
           
 
         </div>
-        <button onclick="checkCategoryValidate()" id="edit_task_box_btn" class="edit_task_btn">Submit</button>
+        <button onclick="checkEditCategoryValidate()" id="edit_task_box_btn" class="edit_task_btn">Submit</button>
       </div>
     </section>
     <div class="trello_page">
@@ -117,15 +117,15 @@
           
           <div class="row">
             <!-- todo section -->
-            <div class="col l-3 m-12 c-12">
+            <div class="col l-3 m-12 c-12  section_name">
               <div class="section_title_container blue">
                 <div class="section_title">Todo</div>
-                <div class="child_count blue">5</div>
+                <div class="child_count blue"></div>
               </div>
               <div class="section_underline blue"></div>
 
               <!-- the se chua tat ca the todo work -->
-              <div id="todo_container" class="Todo_work_container">
+              <div id="todo_container" class="Todo_work_container card_container">
                 <!-- <div class="work_list_card " >
                   <div class="work_category_container">
                     <div class="work_category">Let's do this</div>
@@ -147,7 +147,7 @@
               </div>
             </div>
             <!-- doing section -->
-            <div class="col l-3 m-12 c-12">
+            <div class="col l-3 m-12 c-12 section_name">
               <div class="section_title_container yellow">
                 <div class="section_title">Doing</div>
                 <div class="child_count yellow"></div>
@@ -155,33 +155,33 @@
               <div class="section_underline yellow"></div>
 
               <!-- the se chua tat ca the doing work -->
-              <div class="doing_work_container"></div>
+              <div class="doing_work_container  card_container"></div>
               
             </div>
 
             <!-- completed section -->
-            <div class="col l-3 m-12 c-12">
+            <div class="col l-3 m-12 c-12 section_name">
               <div class="section_title_container green">
                 <div class="section_title">Completed</div>
-                <div class="child_count green">3</div>
+                <div class="child_count green"></div>
               </div>
               <div class="section_underline green"></div>
 
               <!-- the se chua tat ca the completed work -->
-              <div class="completed_work_container"></div>
+              <div class="completed_work_container card_container"></div>
               
             </div>
 
             <!-- blocked section -->
-            <div class="col l-3 m-12 c-12">
+            <div class="col l-3 m-12 c-12 section_name">
               <div class="section_title_container red">
                 <div class="section_title">blocked</div>
-                <div class="child_count red">4</div>
+                <div class="child_count red"></div>
               </div>
               <div class="section_underline red"></div>
 
               <!-- the se chua tat ca the blocked -->
-              <div class="blocked_work_container"></div>
+              <div class="blocked_work_container card_container"></div>
               
             </div>
           </div>

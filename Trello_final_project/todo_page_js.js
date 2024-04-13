@@ -12,17 +12,24 @@ function displayAddCard() {
 
 function editFunction(name) {
   let editTaskSect = document.getElementById("edit_task_section");
-  let editTaskBtn = document.getElementById("edit_task_btn");
+
+  let editCardRoot = document.getElementById(name);
 
   editTaskSect.style.display = "flex";
 
-  
-  
+  // gán giá trị của các trường trong Edit card
+  let editCardCategory = editCardRoot.querySelector(".work_category").innerHTML;
+  let editCardTitle = editCardRoot.querySelector(".work_title").innerHTML;
+  let editCardContent = editCardRoot.querySelector(".work_content").innerHTML;
 
+  let editCategorySection = document.getElementById("edit_task_category");
+  let editTitleSection = document.getElementById("edit_task_title");
+  let editContentSection = document.getElementById("edit_task_content");
 
+  editCategorySection.value = editCardCategory;
+  editTitleSection.value = editCardTitle;
+  editContentSection.value = editCardContent;
 }
-
-
 
 // function to turn off display add_task_section
 function Disappear() {
@@ -33,30 +40,85 @@ function Disappear() {
   editTaskSect.style.display = "none";
 }
 
-
-
-
 //function to create work_todo_card
 
-const card_array = localStorage.getItem("card_items") ? JSON.parse(localStorage.getItem("card_items")) : []
+var card_array = localStorage.getItem("todo_card")
+  ? JSON.parse(localStorage.getItem("todo_card"))
+  : [];
 
-// console.log(
-//   card_array
-// );
+  
+
+
+// display all card when screen is loaded
+window.document.onload = displayCards(card_array);
+
+// show number of card in a section when screen is loaded
+window.document.onload = showCardAmount(card_array);
+
+
+
+function showCardAmount(card_array){
+  let section_array = document.querySelectorAll(".section_name");
+
+  for(i = 0; i  < section_array.length; i++)
+  {
+    let section_number = section_array[i].querySelector(".section_title_container").querySelector(".child_count");
+    let section_container = section_array[i].querySelector(".card_container");
+
+    section_number.innerHTML = section_container.childElementCount;
+  }
+}
+
+//function to display all card when load screen
+function displayCards(card_array) {
+  let card_container = document.querySelectorAll(".card_container");
+
+  for (i = 0; i < card_container.length; i++) {
+    let card_cnt = "";
+    card_array.forEach((card_item) => {
+      if (card_item.card_type == i + 1) {
+        card_cnt += createCard(
+          card_item.index,
+          card_item.card_type,
+          card_item.category,
+          card_item.title,
+          card_item.content,
+          card_item.date
+        );
+      }
+    });
+    card_container[i].innerHTML = card_cnt;
+
+    //action for delete card button
+    var editBtn = document.querySelectorAll(".edit_work");
+    editBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        editFunction(item.getAttribute("name"));
+      });
+    });
+
+    // action for delete card button
+    var deleteBtn = document.querySelectorAll(".delete_work");
+    deleteBtn.forEach((item) => {
+      item.addEventListener("click", () => {
+        deleteFunction(item.getAttribute("name"));
+      });
+    });
+  }
+}
+
 let index = 0;
 function createElement() {
   let categoryInput = document.getElementById("add_task_category").value;
   let categoryTitle = document.getElementById("add_task_title").value;
   let categoryContent = document.getElementById("add_task_content").value;
-  
-  let todo_container = document.getElementById("todo_container");
 
-  
+  let todo_container = document.getElementById("todo_container");
 
   let date = new Date();
   let dateArray = date.toString().split(" ");
   let displayDate = dateArray[1] + " " + dateArray[2] + "," + dateArray[3];
-  
+
   // console.log(displayDate);
 
   let cardInfo = {
@@ -64,23 +126,28 @@ function createElement() {
     title: categoryTitle,
     content: categoryContent,
     date: displayDate,
-    card_type: "1",
+    card_type: 1,
     index: index++,
   };
 
   // console.log(cardInfo);
   card_array.push(cardInfo);
   localStorage.setItem("todo_card", JSON.stringify(card_array));
-  // console.log(card_array);
+  console.log(card_array);
 
   // create item_container
-   let items = "";
-   
-  card_array.forEach((card_item) => {
-    
-    items +=  createCard(card_item.index,card_item.card_type,card_item.category, card_item.title, card_item.content, card_item.date);
-    todo_container.innerHTML = items;
+  let items = "";
 
+  card_array.forEach((card_item) => {
+    items += createCard(
+      card_item.index,
+      card_item.card_type,
+      card_item.category,
+      card_item.title,
+      card_item.content,
+      card_item.date
+    );
+    todo_container.innerHTML = items;
 
     // action for delete card button
     var deleteBtn = document.querySelectorAll(".delete_work");
@@ -95,9 +162,11 @@ function createElement() {
     editBtn.forEach((item) => {
       item.addEventListener("click", () => {
         editFunction(item.getAttribute("name"));
+        showCardAmount(card_array);
       });
     });
-    
+
+    showCardAmount(card_array);
   });
 
   // function displayCards(card_item) {
@@ -137,8 +206,8 @@ function createElement() {
 }
 
 // create innerHTML of todo_container
-function createCard(index,type, category, title, content, time) {
-   return `<div id="${index}" class="work_list_card ">
+function createCard(index, type, category, title, content, time) {
+  return `<div id="${index}" class="work_list_card ">
                   <div class="work_category_container ">
                     <div class="work_category">${category}</div>
                     <div class="work_icon">
@@ -156,7 +225,6 @@ function createCard(index,type, category, title, content, time) {
                     </div>
                   </div>
                 </div>`;
-
 }
 
 // display card
@@ -187,18 +255,14 @@ function createCard(index,type, category, title, content, time) {
 //                 </div>`;
 // };
 
-
-
 // delete current card
 // function deleteCard(){
 //   let card_array = JSON.parse(localStorage.getItem("todo_card"));
 //   let card_index_array = document.getElementsByClassName
 
 //   card_array.forEach((card_element) => {
-  
-    
+
 //   });
-  
 
 // }
 
@@ -207,28 +271,29 @@ function createCard(index,type, category, title, content, time) {
 //   addEventListener("click", console.log(item.name)  );
 // });
 
-
-
-function deleteFunction(name){
+function deleteFunction(name) {
   // console.log(name);
   let cardContainerID = document.getElementById(name);
-  cardContainerID.style.display="none";
+  cardContainerID.style.display = "none";
 
   let card_array = JSON.parse(localStorage.getItem("todo_card"));
-  for(i=0; i< card_array.length; i++)
-  {
-    if(card_array[i].index == name)
-    {
-      card_array.splice(i,1);
+  for (i = 0; i < card_array.length; i++) {
+    if (card_array[i].index == name) {
+      card_array.splice(i, 1);
     }
   }
+
+  console.log(card_array);
   localStorage.setItem("todo_card", JSON.stringify(card_array));
-  
+  console.log(card_array);
+  showCardAmount(card_array);
+  // location.reload(showCardAmount(card_array));
+  // location.reload(displayCards(card_array));
 }
 
 //function to check whether input field are fullfilled
 
-// ! bug 
+// ! bug
 function checkCategoryValidate() {
   let categoryInput = document.getElementById("add_task_category");
   let categoryTitle = document.getElementById("add_task_title");
@@ -236,40 +301,67 @@ function checkCategoryValidate() {
 
   let categoryCheckAll = document.querySelectorAll(".add_task_input");
 
-  
+  //clear trang thai active cua tat ca input
+  categoryCheckAll.forEach((categoryCheckElement) => {
+    categoryCheckElement.classList.remove("active");
+  });
 
-
-//clear trang thai active cua tat ca input
- categoryCheckAll.forEach((categoryCheckElement) =>{
-   categoryCheckElement.classList.remove("active");
- })  
-
-
- //kiem tra Category input co dc dien vao hay ko
+  //kiem tra Category input co dc dien vao hay ko
   if (categoryInput.value == "") {
     categoryInput.classList.add("active");
-  }
-  else
-  {
+  } else {
     categoryInput.classList.remove("active");
   }
 
   if (categoryTitle.value == "") {
     categoryTitle.classList.add("active");
-  }
-  else
-  {
+  } else {
     categoryTitle.classList.remove("active");
   }
 
   if (categoryContent.value == "") {
     categoryContent.classList.add("active");
-  }
-  else
-  {
+  } else {
     categoryContent.classList.remove("active");
+    
+  }
+
+  if  (categoryInput.value != "" && categoryTitle.value != "" && categoryContent.value != ""){
     Disappear();
     createElement();
   }
 }
 
+function checkEditCategoryValidate() {
+  let categoryInput = document.getElementById("edit_task_category");
+  let categoryTitle = document.getElementById("edit_task_title");
+  let categoryContent = document.getElementById("edit_task_content");
+
+  let categoryCheckAll = document.querySelectorAll(".edit_task_input");
+
+  //clear trang thai active cua tat ca input
+  categoryCheckAll.forEach((categoryCheckElement) => {
+    categoryCheckElement.classList.remove("active");
+  });
+
+  //kiem tra Category input co dc dien vao hay ko
+  if (categoryInput.value == "") {
+    categoryInput.classList.add("active");
+  } else {
+    categoryInput.classList.remove("active");
+  }
+
+  if (categoryTitle.value == "") {
+    categoryTitle.classList.add("active");
+  } else {
+    categoryTitle.classList.remove("active");
+  }
+
+  if (categoryContent.value == "") {
+    categoryContent.classList.add("active");
+  } else {
+    categoryContent.classList.remove("active");
+    Disappear();
+    
+  }
+}

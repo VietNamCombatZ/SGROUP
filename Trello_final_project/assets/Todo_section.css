@@ -1,3 +1,9 @@
+.section_name
+{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .section_title_container {
   display: flex;
   justify-content: space-between;
