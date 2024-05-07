@@ -1,5 +1,5 @@
-[submodule "SGROUP/buoi_1"] 
- path = SGROUP/buoi_1
+[submodule "SGROUP/khoa_tap_su/buoi_1"] 
+ path = SGROUP/khoa_tap_su/buoi_1
  url = https://github.com/VietNamCombatZ/SGROUP.git
 [submodule "buoi_1"]
 	path = buoi_1
