@@ -287,7 +287,63 @@ function printThreeMiddleChar() {
 }
 
 
+// Bai 9
 
+let submitBtn9 = document.getElementById("submit_9");
+
+submitBtn9.addEventListener("click", () => {
+  checkRepeatKey();
+});
+
+function checkRepeatKey() {
+  let input9 = document.getElementById("input_9").value;
+  let result9 = document.getElementById("result_9");
+
+
+}
+
+// Bai 11
+
+let submitBtn11 = document.getElementById("submit_11");
+
+let submit_array_1_btn = document.getElementById("subit_element_11_1");
+let submit_array_2_btn = document.getElementById("subit_element_11_2");
+
+let input11_1 = document.getElementById("input_11_1").value;
+let input11_2 = document.getElementById("input_11_2").value;
+
+let array_11_1 =[];
+let array_11_2 = [];
+
+submit_array_1_btn.addEventListener("click", () => {
+  array_11_1 = input11_1.split(",");
+  
+})
+
+submit_array_2_btn.addEventListener("click", () => {
+  array_11_2 = input11_2.split(",");
+  for (const iterator of array_11_2) {
+    console.log(iterator);
+    
+  }
+});
+
+submitBtn11.addEventListener("click", () => {
+  checkRepeatValue();
+});
+
+function checkRepeatValue() {
+
+  
+
+  
+
+  
+
+  let result11 = document.getElementById("result_11");
+
+
+}
    
 
 
