@@ -65,7 +65,7 @@ function checkMaxFrequency() {
       maxfrequency = i;
     }
   }
-  if (maxfrequency <= 1){
+  if (max <= 1){
     result2.innerHTML = "ko co so xuat hien nhieu nhat";
   }else{
     result2.innerHTML = maxfrequency;
