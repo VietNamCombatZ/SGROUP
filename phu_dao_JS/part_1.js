@@ -65,9 +65,15 @@ function checkMaxFrequency() {
       maxfrequency = i;
     }
   }
+  if (maxfrequency <= 1){
+    result2.innerHTML = "ko co so xuat hien nhieu nhat";
+  }else{
+    result2.innerHTML = maxfrequency;
 
-  result2.innerHTML = maxfrequency;
-  console.log(checkarray);
+  }
+
+  
+  
 }
 
 // bai 3
