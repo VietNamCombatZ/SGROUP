@@ -29,40 +29,38 @@ function writeData(data) {
 }
 
 // CREATE
-var IdCnt = 0;
+
 function MaxId() {
+  var IdCnt = 0;
   obj = readData();
   for (const item of obj) {
-    if(item.id > IdCnt){
-
+    if (parseInt(item.id) > IdCnt) {
+      IdCnt = parseInt(item.id);
     }
-    
   }
-  
-  
+  return IdCnt;
 }
 MaxId();
 
+app.post("/users", (req, res) => {
+  let obj = readData();
 
-
-app.post('/users',(req, res) =>{
-    var obj = readData();
-    
-    var newObj = req.body;
-    obj.push(newObj);
-    writeData(obj);
-    res.status(200).send(newObj); //neu trang thai tra ve la 200 (cho phep ) thi gui file len 
-})
+  let newObj = req.body;
+  newObj.id = (MaxId() + 1).toString();
+  obj.push(newObj);
+  writeData(obj);
+  res.status(200).send(newObj); //neu trang thai tra ve la 200 (cho phep ) thi gui file len
+});
 
 // READ
-app.get('/users', (req, res) => {
-    var obj = readData();
-    res.send(obj);
-})
+app.get("/users", (req, res) => {
+  let obj = readData();
+  res.send(obj);
+});
 
 app.get("/users/:id", (req, res) => {
-  var obj = readData();
-  var objFind = obj.find((obj) => obj.id === parseInt(req.params.id));
+  let obj = readData();
+  let objFind = obj.find((item) => item.id == parseInt(req.params.id));
 
   if (objFind) {
     res.send(objFind);
@@ -73,7 +71,23 @@ app.get("/users/:id", (req, res) => {
 
 // UPDATE
 
+app.put("/users/:id", (req, res) =>{
+  let obj = readData();
+  let index = obj.findIndex((item) => item.id == req.params.id);
 
+  if(index == -1){
+    res.status(404).send("No matches given ID");
+  }else{
+    obj[index]  = req.body;
+    obj[index].id = index;
+    writeData(obj);
+    res.status(201).send(obj[index]);
+
+  }
+
+
+
+})
 
 // app.put("/users/:id", (req, res) => {
 //   const objects = readData();
@@ -90,10 +104,24 @@ app.get("/users/:id", (req, res) => {
 // DELETE
 
 app.delete("/users/:id", (req, res) => {
-  var obj = readData();
-  var index = obj.find((item) => {item.id == req.params.id});
+  let obj = readData();
+  let index = obj.find((item) => 
+    item.id == req.params.id
+  );
 
-  res.send(req.params.id);
+  if (index == undefined) {
+    res.status(404).send("No matches given ID");
+    return;
+  }
+
+  let newObj = obj.filter((item) => {
+    return item.id != req.params.id;
+  });
+  writeData(newObj);
+
+  res.send("Item with matches ID deleted");
+  MaxId();
+
   // if(index == undefined){
   //   res.status(404).send("ID invalid");
   // }else{
@@ -101,23 +129,17 @@ app.delete("/users/:id", (req, res) => {
   //   writeData(newObj);
   //   res.send(newObj);
   // }
+});
 
-})
+app.delete("/users/", (req, res) => {
+  let obj = [];
+  
+  writeData(obj);
 
+  res.send(obj);
+  MaxId();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 // app.delete("/users/:id", (req, res) => {
 //   const objects = readData();
 //   const newObjects = objects.filter(
@@ -130,5 +152,3 @@ app.delete("/users/:id", (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
-

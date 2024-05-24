@@ -487,8 +487,52 @@ function nameWithStartChar() {
       return_array.push(array_17[i]);
     }
   }
+
+  // Cach 2, dung method startWith()
+
+
   result17.innerHTML = `[${return_array}]`;
 }
+
+// Bai 18
+
+let submitBtn18 = document.getElementById("submit_18");
+
+submitBtn18.addEventListener("click", () => {
+  calCashNumber();
+});
+
+function calCashNumber() {
+  let input18 = document.getElementById("input_18").value;
+
+  let result18 = document.getElementById("result_18");
+
+  let array_18 = [
+    { name: "Shirt", price: 20, discount: 0.1 },
+    { name: "Jeans", price: 40, discount: 0.2 },
+    { name: "Shoes", price: 60, discount: 0.15 },
+  ];
+
+ let cash;
+ console.log(input18);
+
+  // let return_array = [];
+  // try{
+  //   array_18 = JSON.parse("["+ input18 + "]");
+
+  // }
+  // catch(e){
+  //   result18.innerHTML = `Chuỗi không hợp lệ. Chuỗi hợp lệ ví dụ: { name: "Shirt", price: 20, discount: 0.1 },{ name: "Jeans", price: 40, discount: 0.2 },name: "Shoes", price: 60, discount: 0.15 } `;
+  //     return;
+  // }
+  
+  cash = array_18.reduce(function (value, good){
+    return value + good.price - (good.price*good.discount); 
+  }, 0);
+  
+  result18.innerHTML = cash;
+}
+
 
 // Bai 19
 
@@ -505,9 +549,6 @@ function flatNestedArray() {
 
   let array_19 = [];
 
-  let merge_array = [];
-  let freq_array = [];
-
   let return_array = [];
   try{
     array_19 = JSON.parse("["+ input19 + "]");
@@ -523,6 +564,49 @@ function flatNestedArray() {
   result19.innerHTML = `[${return_array}]`;
 }
 
+
+// Bai 20
+
+let submitBtn20 = document.getElementById("submit_20");
+
+submitBtn20.addEventListener("click", () => {
+  checkStudentMark();
+});
+
+function checkStudentMark() {
+  let input20 = document.getElementById("input_20").value;
+
+  let result20 = document.getElementById("result_20");
+
+  let array_20 = [
+    { name: "Alice", score: 80 },
+    { name: "Bob", score: 45 },
+    { name: "Charlie", score: 90 },
+    { name: "Dave", score: 70 },
+  ];
+
+ let studentList = [];
+
+ // dùng map sẽ bị lỗi không xóa dc dấu phẩy khi phần tử đó không tồn tại
+  
+  // studentList = array_20.map(function(student){
+  //   if (student.score >= 80){
+  //     return student.name;
+  //   }
+  // });
+
+  for (const student of array_20) {
+    
+    if(student.score >= 50){
+      studentList.push(student.name);
+    }
+    
+  }
+
+  
+  
+  result20.innerHTML = studentList;
+}
 
 
 
@@ -542,19 +626,19 @@ function arithmeticMeanAllNumber() {
   let sum;
 
   array = input21.split(",");
-  let check = 0;
+  let count = 0;
 
   sum = array.reduce(function (value, number) {
     number = Number(number);
-    check++;
+    count++;
 
     return value + number;
   }, 0);
 
-  result21.innerHTML = sum / check;
+  result21.innerHTML = sum / count;
 }
 
-// Bai 23
+// Bai 22
 
 let submitBtn22 = document.getElementById("submit_22");
 
@@ -580,15 +664,15 @@ function birthdayCal() {
 
   let today = new Date(`${year + "-" + month + "-" + day}`);
 
-  console.log(date_1.getFullYear());
-  console.log(date_1.getMonth());
-  console.log(date_1.getDate());
+  // console.log(date_1.getFullYear());
+  // console.log(date_1.getMonth());
+  // console.log(date_1.getDate());
 
-  console.log(today.getFullYear());
-  console.log(typeof(today.getMonth()));
-  console.log(today.getDate());
+  // console.log(today.getFullYear());
+  // console.log(typeof(today.getMonth()));
+  // console.log(today.getDate());
 
-  console.log((today - date_1)/(1000*60*60*24));
+  // console.log((today - date_1)/(1000*60*60*24));
  
   if(today - date_1 < 0){
     result22.innerHTML = "Nhập sai tuổi rồi, ngmu ngmu";
@@ -648,14 +732,19 @@ function daysCal() {
   let today = new Date(`${year + "-" + month + "-" + day}`);
 
   let pos = "";
-  if (today - date_1 >= 0) {
+  if (today - date_1 > 0) {
     pos = "trước";
   } else {
     pos = "sau";
+
   }
 
   let time = Math.abs(today - date_1);
   let days = Math.ceil(time / (1000 * 60 * 60 * 24));
+
+  if( pos == "sau"){
+    days--;
+  }
 
   result23.innerHTML = `${days} ngày ${pos}`;
 }
