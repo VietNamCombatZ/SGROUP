@@ -49,12 +49,12 @@ submitBtn1.addEventListener("click", () => {
           });
           //   variantIndex = variantsList.indexOf(maxPriceVariant.id);
           index1++;
-          // console.log(index1);
+          
           // console.log(variantIndex);
           // console.log(productIndex);
         });
 
-        let productOption = products[productIndex].option || "None";
+        let productOptions = (products[productIndex].options && products[productIndex].options.length > 0) ? products[productIndex].options : "None";
 
         // if(productOption != "None"){
 
@@ -63,12 +63,12 @@ submitBtn1.addEventListener("click", () => {
 
         console.log(products[productIndex].title);
         console.log(maxPrice);
-        console.log(productOption);
+        console.log(productOptions);
 
         let HTMLofProduct = `<div class="container">
         <p class="product name">${products[productIndex].title}</p>
         <p class="product price">Price: $${maxPrice} USD</p>
-        <ul class="product option">Option: ${productOption}</ul>
+        <ul class="product option">Option: ${productOptions}</ul>
         </div> `; 
 
         result_1.innerHTML = HTMLofProduct;
