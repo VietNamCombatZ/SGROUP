@@ -56,6 +56,10 @@ submitBtn1.addEventListener("click", () => {
 
         let productOption = products[productIndex].option || "None";
 
+        // if(productOption != "None"){
+
+        // }
+
 
         console.log(products[productIndex].title);
         console.log(maxPrice);
@@ -63,7 +67,7 @@ submitBtn1.addEventListener("click", () => {
 
         let HTMLofProduct = `<div class="container">
         <p class="product name">${products[productIndex].title}</p>
-        <p class="product price">Price: $${maxPrice}USD</p>
+        <p class="product price">Price: $${maxPrice} USD</p>
         <ul class="product option">Option: ${productOption}</ul>
         </div> `; 
 
