@@ -340,8 +340,9 @@ submitBtn5.addEventListener("click", () => {
 
         //Array of 28 product
         products.forEach((product) => {
-          let check = 0;
+          // let check = 0;
           let variantsList = product.variants; // danh sach cac bien the
+          let variantOptionIndex; // chi so cua option, trong danh sach option cua 1 variant
 
           let variantsListHTML = "";
 
@@ -355,7 +356,7 @@ submitBtn5.addEventListener("click", () => {
             optionArray.push(element.values);
           });
 
-          // console.log(optionArray);
+          console.log(optionArray);
           // console.log(optionList);
 
           // let variantIndex = variantsList.findIndex(
@@ -366,23 +367,40 @@ submitBtn5.addEventListener("click", () => {
           // Duyet qua danh sach tung variant trong product
           variantsList.forEach((variant) => {
             let variantHTML = ""; //the HTML cua 1 variant
+            variantOptionIndex = 0; //reset moi lan duyet 1 variant moi
 
             //kiem tra neu input_1 <= variant.price <= input_2
             if (variant.price >= input_1 && variant.price <= input_2) {
               //duyet qua danh sach options trong 1 variants
+
+              
               variant.options.forEach((option) => {
+                // console.log(
+                //   product.options[variant.options.indexOf(option)].name
+                // );
+
+                // // bug chi lay dc index 0,1
                 // console.log(variant.options.indexOf(option));
+                // variantHTML += `${
+                //   product.options[variant.options.indexOf(option)].name
+                // }: ${
+                //   optionArray[variant.options.indexOf(option)][Number(option)]
+                // }|`;
+
+                // console.log(variantOptionIndex);
                 variantHTML += `${
-                  product.options[variant.options.indexOf(option)].name
+                  product.options[variantOptionIndex].name
                 }: ${
-                  optionArray[variant.options.indexOf(option)][Number(option)]
+                  optionArray[variantOptionIndex][Number(option)]
                 }|`;
+
+                variantOptionIndex++;
                 //  console.log(variantHTML);
               });
 
               variantHTML += `Price: $ ${variant.price} USD`;
               variantHTML = `<li class="option">${variantHTML}</li>`;
-              console.log(variantHTML);
+              // console.log(variantHTML);
               if (variantHTML != "") {
                 variantsListHTML += variantHTML;
               }
