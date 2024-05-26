@@ -175,7 +175,6 @@ submitBtn3.addEventListener("click", () => {
 let submitBtn4 = document.getElementById("submit_4");
 
 submitBtn4.addEventListener("click", () => {
-
   console.log("check4");
   let input_1 = document.getElementById("input_4_1").value.toUpperCase();
   let input_2 = document.getElementById("input_4_2").value.toUpperCase();
@@ -185,8 +184,6 @@ submitBtn4.addEventListener("click", () => {
   console.log(input_1);
   console.log(input_2);
 
-  
-
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
@@ -195,7 +192,7 @@ submitBtn4.addEventListener("click", () => {
         var products = data.data.items;
 
         let productListHTML = document.getElementById("product_list_by_option");
-        productListHTML.innerHTML="";
+        productListHTML.innerHTML = "";
         // console.log(typeof(productListHTML));
 
         // productListHTML= "";
@@ -203,7 +200,7 @@ submitBtn4.addEventListener("click", () => {
 
         let variantCount = 0;
         let variantPriceSum = 0;
-        
+
         let productIndex; // index of max price product
 
         let productName = ""; // Ten san pham
@@ -215,8 +212,6 @@ submitBtn4.addEventListener("click", () => {
         // check2 += check1;
         // // console.log(check2);
         // check1 = `<p>${check1}</p>`;
-
-        
 
         /*format
         Product A
@@ -230,7 +225,7 @@ submitBtn4.addEventListener("click", () => {
           let check = 0;
           let variantsList;
 
-          let variantHTML=""; //the HTML chua cac variant
+          let variantHTML = ""; //the HTML chua cac variant
 
           let optionList = product.options; // Danh sach cac option (vd: size, color)
           let optionChoice; //danh sach cac lua chon trong option (vd: size M,L, X; color: red, green, blue,...)
@@ -241,17 +236,14 @@ submitBtn4.addEventListener("click", () => {
             (check) => check.name.toUpperCase() == input_1
           );
 
-          if (optionIndex != -1){
-             optionChoiceIndex = optionList[optionIndex].values.findIndex(
+          if (optionIndex != -1) {
+            optionChoiceIndex = optionList[optionIndex].values.findIndex(
               (item) => item.toUpperCase() == input_2
             );
           }
-          
-
-          
 
           // kiem tra neu option co ton tai thi thuc hien lenh tao the HTML theo format
-          if ( optionIndex != -1 && optionChoiceIndex != -1) {
+          if (optionIndex != -1 && optionChoiceIndex != -1) {
             variantsList = product.variants; // Lay danh sach cac bien the
             optionChoice = product.options[optionIndex].values; //danh sach cac lua chon trong option (vd: size M,L, X; color: red, green, blue,...)
 
@@ -260,28 +252,22 @@ submitBtn4.addEventListener("click", () => {
             // console.log(productName);
 
             variantsList.forEach((element) => {
-              
+              optionName =
+                optionChoice[element.options[optionIndex]].toString(); //thong tin option cua bien the (green, blue, yellow, X, L, M, X, S)
 
-              
-              optionName = optionChoice[element.options[optionIndex]].toString(); //thong tin option cua bien the (green, blue, yellow, X, L, M, X, S)
-              
               variantPrice = element.price; //gia cua bien the
-
 
               // console.log(optionName);
               // console.log(typeof(optionName));
               // console.log(variantPrice);
-// variantHTML += `<li class="option">${input_1}:${optionName} | Price: $${variantPrice} USD</li>`;
-              if(optionName.toUpperCase() == input_2){
+              // variantHTML += `<li class="option">${input_1}:${optionName} | Price: $${variantPrice} USD</li>`;
+              if (optionName.toUpperCase() == input_2) {
                 // console.log(optionList[optionIndex].name);
                 // console.log(optionName);
                 // console.log(variantPrice);
-                
+
                 variantHTML += `<li class="option">${optionList[optionIndex].name}:${optionName} | Price: $${variantPrice} USD</li>`;
-
               }
-
-              
             });
             // console.log(typeof(variantHTML));
             // console.log(productListHTML);
@@ -297,18 +283,13 @@ submitBtn4.addEventListener("click", () => {
 
             // console.log(variantsList);
           }
-
-          
         });
         if (productListHTML.innerHTML == "") {
           productListHTML.innerHTML = `<p>Invalid option</p>`;
         }
-
-        
       }
     });
 });
-
 
 let submitBtn5 = document.getElementById("submit_5");
 
@@ -319,11 +300,10 @@ submitBtn5.addEventListener("click", () => {
   let result_5 = document.getElementById("result_5");
   // result_5.innerHTML = "SOLD OUT";
   // let soldOutContainer = "";
-  if(Number(input_1 ) > Number(input_2))
-  {
+  if (Number(input_1) > Number(input_2)) {
     console.log("Invalid");
     return;
-  }else{
+  } else {
     console.log("check");
   }
 
@@ -350,9 +330,7 @@ submitBtn5.addEventListener("click", () => {
         let optionName = ""; //Ten option
         let variantPrice; //gia tien san pham
 
-      
-
-      // console.log( check1 > check2 && check3 <check1);
+        // console.log( check1 > check2 && check3 <check1);
         /*format
         Product A
         Size: 10 | price $ 124 USD 
@@ -364,18 +342,18 @@ submitBtn5.addEventListener("click", () => {
         products.forEach((product) => {
           let check = 0;
           let variantsList = product.variants; // danh sach cac bien the
-          
-          let variantHTML = ""; //the HTML chua cac variant
+
+          let variantsListHTML = "";
 
           let optionList = product.options; // Danh sach cac option (vd: size, color)
           let optionChoice; //danh sach cac lua chon trong option (vd: size M,L, X; color: red, green, blue,...)
           let optionChoiceIndex;
 
           let optionArray = [];
-          optionList.forEach(element =>{
+          optionList.forEach((element) => {
             // console.log(element.values);
             optionArray.push(element.values);
-          })
+          });
 
           // console.log(optionArray);
           // console.log(optionList);
@@ -386,75 +364,49 @@ submitBtn5.addEventListener("click", () => {
           // console.log(variantIndex);
 
           // Duyet qua danh sach tung variant trong product
-         variantsList.forEach(element => {
+          variantsList.forEach((variant) => {
+            let variantHTML = ""; //the HTML cua 1 variant
 
             //kiem tra neu input_1 <= variant.price <= input_2
-            if(element.price >= input_1 && element.price <= input_2){
-
+            if (variant.price >= input_1 && variant.price <= input_2) {
               //duyet qua danh sach options trong 1 variants
-              element.options.forEach(
-                item => {
-
-                  // console.log(element.options.indexOf(item));
-                  variantHTML += `${product.options[element.options.indexOf(item)].name}: ${optionArray[element.options.indexOf(item)][Number(item)]}|`; 
+              variant.options.forEach((option) => {
+                // console.log(variant.options.indexOf(option));
+                variantHTML += `${
+                  product.options[variant.options.indexOf(option)].name
+                }: ${
+                  optionArray[variant.options.indexOf(option)][Number(option)]
+                }|`;
                 //  console.log(variantHTML);
-                }
+              });
 
-
-              )
-
-              variantHTML += `Price: $ ${element.price} USD`;
-             console.log(variantHTML); 
+              variantHTML += `Price: $ ${variant.price} USD`;
+              variantHTML = `<li class="option">${variantHTML}</li>`;
+              console.log(variantHTML);
+              if (variantHTML != "") {
+                variantsListHTML += variantHTML;
+              }
             }
-         });
+            // console.log("finish");
+            
+          });
+          
+          if(variantsListHTML != ""){
+          variantsListHTML = `
+                    <ul class="option_container">
+                        ${variantsListHTML}
+                    </ul>
+                `;
 
-          // if (optionIndex != -1) {
-          //   optionChoiceIndex = optionList[optionIndex].values.findIndex(
-          //     (item) => item.toUpperCase() == input_2
-          //   );
-          // }
+          productListHTML.innerHTML += `<li class="product_container">
+                    <p class="product_name">${product.title}</p>
+                    ${variantsListHTML}
+                </li>`;
+        }
 
-          // // kiem tra neu option co ton tai thi thuc hien lenh tao the HTML theo format
-          // if (optionIndex != -1 && optionChoiceIndex != -1) {
-          //   variantsList = product.variants; // Lay danh sach cac bien the
-          //   optionChoice = product.options[optionIndex].values; //danh sach cac lua chon trong option (vd: size M,L, X; color: red, green, blue,...)
+        
+          // console.log(variantsListHTML);
 
-          //   // console.log(optionChoice);
-          //   productName = product.title; // ten san pham
-          //   // console.log(productName);
-
-          //   variantsList.forEach((element) => {
-          //     optionName =
-          //       optionChoice[element.options[optionIndex]].toString(); //thong tin option cua bien the (green, blue, yellow, X, L, M, X, S)
-
-          //     variantPrice = element.price; //gia cua bien the
-
-          //     // console.log(optionName);
-          //     // console.log(typeof(optionName));
-          //     // console.log(variantPrice);
-          //     // variantHTML += `<li class="option">${input_1}:${optionName} | Price: $${variantPrice} USD</li>`;
-          //     if (optionName.toUpperCase() == input_2) {
-          //       // console.log(optionList[optionIndex].name);
-          //       // console.log(optionName);
-          //       // console.log(variantPrice);
-
-          //       variantHTML += `<li class="option">${optionList[optionIndex].name}:${optionName} | Price: $${variantPrice} USD</li>`;
-          //     }
-          //   });
-          //   // console.log(typeof(variantHTML));
-          //   // console.log(productListHTML);
-          //   // productListHTML.innerHTML += `<li>check</li>`;
-
-          //   productListHTML.innerHTML += `<li class="product_container">
-          //           <p class="product_name">${productName}</p>
-          //           <ul class="option_container">
-          //               ${variantHTML}
-          //           </ul>
-          //       </li>`;
-          //   // console.log(optionChoice);
-
-          //   // console.log(variantsList);
-          // }
         });
         if (productListHTML.innerHTML == "") {
           productListHTML.innerHTML = `<p>Invalid option</p>`;
@@ -462,4 +414,3 @@ submitBtn5.addEventListener("click", () => {
       }
     });
 });
-
