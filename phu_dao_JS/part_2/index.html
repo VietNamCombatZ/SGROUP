@@ -20,7 +20,7 @@
         }
         .container{
             display: block;
-            margin: 10px 0;
+            margin: 20px 0;
 
         }
         .exercise_input{
@@ -35,8 +35,11 @@
         }
         .result
         {
+            padding: 20px 0;
             font-size: 30px;
             color: black;
+            font-weight: 500;
+            font-family: SFMono-Regular, Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
         }
 
         .product{
@@ -45,7 +48,18 @@
             font-family: SFMono-Regular, Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
             padding: 0 !important;
         }
+        .sold_out li{
+            padding: 10px 0;
+        }
 
+        .option_container{
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .product_container{
+            list-style: none;
+        }
 
     </style>
 </head>
@@ -58,6 +72,87 @@
         <button class="submitBtn bai_1" id="submit_1">Submit</button>
         <div class="result bai_1" id="result_1"></div>
     </div>
+
+    <div class="exercise_container bai_2" id="bai_2">
+        <h2 class="exercise_title">Bai 2</h2>
+        <p class="exercise_subtitle">Tính tổng giá tiền của các biến thể trong sản phẩm Test bundle</p>
+        
+        <button class="submitBtn bai_2" id="submit_2">Submit</button>
+        <div class="result bai_2" id="result_2"></div>
+    </div>
+
+    
+    <div class="exercise_container bai_3" id="bai_3">
+        <h2 class="exercise_title">Bai 3</h2>
+        <p class="exercise_subtitle">Lọc ra các sản phẩm SOLD OUT (available = 0)</p>
+        
+        <button class="submitBtn bai_3" id="submit_3">Submit</button>
+        <div class="result bai_3" id="result_3">
+            <ul class="sold_out container" id="sold_out">
+                
+                
+            </ul>
+        </div>
+    </div>
+
+    
+
+    <div class="exercise_container bai_4" id="bai_4">
+        <h2 class="exercise_title">Bai 4 </h2>
+        <p class="exercise_subtitle">Lọc ra các sản phẩm có option nhập từ input (ví dụ: SIZE | 10) và hiển thị các biến thể tương ứng kèm với giá</p>
+        <div class="container">
+            <input class="exercise_input bai_4" id="input_4_1" type="text">
+        </div>
+
+        <div class="container">
+            <input class="exercise_input bai_4" id="input_4_2" type="text">
+        </div>
+        <button class="submitBtn bai_4" id="submit_4">Submit</button>
+        
+        
+        <div class="result bai_4" id="result_4">
+            <ul class="product_list_by_option container" id="product_list_by_option">
+                <!-- <li class="product_container">
+                    <p class="product_name">Product A</p>
+                    <ul class="option_container">
+                        <li class="option">Size:10 | Price: $124 USD</li>
+                        <li class="option">Size:8 | Price: $120 USD</li>
+                    </ul>
+                </li> -->
+                
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="exercise_container bai_5" id="bai_5">
+        <h2 class="exercise_title">Bai 5 </h2>
+        <p class="exercise_subtitle">Lọc ra các sản phẩm có giá từ input1 đến input2 và hiển thị danh sách sản phẩm với các biển thể có mức giá đó</p>
+        <div class="container">
+            <input class="exercise_input bai_5" id="input_5_1" type="text">
+        </div>
+
+        <div class="container">
+            <input class="exercise_input bai_5" id="input_5_2" type="text">
+        </div>
+        <button class="submitBtn bai_5" id="submit_5">Submit</button>
+        
+        
+        <div class="result bai_5" id="result_5">
+            <ul class="product_list_by_price container" id="product_list_by_price">
+                <!-- <li class="product_container">
+                    <p class="product_name">Product A</p>
+                    <ul class="option_container">
+                        <li class="option">Size:10 |Color: Red | Price: $124 USD</li>
+                        <li class="option">Size:8 | Color: Blue | Price: $120 USD</li>
+                    </ul>
+                </li> -->
+                
+                
+            </ul>
+        </div>
+    </div>
+    
 
     <script src="part_2.js"></script>
 </body>
