@@ -1,0 +1,25 @@
+1. Static servering
+
+
+2. Mô hình MVC 
+
+
+3. Lập trình OOP 
+* 4 thuộc tính cơ bản:
+- Đóng gói (Encapsulation)
+- Kế thừa (Inheritance)
+- Đa hình (Polymorphism)
+- Trừu tượng (Abstraction)
+
+
+- Vd: DS Động vật gồm  chó, mèo, heo
+=> Class: động vật
+=> Object: chó, mèo, heo
+
+- Overwriting la` gi` ?
+
+4. Github
+- Pull request
+- git checkout, pull, fetch, merge
+- conflict khi git push/pull  gì đó, nếu thêm xóa 1 dòng thì git tự sửa luôn, còn sửa trên 1 dòng thì sẽ có conflict
+- 

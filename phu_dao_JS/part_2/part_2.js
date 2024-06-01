@@ -67,7 +67,10 @@ submitBtn1.addEventListener("click", () => {
 
         let HTMLofProduct = `<div class="container">
         <p class="product name">${products[productIndex].title}</p>
-        <p class="product price">Price: $${maxPrice} USD</p>
+        <p class="product price">Price: ${data.data.currency.longFormat.replace(
+          "{0}",
+          maxPrice
+        )}</p>
         <ul class="product option">Option: ${productOptions}</ul>
         </div> `;
 
@@ -101,17 +104,22 @@ submitBtn2.addEventListener("click", () => {
         products.forEach((product) => {
           if (product.title == "Test bundle") {
             productIndex = index1;
-            console.log(productIndex);
-            console.log(product.title);
+            // console.log(productIndex);
+            // console.log(product.title);
 
             variantCount = product.variants.length;
 
-            console.log(variantCount);
+            // console.log(variantCount);
 
-            for (let variant of product.variants) {
-              variantPriceSum += variant.price;
-            }
-            console.log(variantPriceSum);
+            variantPriceSum = product.variants.reduce(
+              (total, variant) => total + variant.price,
+              0
+            );
+
+            // for (let variant of product.variants) {
+            //   variantPriceSum += variant.price;
+            // }
+            // console.log(variantPriceSum);
           }
           index1++;
         });
@@ -119,7 +127,10 @@ submitBtn2.addEventListener("click", () => {
         let HTMLofProduct = `<div class="container">
         <p class="product name">${products[productIndex].title}</p>
         <p class="product price">${variantCount} variants</p>
-        <ul class="product option">Total price: $${variantPriceSum} USD</ul>
+        <ul class="product option">Total price: ${data.data.currency.longFormat.replace(
+          "{0}",
+          variantPriceSum
+        )}</ul>
         </div> `;
 
         result_2.innerHTML = HTMLofProduct;
@@ -347,8 +358,6 @@ submitBtn5.addEventListener("click", () => {
           let variantsListHTML = "";
 
           let optionList = product.options; // Danh sach cac option (vd: size, color)
-          let optionChoice; //danh sach cac lua chon trong option (vd: size M,L, X; color: red, green, blue,...)
-          let optionChoiceIndex;
 
           let optionArray = [];
           optionList.forEach((element) => {
@@ -359,11 +368,6 @@ submitBtn5.addEventListener("click", () => {
           console.log(optionArray);
           // console.log(optionList);
 
-          // let variantIndex = variantsList.findIndex(
-          //   (check) => check.price >= input_1 && check.price <= input_2
-          // );
-          // console.log(variantIndex);
-
           // Duyet qua danh sach tung variant trong product
           variantsList.forEach((variant) => {
             let variantHTML = ""; //the HTML cua 1 variant
@@ -373,12 +377,7 @@ submitBtn5.addEventListener("click", () => {
             if (variant.price >= input_1 && variant.price <= input_2) {
               //duyet qua danh sach options trong 1 variants
 
-              
               variant.options.forEach((option) => {
-                // console.log(
-                //   product.options[variant.options.indexOf(option)].name
-                // );
-
                 // // bug chi lay dc index 0,1
                 // console.log(variant.options.indexOf(option));
                 // variantHTML += `${
@@ -388,9 +387,7 @@ submitBtn5.addEventListener("click", () => {
                 // }|`;
 
                 // console.log(variantOptionIndex);
-                variantHTML += `${
-                  product.options[variantOptionIndex].name
-                }: ${
+                variantHTML += `${product.options[variantOptionIndex].name}: ${
                   optionArray[variantOptionIndex][Number(option)]
                 }|`;
 
@@ -406,25 +403,20 @@ submitBtn5.addEventListener("click", () => {
               }
             }
             // console.log("finish");
-            
           });
-          
-          if(variantsListHTML != ""){
-          variantsListHTML = `
+
+          if (variantsListHTML != "") {
+            variantsListHTML = `
                     <ul class="option_container">
                         ${variantsListHTML}
                     </ul>
                 `;
 
-          productListHTML.innerHTML += `<li class="product_container">
+            productListHTML.innerHTML += `<li class="product_container">
                     <p class="product_name">${product.title}</p>
                     ${variantsListHTML}
                 </li>`;
-        }
-
-        
-          // console.log(variantsListHTML);
-
+          }
         });
         if (productListHTML.innerHTML == "") {
           productListHTML.innerHTML = `<p>Invalid option</p>`;
