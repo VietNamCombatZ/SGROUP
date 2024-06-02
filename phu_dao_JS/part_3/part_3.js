@@ -29,22 +29,20 @@ const app = {
     if (BtnID == "bai_3") {
       Btn.addEventListener("input", async () => {
         result.innerHTML = `<div class="warning">Loading product</div>`;
-try
-        {app.debounce(async function () {
-          try {
-            result.innerHTML = await callback(Btn);
-          } catch (err) {
-            result.innerHTML = `<div class="warning">Failed to get product</div>`;
-            console.log(err);
-          }
-          // console.log("check");
-        }, 3000);}
-        catch(err){
+        try {
+          app.debounce(async function () {
+            // try {
+              result.innerHTML = await callback(Btn);
+            // } catch (err) {
+            //   result.innerHTML = `<div class="warning">Failed to get product</div>`;
+            //   console.log(err);
+            // }
+            // console.log("check");
+          }, 3000);
+        } catch (err) {
           result.innerHTML = `<div class="warning">Failed to get product</div>`;
         }
-
-      }  
-      );
+      });
     }
   },
 
@@ -69,9 +67,9 @@ try
 
     console.log(productList);
 
-    if(productList == []){
+    if (productList == []) {
       return `<div class="warning">No matches product</div>`;
-    }else{
+    } else {
       return `<ol class="productList">${productList
         .map(
           //return HTML tag of each product
@@ -147,7 +145,7 @@ try
     let comparePrice = Number(variantList[index].compareAtPrice);
     let price = Number(variantList[index].price);
     let discount = (comparePrice - price) / comparePrice;
-    return (Math.round(discount * 1000))/10;
+    return Math.round(discount * 1000) / 10;
   },
   async showProductsList() {
     const database = await app.fetchData(app.API_URL);
@@ -171,15 +169,15 @@ try
           if (index == -1) {
             var price = app.getFirstValidPrice(product.variants, 0);
             var discount = "";
-            
           } else {
-            
-
             //Get valid price (price of first discount variant or first variant)
             var price = app.getFirstValidPrice(product.variants, index);
 
             //Get discount of variant
-            var discount = `Discount: ${app.getDiscount(product.variants, index)}%`;
+            var discount = `Discount: ${app.getDiscount(
+              product.variants,
+              index
+            )}%`;
           }
 
           return `<li class="product">
@@ -234,7 +232,6 @@ try
     app.startProgram("download_btn");
   },
   bai2() {
-    
     app.handleEvent("bai_2", "result_2", app.showProductsList);
   },
 
