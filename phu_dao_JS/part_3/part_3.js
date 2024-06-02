@@ -27,22 +27,34 @@ const app = {
     }
 
     if (BtnID == "bai_3") {
-      Btn.addEventListener("input", async () => {
-        result.innerHTML = `<div class="warning">Loading product</div>`;
-        try {
-          app.debounce(async function () {
-            // try {
-              result.innerHTML = await callback(Btn);
-            // } catch (err) {
-            //   result.innerHTML = `<div class="warning">Failed to get product</div>`;
-            //   console.log(err);
-            // }
-            // console.log("check");
-          }, 3000);
-        } catch (err) {
-          result.innerHTML = `<div class="warning">Failed to get product</div>`;
-        }
-      });
+      // Btn.addEventListener("input", async () => {
+      //   result.innerHTML = `<div class="warning">Loading product</div>`;
+      //   try {
+      //     app.debounce(async function () {
+      //       // try {
+      //         result.innerHTML = await callback(Btn);
+      //       // } catch (err) {
+      //       //   result.innerHTML = `<div class="warning">Failed to get product</div>`;
+      //       //   console.log(err);
+      //       // }
+      //       // console.log("check");
+      //     }, 3000);
+      //   } catch (err) {
+      //     result.innerHTML = `<div class="warning">Failed to get product</div>`;
+      //   }
+      // });
+      Btn.addEventListener("input", 
+        app.debounce(async function () {
+          result.innerHTML = `<div class="warning">Loading product</div>`;
+          try {
+            result.innerHTML = await callback(Btn);
+          } catch (err) {
+            result.innerHTML = `<div class="warning">Failed to get product</div>`;
+            console.log(err);
+          }
+          console.log("check");
+        }, 3000)
+      );
     }
   },
 
